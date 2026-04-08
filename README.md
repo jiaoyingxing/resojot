@@ -59,6 +59,8 @@ The current MVP already includes:
 - multiple transcription provider support in progress
 - local offline transcription route already validated
 
+![命令面板2](./assets/命令面板 (2).png)
+
 当前 MVP 已经具备：
 
 - 从命令或工作台直接开始录音
@@ -70,6 +72,8 @@ The current MVP already includes:
 - 移动端兼容录音流程
 - 多转写 provider 架构已落地
 - 本地离线转写路线已完成首轮验证
+
+![命令面板1](./assets/命令面板 (1).png)
 
 ---
 
