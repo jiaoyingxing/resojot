@@ -17,9 +17,11 @@ Resojot 面向的是“先记录，再整理”的使用方式。
 它不是把录音当成一个独立流程，而是希望把**录音、写入笔记、待转处理、后续整理**收成一条在 Obsidian 内连续完成的工作流。
 
 <p align="center">
-  <img src="./assets/启动速度.png" width="45%" />
-  <img src="./assets/手机-记录.png" width="45%" />
+  <img src="./assets/手机-工作台.png" width="45%" />
+  <img src="./assets/手机-录音界面.png" width="45%" />
 </p>
+
+<br/>
 
 ---
 
