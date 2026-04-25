@@ -2,7 +2,7 @@
   <a href="./README.md">中文</a> · English
 </p>
 
-# Resojot
+# 🎙️ Resojot
 
 You think you are taking notes, but sometimes you are typing and deleting thoughts before they have even had a chance to be spoken.
 
@@ -39,7 +39,7 @@ Resojot = Resonate + Jot down
   <img src="./assets/手机-自动转写.png" width="30%" />
 </p>
 
-## Why Resojot
+## 💡 Why Resojot
 
 ### We are used to thinking with a keyboard
 
@@ -51,14 +51,14 @@ say it first, organize it later.
 
 The value of voice notes is not only speed. It is fidelity. Pauses, additions, turns, hesitation, and context are not always noise. They can be important clues to what you meant. For AI, the extra texture in spoken language can sometimes make your intent easier to recover.
 
-## Designed For
+## 🧭 Designed For
 
 - Ideas that appear suddenly, before you want to start typing
 - Quick capture while walking, commuting, or using fragmented time
 - Spoken material where tone, pauses, and context matter
 - A workflow that keeps original expression in your knowledge base, not only the polished result
 
-## Core Workflow
+## 🔁 Core Workflow
 
 ### 1. Record Quickly
 
@@ -76,7 +76,7 @@ With a license, Resojot can enable automatic transcription, imported-audio trans
 
 After transcription, you can connect your configured LLM provider to polish text. Polishing is a later organization step; it does not replace the main goal of capturing first.
 
-## Main Features
+## 🧰 Main Features
 
 ### Recording And Writing
 
@@ -113,7 +113,7 @@ Available provider routes depend on your own accounts, API keys, balance, networ
 - Azure Speech
 - Google Speech-to-Text
 
-## License And Versions
+## 🔐 License And Versions
 
 Resojot uses feature licensing. Without a license key, it can still be used as a basic voice recording tool. With a license, enhanced features such as transcription, pending queues, imported-audio transcription, and AI polishing can be enabled.
 
@@ -143,7 +143,7 @@ To get a license key, search for `焦应行` on Xiaohongshu.
 
 A Resojot license does not include third-party cloud service quota. Cloud ASR or LLM providers still require your own account, API key, balance, billing settings, and network access.
 
-## Privacy And Storage
+## 🛡️ Privacy And Storage
 
 - Audio files and Markdown notes are stored in your Obsidian vault.
 - Plugin settings, provider API keys, license state, and pending task state are stored in local Obsidian plugin data.
@@ -153,7 +153,7 @@ A Resojot license does not include third-party cloud service quota. Cloud ASR or
 
 Do not publish your `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, or provider credentials.
 
-## Installation
+## 📦 Installation
 
 Resojot currently provides installable builds through GitHub Releases. Use the versions that are actually available on the Releases page. Do not treat files on the repository main branch as official release packages.
 
@@ -165,7 +165,7 @@ Manual installation:
 4. Restart Obsidian, or reload community plugins.
 5. Enable Resojot in Obsidian settings.
 
-## Closed Source Notice
+## 🔒 Closed Source Notice
 
 This public repository is the project homepage and release artifacts repository for Resojot.
 
@@ -184,11 +184,11 @@ It does not contain private source code, development documents, tests, internal 
 
 The plugin has not yet entered the official Obsidian plugin submission process. If source review access is required later under Obsidian's closed-source plugin review process, the author will provide reviewer access to a private source repository separately.
 
-## Current Status
+## 📌 Current Status
 
 - Please refer to the GitHub Releases page for actually published installable versions.
 
-## Contact
+## ✉️ Contact
 
 Feedback and license key access:
 
