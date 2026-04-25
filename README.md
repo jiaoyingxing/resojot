@@ -1,8 +1,8 @@
 # Resojot / 应声记
 
-Resojot is a closed-source Obsidian plugin for capturing voice notes, writing them into Markdown, and transcribing them through local or cloud providers.
+一个面向 Obsidian 的轻量语音速记插件。先把真实表达留下来，再让转写、待处理恢复和 AI 润色帮助你继续整理。
 
-应声记（Resojot）是一个面向 Obsidian 的闭源语音笔记插件，目标是让录音、写入笔记、转写和后续整理更自然地接在一起。
+Resojot = Resonate + Jot。它想做的不是一套厚重的录音系统，而是一个自然融入 Obsidian 的“声音碎片记录器”：开口即可记，原始表达可回溯，后续内容还能继续转写、整理和归档。
 
 <p align="center">
   <img src="./assets/手机-工作台.png" width="30%" />
@@ -10,39 +10,71 @@ Resojot is a closed-source Obsidian plugin for capturing voice notes, writing th
   <img src="./assets/手机-自动转写.png" width="30%" />
 </p>
 
-## What Resojot Does
+## 为什么做应声记
 
-- Record voice notes inside Obsidian.
-- Save audio and Markdown notes in your vault.
-- Create a new note per recording, append to a daily note, or append to a monthly note.
-- Transcribe recordings through local, self-hosted, or cloud providers.
-- Keep failed or unfinished transcription tasks visible and retryable.
-- Import existing audio files for transcription.
-- Polish transcription text with a configured LLM provider when enabled.
+我们习惯了用键盘思考。打字会让人下意识追求准确、工整、简洁，很多还没成形的想法会在“准备写好”的过程中被消耗掉。
 
-## Product Direction
+语音记录的价值不只是更快，而是更真实。停顿、补充、转折、犹豫和语境，不一定是噪音，它们常常是理解意图的重要线索。对 AI 来说，口语中的冗余信息有时反而能帮助它更接近你原本的意思。
 
-Resojot is built as a voice note workflow plugin with flexible transcription backends.
+所以 Resojot 更相信这样的记录方式：
 
-It is not trying to become a professional recording studio inside Obsidian. The project prioritizes stable capture, recoverable transcription, low interruption, and an Obsidian-native feel.
+```text
+先说出来 -> 保留原始声音 -> 写入 Markdown -> 转写成文字 -> 再由 AI 整理、提炼、归档
+```
 
-## Editions
+## 适合这些场景
 
-The basic edition can be used for recording and Markdown note writing.
+- 走路、通勤、睡前、手机上突然冒出的想法。
+- 不想打开长篇编辑器，只想先把灵感和情绪留住。
+- 需要把口述、会议片段、音频材料沉到 Obsidian。
+- 希望录音、原始音频、转写文字和后续整理结果都能回到自己的 vault。
+- 想用 AI 帮忙整理，但不想一开始就被“写漂亮”的压力打断。
 
-Licensed features may include:
+## 核心工作流
 
-- Automatic transcription
-- Transcription queue and retry
-- Imported audio transcription
-- Text polishing after transcription
-- Additional advanced workflow commands
+### 1. 随手录音
 
-A valid Resojot license does not include third-party cloud provider quotas. Cloud transcription and LLM providers may still require their own account, API key, billing setup, or network access.
+可以从工作台、命令面板或移动端入口开始录音。Resojot 优先服务“先留下来”这件事，而不是让你先理解一堆复杂配置。
 
-## Provider Options
+### 2. 写入 Markdown
 
-Current provider routes include:
+录音结束后，音频会保存到你的 Obsidian vault，并写入 Markdown 笔记。你可以选择每次新建一篇笔记，也可以追加到当天或当月记录。
+
+### 3. 转写与待处理恢复
+
+授权后可启用自动转写、导入音频转写、当前笔记音频转写和待处理队列。未完成或失败的任务会进入待处理列表，方便后续重试和恢复。
+
+### 4. 可选 AI 润色
+
+转写完成后，可以接入你配置的大语言模型 provider 做文本润色。润色是后续整理能力，不会压过“先记录”的主链路。
+
+## 主要能力
+
+### 记录与写入
+
+- 在 Obsidian 内直接录音。
+- 保存音频文件，并把音频写入 Markdown 笔记。
+- 支持每次新建、按天追加、按月追加等笔记写入方式。
+- 支持模板，让语音笔记进入更稳定的整理格式。
+- 支持移动端优先的轻量入口和工作台体验。
+
+### 转写与恢复
+
+- 授权后支持录音完成自动转写。
+- 支持导入已有音频文件进行转写。
+- 支持转写当前笔记中的音频。
+- 支持待处理列表，保留失败或未完成任务，方便后续重试。
+- 支持常见错误提示和诊断入口，减少排查成本。
+
+### AI 整理
+
+- 授权后可在转写完成后继续进入润色流程。
+- 支持常见大语言模型 provider 或 OpenAI-compatible 接口。
+- 支持自定义提示词方案，让同一段口述可以被整理成不同风格的文字。
+
+### 服务商路线
+
+当前已提供多种转写路线，实际可用性取决于你自己的账号、API key、余额、网络环境和服务商政策：
 
 - Local OpenAI-compatible server
 - Manual cloud OpenAI-compatible endpoint
@@ -53,51 +85,89 @@ Current provider routes include:
 - Azure Speech
 - Google Speech-to-Text
 
-Provider availability depends on your own credentials, account status, network environment, and the provider's current service policy.
+## 授权与版本
 
-## Privacy And Storage
+Resojot 采用温和的功能授权方式：未填写授权码时，插件仍可作为基础语音记录工具使用；授权后启用转写、待处理队列、导入音频转写、AI 润色等增强能力。
 
-- Audio files and Markdown notes are stored in your Obsidian vault.
-- Provider API keys and plugin settings are stored locally in Obsidian plugin data.
-- Resojot does not include client-side telemetry in the current release.
-- Cloud transcription or LLM features send the selected audio/text content to the provider you configure.
-- Local/offline transcription is available when you configure a local OpenAI-compatible server.
+### 基础可用能力
 
-Do not publish your local `.obsidian/plugins/resojot/data.json`; it may contain settings, queue state, license state, or provider credentials.
+未授权时仍可使用：
 
-## Closed Source Notice
+- 录音
+- 保存音频
+- 写入基础 Markdown 笔记
+- 使用基础模板写入
 
-This public repository is the project page and release-artifact repository for Resojot.
+### 授权后启用
 
-It may contain:
+授权后可启用：
+
+- 自动转写
+- 待处理队列与补转
+- 导入音频转写
+- 转写后的 AI 润色
+
+### 授权方式
+
+- 授权码在本地完成签名校验。
+- 当前不依赖远程授权服务器。
+- 当前不需要服务端账号系统。
+- 作者不会通过额外后台服务远程启停你的本地插件。
+- 永久授权用户会优先获得新版构筑物与更新支持。
+
+授权码获取方式：小红书搜索“焦应行”。
+
+授权不等于第三方云服务额度。即使你有 Resojot 授权，云端转写或大语言模型 provider 仍可能需要你自己的账号、API key、余额、账单设置和网络访问条件。
+
+## 隐私与存储
+
+- 音频文件和 Markdown 笔记保存在你的 Obsidian vault 中。
+- 插件设置、provider API key、授权状态和待处理状态保存在本地 Obsidian 插件数据中。
+- Resojot 当前不包含客户端遥测。
+- 如果你启用云端转写或云端 LLM 润色，被处理的音频或文字会发送给你自己配置的 provider。
+- 如果你配置本地 OpenAI-compatible 服务，可以走本地或自托管路线。
+
+请不要公开你的 `.obsidian/plugins/resojot/data.json`。它可能包含设置、队列状态、授权状态或 provider 凭据。
+
+## 安装
+
+Resojot 目前通过 GitHub Releases 提供可安装构筑物。请以 Releases 页面中实际可见的版本为准，不要把仓库 main 分支中的展示文件当作正式发布版本。
+
+手动安装步骤：
+
+1. 从 GitHub Releases 下载对应版本的 `main.js`、`manifest.json` 和 `styles.css`。
+2. 在你的 vault 下创建 `.obsidian/plugins/resojot/` 文件夹。
+3. 将三个文件放入该文件夹。
+4. 重启 Obsidian，或重新加载社区插件。
+5. 在 Obsidian 设置中启用 Resojot。
+
+## 闭源说明
+
+这个公开仓库是 Resojot 的项目主页和 release artifacts 仓库。
+
+它可以包含：
 
 - `README.md`
 - `LICENSE`
-- screenshots and public assets
+- 截图和公开素材
 - `manifest.json`
 - `versions.json`
 - `styles.css`
-- compiled `main.js`
+- 编译后的 `main.js`
 - GitHub Release artifacts
 
-It does not contain the private source code, development documents, tests, or internal build scripts. Source review access can be granted separately when required for Obsidian closed-source plugin review.
+它不包含私有源码、开发文档、测试、内部构建脚本、授权生成材料、私钥、API key 或用户本地数据。
 
-## Manual Installation
+如果后续需要按 Obsidian 闭源插件审核流程提供源码审核访问，作者会单独向 reviewer 提供私有源码仓库访问权限。
 
-1. Download the latest GitHub Release artifacts.
-2. Create a folder named `resojot` under your vault's `.obsidian/plugins/` directory.
-3. Put `main.js`, `manifest.json`, and `styles.css` into that folder.
-4. Restart Obsidian or reload community plugins.
-5. Enable Resojot in Obsidian settings.
+## 当前状态
 
-## Current Status
+- 当前公开仓 main 分支展示版本：`0.9.2`
+- 最低 Obsidian 版本：`1.8.0`
+- 正式可安装版本：以 GitHub Releases 页面实际发布内容为准
 
-Current public release line: `0.9.2`
+## 联系
 
-Minimum Obsidian version: `1.8.0`
+反馈与授权码获取：
 
-## Contact
-
-Feedback is welcome.
-
-- REDnote: `1167756159`
+- 小红书搜索：`焦应行`
