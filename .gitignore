@@ -1,0 +1,21 @@
+node_modules/
+data.json
+*.log
+*.tsbuildinfo
+
+# Private source repository content must never be staged here.
+src/
+scripts/
+tests/
+核心文档/
+开发日志/
+专题文档/
+临时文档/
+文档归档/
+license-local/
+
+# Local credentials and development-only materials.
+*.key
+*.pem
+*.env
+.env*

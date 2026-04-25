@@ -1,0 +1,9 @@
+{
+  "id": "resojot",
+  "name": "Resojot",
+  "version": "0.9.2",
+  "minAppVersion": "1.8.0",
+  "description": "Capture voice notes in Obsidian, write them into Markdown, and transcribe them with local or cloud providers. (Closed source)",
+  "author": "Jiao Yingxing",
+  "isDesktopOnly": false
+}
