@@ -1,37 +1,37 @@
-<p align="right">
-  中文 · <a href="./README.en.md">English</a>
+<p align="center">
+  <strong>Language:</strong> <strong>English</strong> · <a href="./README-zh.md"><strong>简体中文</strong></a>
 </p>
 
-# 🎙️ Resojot 应声记
+# 🎙️ Resojot
 
-你以为你在记录，其实你在一边打字，一边删掉还没说出口的想法。
+You think you are taking notes, but sometimes you are typing and deleting thoughts before they have even had a chance to be spoken.
 
-打字会让人下意识把表达“整理好再写”，  
-而大量真正有价值的内容——犹豫、补充、跳跃、语境——就在这个过程中被抹掉了。
+Typing often pushes us to make expression clean before it is complete.<br>
+Valuable context, hesitation, additions, jumps, and tone can disappear in that process.
 
-Resojot 反过来做：
-先完整说出来，再慢慢整理。
+Resojot works the other way around:
+say it first, organize it later.
 
-在 Obsidian 里，一条链路直接走完：
+In Obsidian, the core flow stays simple:
 
-录音 → 转写 → AI 整理 → 成为 Markdown 笔记
+Recording → Transcription → AI organization → Markdown notes
 
-- **录音**：开口即记，音频进入 Vault  
-- **转写**：支持本地与多种云端 ASR，自动或手动处理  
-- **整理**：接入你的 LLM，完成润色、总结或结构化输出  
-- **归档**：原始音频、转写与整理结果统一沉淀为笔记
+- **Recording**: speak first, with audio saved into your vault
+- **Transcription**: use local or cloud ASR, automatically or manually
+- **Organization**: connect your LLM for polishing, summarizing, or structured output
+- **Archiving**: keep original audio, transcripts, and organized notes in one place
 
-它不把记录变成另一套独立系统。音频、转写和整理结果都回到你的 Obsidian vault，继续沿着你原本的笔记工作流生长。
+Resojot does not turn your notes into a separate system. Audio, transcripts, and organized results return to your Obsidian vault and continue inside your existing note workflow.
 
-它不帮你“当场写好”，  
-而是尽量让你**说过的内容被保存下来**，并且之后仍然可整理、可回溯。
+It does not try to make you write perfectly on the spot.<br>
+It helps keep what you said available, so you can organize it and return to it later.
 
-它适合那些刚冒出来、还不想被打字打断的想法，也适合走路、通勤和碎片时间里的口述记录。
+It is especially useful for thoughts that are still forming, moments when typing would interrupt you, and voice notes captured while walking, commuting, or using small pockets of time.
 
-让表达先发生，再把结构交给之后。
+Let expression happen first. Let structure come after.
 
-Resojot = Resonate + Jot down  
-应声记：闻声成记，开口成文
+Resojot = Resonate + Jot down<br>
+应声记: hear it, keep it, turn it into notes
 
 <p align="center">
   <img src="./assets/手机-工作台.png" width="30%" />
@@ -39,70 +39,70 @@ Resojot = Resonate + Jot down
   <img src="./assets/手机-自动转写.png" width="30%" />
 </p>
 
-## 💡 为什么做应声记
+## 💡 Why Resojot
 
-### 我们习惯了用键盘思考
+### We are used to thinking with a keyboard
 
-我们习惯一边想，一边把内容整理成句子。  
-结果是：表达变慢了，想法被压缩了，很多还没成形的内容，在“写清楚之前”就消失了。
+We often think and edit at the same time.<br>
+The result is slower expression, compressed ideas, and thoughts that disappear before they become clear enough to write.
 
-Resojot 提供另一种路径——  
-先说出来，再慢慢整理。
+Resojot offers another path:<br>
+say it first, organize it later.
 
-语音记录的价值不只是更快，而是更真实。停顿、补充、转折、犹豫和语境，不一定是噪音，它们常常是理解意图的重要线索。对 AI 来说，口语中的冗余信息有时反而能帮助它更接近你原本的意思。
+The value of voice notes is not only speed. It is fidelity. Pauses, additions, turns, hesitation, and context are not always noise. They can be important clues to what you meant. For AI, the extra texture in spoken language can sometimes make your intent easier to recover.
 
-## 🧭 专门为这些场景设计
+## 🧭 Designed For
 
-- 想法刚出现，但不想被打字打断  
-- 走路、通勤、碎片时间里的快速记录  
-- 需要保留语气、停顿和上下文的口述内容  
-- 希望把“原始表达”也纳入知识库，而不是只留下整理结果  
+- Ideas that appear suddenly, before you want to start typing
+- Quick capture while walking, commuting, or using fragmented time
+- Spoken material where tone, pauses, and context matter
+- A workflow that keeps original expression in your knowledge base, not only the polished result
 
-## 🔁 核心工作流
+## 🔁 Core Workflow
 
-### 1. 随手录音
+### 1. Record Quickly
 
-可以从工作台、命令面板或移动端入口开始录音。Resojot 优先服务“先留下来”这件事，而不是让你先理解一堆复杂配置。
+Start recording from the workspace, command palette, or mobile-friendly entry points. Resojot is built around saving the thought first, not making you understand a large configuration surface before you can begin.
 
-### 2. 写入 Markdown
+### 2. Write To Markdown
 
-录音结束后，音频会保存到你的 Obsidian vault，并写入 Markdown 笔记。你可以选择每次新建一篇笔记，也可以追加到当天或当月记录。
+After recording, audio is saved into your Obsidian vault and written into Markdown notes. You can create a new note each time, or append to daily or monthly notes.
 
-### 3. 转写与待处理恢复
+### 3. Transcribe And Recover
 
-授权后可启用自动转写、导入音频转写、当前笔记音频转写和待处理队列。未完成或失败的任务会进入待处理列表，方便后续重试和恢复。
+With a license, Resojot can enable automatic transcription, imported-audio transcription, current-note audio transcription, and a pending task queue. Unfinished or failed tasks can stay in the pending list for retry and recovery.
 
-### 4. 可选 AI 润色
+### 4. Optional AI Polish
 
-转写完成后，可以接入你配置的大语言模型 provider 做文本润色。润色是后续整理能力，不会压过“先记录”的主链路。
+After transcription, you can connect your configured LLM provider to polish text. Polishing is a later organization step; it does not replace the main goal of capturing first.
 
-## 🧰 主要能力
+## 🧰 Main Features
 
-### 记录与写入
+### Recording And Writing
 
-- 在 Obsidian 内直接录音。
-- 保存音频文件，并把音频写入 Markdown 笔记。
-- 支持每次新建、按天追加、按月追加等笔记写入方式。
-- 支持模板，让语音笔记进入更稳定的整理格式。
-- 支持移动端优先的轻量入口和工作台体验。
+- Record directly inside Obsidian.
+- Save audio files and embed them into Markdown notes.
+- Choose new note, daily append, or monthly append writing modes.
+- Use templates for more consistent voice note structure.
+- Use lightweight mobile-first entries and workspace views.
 
-### 转写与恢复
+### Transcription And Recovery
 
-- 授权后支持录音完成自动转写。
-- 支持导入已有音频文件进行转写。
-- 支持转写当前笔记中的音频。
-- 支持待处理列表，保留失败或未完成任务，方便后续重试。
-- 支持常见错误提示和诊断入口，减少排查成本。
+- Enable automatic transcription after recording with a license.
+- Transcribe imported audio files.
+- Transcribe audio in the current note.
+- Keep failed or unfinished work in a pending list for retry.
+- Use common error hints and diagnostics to reduce troubleshooting cost.
 
-### AI 整理
+### AI Organization
 
-- 授权后可在转写完成后继续进入润色流程。
-- 支持常见大语言模型 provider 或 OpenAI-compatible 接口。
-- 支持自定义提示词方案，让同一段口述可以被整理成不同风格的文字。
+- Continue into an AI polishing flow after transcription with a license.
+- Use common LLM providers or OpenAI-compatible endpoints.
+- Customize prompt presets so the same spoken material can become different styles of writing.
 
-### 服务商路线
+### Provider Routes
 
-当前已提供多种转写路线，实际可用性取决于你自己的账号、API key、余额、网络环境和服务商政策：
+Available provider routes depend on your own accounts, API keys, balance, network access, and provider policies:
 
 - Local OpenAI-compatible server
 - Manual cloud OpenAI-compatible endpoint
@@ -113,87 +113,84 @@ Resojot 提供另一种路径——
 - Azure Speech
 - Google Speech-to-Text
 
-## 🔐 授权与版本
+## 🔐 License And Versions
 
-Resojot 采用功能授权方式：未填写授权码时，插件仍可作为基础语音记录工具使用；授权后启用转写、待处理队列、导入音频转写、AI 润色等增强能力。
+Resojot uses feature licensing. Without a license key, it can still be used as a basic voice recording tool. With a license, enhanced features such as transcription, pending queues, imported-audio transcription, and AI polishing can be enabled.
 
-### 基础可用能力
+### Available Without A License
 
-未授权时仍可使用：
+- Recording
+- Saving audio
+- Writing basic Markdown notes
+- Using basic templates
 
-- 录音
-- 保存音频
-- 写入基础 Markdown 笔记
-- 使用基础模板写入
+### Enabled With A License
 
-### 授权后启用
+- Automatic transcription
+- Pending queue and retry
+- Imported-audio transcription
+- AI polishing after transcription
 
-授权后可启用：
+### License Model
 
-- 自动转写
-- 待处理队列与补转
-- 导入音频转写
-- 转写后的 AI 润色
+- License keys are verified locally through signature validation.
+- Resojot currently does not rely on a remote license server.
+- Resojot currently does not require a server-side account system.
+- The author will not remotely enable or disable your local plugin through an extra background service.
+- Lifetime license users receive priority access to new builds and update support.
 
-### 授权方式
+To get a license key, search for `焦应行` on Xiaohongshu.
 
-- 授权码在本地完成签名校验。
-- 当前不依赖远程授权服务器。
-- 当前不需要服务端账号系统。
-- 作者不会通过额外后台服务远程启停你的本地插件。
-- 永久授权用户会优先获得新版构筑物与更新支持。
+A Resojot license does not include third-party cloud service quota. Cloud ASR or LLM providers still require your own account, API key, balance, billing settings, and network access.
 
-授权码获取方式：小红书搜索“焦应行”。
+## 🛡️ Privacy And Storage
 
-授权不等于第三方云服务额度。即使你有 Resojot 授权，云端转写或大语言模型 provider 仍需要你自己的账号、API key、余额、账单设置和网络访问条件。
+- Audio files and Markdown notes are stored in your Obsidian vault.
+- Plugin settings, provider API keys, license state, and pending task state are stored in local Obsidian plugin data.
+- Resojot currently contains no client-side telemetry.
+- If you enable cloud ASR or cloud LLM polishing, the processed audio or text will be sent to the provider you configured.
+- If you configure a local OpenAI-compatible service, you can use a local or self-hosted route.
 
-## 🛡️ 隐私与存储
+Do not publish your `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, or provider credentials.
 
-- 音频文件和 Markdown 笔记保存在你的 Obsidian vault 中。
-- 插件设置、provider API key、授权状态和待处理状态保存在本地 Obsidian 插件数据中。
-- Resojot 当前不包含客户端遥测。
-- 如果你启用云端转写或云端 LLM 润色，被处理的音频或文字会发送给你自己配置的 provider。
-- 如果你配置本地 OpenAI-compatible 服务，可以走本地或自托管路线。
+## 📦 Installation
 
-请不要公开你的 `.obsidian/plugins/resojot/data.json`。它可能包含设置、队列状态、授权状态或 provider 凭据。
+Resojot currently provides installable builds through GitHub Releases. Use the versions that are actually available on the Releases page. Do not treat files on the repository main branch as official release packages.
 
-## 📦 安装
+Manual installation:
 
-Resojot 目前通过 GitHub Releases 提供可安装构筑物。请以 Releases 页面中实际可见的版本为准，不要把仓库 main 分支中的展示文件当作正式发布版本。
+1. Download `main.js`, `manifest.json`, and `styles.css` from the corresponding GitHub Release.
+2. Create `.obsidian/plugins/resojot/` under your vault.
+3. Put the three files into that folder.
+4. Restart Obsidian, or reload community plugins.
+5. Enable Resojot in Obsidian settings.
 
-手动安装步骤：
+## 🔒 Closed Source Notice
 
-1. 从 GitHub Releases 下载对应版本的 `main.js`、`manifest.json` 和 `styles.css`。
-2. 在你的 vault 下创建 `.obsidian/plugins/resojot/` 文件夹。
-3. 将三个文件放入该文件夹。
-4. 重启 Obsidian，或重新加载社区插件。
-5. 在 Obsidian 设置中启用 Resojot。
+This public repository is the project homepage and release artifacts repository for Resojot.
 
-## 🔒 闭源说明
-
-这个公开仓库是 Resojot 的项目主页和 release artifacts 仓库。
-
-它大致包含：
+It generally contains:
 
 - `README.md`
+- `README-zh.md`
 - `LICENSE`
-- 截图和公开素材
+- Screenshots and public assets
 - `manifest.json`
 - `versions.json`
 - `styles.css`
-- 编译后的 `main.js`
+- Compiled `main.js`
 - GitHub Release artifacts
 
-它不包含私有源码、开发文档、测试、内部构建脚本、授权生成材料、私钥、API key 或用户本地数据。
+It does not contain private source code, development documents, tests, internal build scripts, license generation materials, private keys, API keys, or local user data.
 
-插件暂未提交上架流程，如果后续需要按 Obsidian 闭源插件审核流程提供源码审核访问，作者会单独向 reviewer 提供私有源码仓库访问权限。
+The plugin has not yet entered the official Obsidian plugin submission process. If source review access is required later under Obsidian's closed-source plugin review process, the author will provide reviewer access to a private source repository separately.
 
-## 📌 当前状态
+## 📌 Current Status
 
-- 以 GitHub Releases 页面实际发布内容为准
+- Please refer to the GitHub Releases page for actually published installable versions.
 
-## ✉️ 联系
+## ✉️ Contact
 
-反馈与授权码获取：
+Feedback and license key access:
 
-- 小红书搜索：`焦应行`
+- Search Xiaohongshu for `焦应行`
