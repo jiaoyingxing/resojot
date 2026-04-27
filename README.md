@@ -146,12 +146,13 @@ A Resojot license does not include third-party cloud service quota. Cloud ASR or
 ## 🛡️ Privacy And Storage
 
 - Audio files and Markdown notes are stored in your Obsidian vault.
-- Plugin settings, provider API keys, license state, and pending task state are stored in local Obsidian plugin data.
+- Plugin settings, license state, and pending task state are stored in local Obsidian plugin data.
+- Provider keys, polishing API keys, and the license key are stored in Obsidian SecretStorage, scoped to the current device and vault.
 - Resojot currently contains no client-side telemetry.
 - If you enable cloud ASR or cloud LLM polishing, the processed audio or text will be sent to the provider you configured.
 - If you configure a local OpenAI-compatible service, you can use a local or self-hosted route.
 
-Do not publish your `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, or provider credentials.
+Do not publish your `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.
 
 ## 📦 Installation
 

@@ -150,12 +150,13 @@ Resojot 采用功能授权方式：未填写授权码时，插件仍可作为基
 ## 🛡️ 隐私与存储
 
 - 音频文件和 Markdown 笔记保存在你的 Obsidian vault 中。
-- 插件设置、provider API key、授权状态和待处理状态保存在本地 Obsidian 插件数据中。
+- 插件设置、授权状态和待处理状态保存在本地 Obsidian 插件数据中。
+- provider key、润色 API key 和授权码保存在 Obsidian SecretStorage 中，并按当前设备和 vault 生效。
 - Resojot 当前不包含客户端遥测。
 - 如果你启用云端转写或云端 LLM 润色，被处理的音频或文字会发送给你自己配置的 provider。
 - 如果你配置本地 OpenAI-compatible 服务，可以走本地或自托管路线。
 
-请不要公开你的 `.obsidian/plugins/resojot/data.json`。它可能包含设置、队列状态、授权状态或 provider 凭据。
+请不要公开你的 `.obsidian/plugins/resojot/data.json`。它可能包含设置、队列状态、授权状态，以及旧版本遗留的 provider 凭据。
 
 ## 📦 安装
 
