@@ -85,7 +85,7 @@
   justify-content: flex-start;
 }
 
-.resojot-plugin-mobile-record-indicator {
+.resojot-plugin-live-strip {
   position: absolute;
   top: 0;
   left: 0;
@@ -106,25 +106,27 @@
   transition: opacity 0.18s ease, transform 0.22s ease;
 }
 
-.resojot-plugin-mobile-record-indicator.is-active {
+.resojot-plugin-live-strip.is-active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.resojot-plugin-mobile-record-indicator-track {
+.resojot-plugin-live-strip-track {
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 0;
   background: transparent;
   overflow: hidden;
+  isolation: isolate;
 }
 
-.resojot-plugin-mobile-record-indicator-line {
+.resojot-plugin-live-strip-line {
   --resojot-record-line-scale: 0;
   --resojot-record-line-opacity: 0;
   position: absolute;
   inset: 0;
+  z-index: 1;
   border-radius: 999px;
   background: var(--resojot-rec-accent);
   opacity: var(--resojot-record-line-opacity, 0);
@@ -134,7 +136,7 @@
 }
 
 @supports (color: color-mix(in srgb, red 50%, white)) {
-  .resojot-plugin-mobile-record-indicator-line {
+  .resojot-plugin-live-strip-line {
     background: linear-gradient(
       90deg,
       color-mix(in srgb, var(--resojot-rec-accent) 78%, rgba(255, 255, 255, 0.18)) 0%,
@@ -142,6 +144,55 @@
       color-mix(in srgb, var(--resojot-rec-accent) 78%, rgba(255, 255, 255, 0.18)) 100%
     );
   }
+}
+
+.resojot-plugin-global-live-strip-host {
+  position: fixed;
+  z-index: 25;
+  height: 4px;
+  pointer-events: none;
+}
+
+.resojot-plugin-global-live-strip-host[hidden] {
+  display: none !important;
+}
+
+.resojot-plugin-global-live-strip-host .resojot-plugin-live-strip {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.resojot-plugin-mobile-live-strip-host {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.resojot-plugin-mobile-live-strip-host.is-fallback {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: 0;
+  right: auto;
+}
+
+.resojot-plugin-mobile-live-strip-host[hidden] {
+  display: none !important;
+}
+
+.resojot-plugin-mobile-live-strip-host .resojot-plugin-live-strip {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .resojot-plugin-workbench {
@@ -1320,44 +1371,179 @@
   resize: vertical;
 }
 
-.resojot-settings-prompt-profile-editor .setting-item {
-  border-top: 0;
-  padding-left: 0;
-  padding-right: 0;
+.resojot-settings-prompt-profile-editor-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
-.resojot-settings-prompt-profile-editor-prompt-setting.setting-item {
+.resojot-settings-prompt-profile-editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-button {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid color-mix(
+    in srgb,
+    var(--background-modifier-border) 82%,
+    transparent
+  ) !important;
+  border-radius: 999px;
+  background: var(--background-secondary) !important;
+  box-shadow: none !important;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    transform 140ms ease;
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-button:hover {
+  color: var(--text-normal);
+  border-color: var(--background-modifier-border-hover, var(--background-modifier-border)) !important;
+  background: var(--background-modifier-hover) !important;
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-button:focus,
+.resojot-settings-prompt-profile-editor-toolbar-button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-button.is-primary {
+  border-color: color-mix(
+    in srgb,
+    var(--interactive-accent) 78%,
+    var(--background-modifier-border)
+  ) !important;
+  background: var(--interactive-accent) !important;
+  color: var(--text-on-accent, #ffffff);
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-button.is-primary:hover {
+  border-color: color-mix(
+    in srgb,
+    var(--interactive-accent-hover, var(--interactive-accent)) 82%,
+    var(--background-modifier-border)
+  ) !important;
+  background: var(--interactive-accent-hover, var(--interactive-accent)) !important;
+  color: var(--text-on-accent, #ffffff);
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-button.is-primary:disabled {
+  opacity: 0.48;
+  cursor: default;
+  transform: none;
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.resojot-settings-prompt-profile-editor-toolbar-label {
+  display: none;
+  white-space: nowrap;
+}
+
+.resojot-settings-prompt-profile-editor-fields {
+  display: flex;
   flex-direction: column;
-  align-items: stretch;
+  gap: 14px;
+  width: 100%;
+}
+
+.resojot-settings-prompt-profile-editor-section {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
-.resojot-settings-prompt-profile-editor-prompt-setting .setting-item-info,
-.resojot-settings-prompt-profile-editor-prompt-setting .setting-item-control {
-  width: 100%;
-  margin-left: 0;
-  padding-right: 0;
+.resojot-settings-prompt-profile-editor-section-title {
+  font-size: var(--font-ui-small);
+  line-height: 1.45;
+  font-weight: 600;
+  color: var(--text-normal);
 }
 
-.resojot-settings-prompt-profile-editor-prompt-setting .setting-item-control {
-  justify-content: stretch;
-  max-width: none;
-}
-
+.resojot-settings-prompt-profile-editor-name-input,
 .resojot-settings-prompt-profile-editor-textarea {
   box-sizing: border-box;
   display: block;
   width: 100% !important;
   max-width: 100%;
-  min-height: 260px;
+  border: 1px solid color-mix(
+    in srgb,
+    var(--background-modifier-border) 84%,
+    transparent
+  ) !important;
+  border-radius: 16px !important;
+  background: var(--background-secondary) !important;
+  box-shadow: none !important;
+  color: var(--text-normal);
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.resojot-settings-prompt-profile-editor-name-input {
+  min-height: 52px;
+  padding: 0 18px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.resojot-settings-prompt-profile-editor-name-input::placeholder {
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.resojot-settings-prompt-profile-editor-textarea {
+  min-height: 320px;
+  padding: 16px 18px 18px;
+  font-size: 14px;
+  line-height: 1.65;
   resize: vertical;
 }
 
-.resojot-settings-prompt-profile-editor-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding-top: 8px;
+.resojot-settings-prompt-profile-editor-name-input:focus,
+.resojot-settings-prompt-profile-editor-name-input:focus-visible,
+.resojot-settings-prompt-profile-editor-textarea:focus,
+.resojot-settings-prompt-profile-editor-textarea:focus-visible {
+  outline: none;
+  border-color: color-mix(in srgb, var(--interactive-accent) 46%, transparent) !important;
+  background: var(--background-primary) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--interactive-accent) 10%, transparent) !important;
 }
 
 .resojot-settings-nav {
@@ -1428,6 +1614,10 @@
   display: none;
 }
 
+body > .resojot-settings-mobile-nav--portal {
+  display: block;
+}
+
 .resojot-settings-content {
   min-width: 0;
   width: 100%;
@@ -1446,11 +1636,13 @@
   .resojot-settings-nav {
     display: block;
     border-bottom: 0;
+    height: 0;
+    min-height: 0;
     overflow: visible;
   }
 
   .resojot-settings-nav.resojot-settings-nav--mobile {
-    padding: 0 0 2px;
+    padding: 0;
   }
 
   .resojot-settings-nav.resojot-settings-nav--mobile .resojot-settings-nav-button {
@@ -1460,7 +1652,8 @@
   .resojot-settings-mobile-nav {
     display: block;
     margin: 0;
-    position: relative;
+    height: 0;
+    position: static;
   }
 
   .resojot-settings-mobile-nav summary {
@@ -1472,31 +1665,66 @@
   }
 
   .resojot-settings-mobile-nav-trigger {
-    display: flex;
+    position: fixed;
+    right: calc(14px + env(safe-area-inset-right, 0px));
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    z-index: 10050;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    width: 100%;
-    max-width: 100%;
-    padding: 10px 0 12px;
-    border: 0;
-    border-bottom: 1px solid var(--background-modifier-border);
-    background: transparent;
-    color: var(--text-normal);
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    padding: 0;
+    border: 1px solid color-mix(
+      in srgb,
+      var(--interactive-accent) 72%,
+      var(--background-modifier-border)
+    ) !important;
+    border-radius: 999px;
+    background: var(--interactive-accent);
+    box-shadow:
+      0 14px 28px color-mix(in srgb, var(--interactive-accent) 26%, rgba(15, 23, 42, 0.22)),
+      0 3px 10px rgba(15, 23, 42, 0.1);
+    color: var(--text-on-accent, #ffffff);
     cursor: pointer;
+    transition:
+      background-color 150ms ease,
+      opacity 150ms ease,
+      transform 150ms ease,
+      box-shadow 150ms ease,
+      border-color 150ms ease;
   }
 
-  .resojot-settings-mobile-nav-current,
+  .resojot-settings-mobile-nav-trigger:hover {
+    background: var(--interactive-accent-hover, var(--interactive-accent));
+    border-color: color-mix(
+      in srgb,
+      var(--interactive-accent-hover, var(--interactive-accent)) 78%,
+      var(--background-modifier-border)
+    ) !important;
+  }
+
+  .resojot-settings-mobile-nav-trigger:focus,
+  .resojot-settings-mobile-nav-trigger:focus-visible,
+  .resojot-settings-mobile-nav-button:focus,
+  .resojot-settings-mobile-nav-button:focus-visible,
+  .resojot-settings-layout select:focus,
+  .resojot-settings-layout select:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
   .resojot-settings-mobile-nav-button-main {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     min-width: 0;
   }
 
   .resojot-settings-mobile-nav-icon,
-  .resojot-settings-mobile-nav-check,
-  .resojot-settings-mobile-nav-chevron {
+  .resojot-settings-mobile-nav-check {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1506,10 +1734,20 @@
   }
 
   .resojot-settings-mobile-nav-icon svg,
-  .resojot-settings-mobile-nav-check svg,
-  .resojot-settings-mobile-nav-chevron svg {
+  .resojot-settings-mobile-nav-check svg {
     width: 16px;
     height: 16px;
+  }
+
+  .resojot-settings-mobile-nav-trigger-icon {
+    width: 24px;
+    height: 24px;
+    color: inherit;
+  }
+
+  .resojot-settings-mobile-nav-trigger-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
   .resojot-settings-mobile-nav-label {
@@ -1517,19 +1755,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.45;
     font-weight: 500;
-  }
-
-  .resojot-settings-mobile-nav-chevron {
-    color: var(--text-muted);
-    transition: transform 140ms ease, color 140ms ease;
-  }
-
-  .resojot-settings-mobile-nav[open] .resojot-settings-mobile-nav-chevron {
-    transform: rotate(180deg);
-    color: var(--text-normal);
   }
 
   .resojot-settings-mobile-nav-dismiss {
@@ -1541,7 +1769,7 @@
     position: fixed;
     inset: 0;
     background: transparent;
-    z-index: 39;
+    z-index: 10048;
   }
 
   .resojot-settings-mobile-nav-menu {
@@ -1549,23 +1777,31 @@
   }
 
   .resojot-settings-mobile-nav[open] .resojot-settings-mobile-nav-menu {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    z-index: 40;
+    position: fixed;
+    right: calc(12px + env(safe-area-inset-right, 0px));
+    bottom: calc(158px + env(safe-area-inset-bottom, 0px));
+    z-index: 10051;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    width: min(340px, calc(100vw - 32px));
-    max-width: 100%;
-    padding: 6px 0;
-    border: 1px solid color-mix(in srgb, var(--background-modifier-border) 78%, transparent);
-    border-radius: 12px;
+    gap: 4px;
+    width: min(
+      286px,
+      calc(100vw - 24px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px))
+    );
+    max-width: none;
+    max-height: min(
+      396px,
+      calc(100vh - 108px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px))
+    );
+    padding: 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 14px;
     background: var(--background-primary);
     box-shadow:
-      0 14px 28px rgba(15, 23, 42, 0.12),
-      0 2px 8px rgba(15, 23, 42, 0.06);
-    overflow: hidden;
+      0 18px 34px rgba(15, 23, 42, 0.14),
+      0 4px 12px rgba(15, 23, 42, 0.08);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .resojot-settings-mobile-nav-button {
@@ -1576,14 +1812,10 @@
     justify-content: space-between;
     gap: 12px;
     width: 100%;
-    padding: 11px 14px;
+    min-height: 46px;
+    padding: 12px 14px;
     border: 0 !important;
-    border-bottom: 1px solid
-      color-mix(
-        in srgb,
-        var(--background-modifier-border-hover, var(--background-modifier-border)) 72%,
-        transparent
-      );
+    border-radius: 10px;
     background: transparent !important;
     box-shadow: none !important;
     color: var(--text-muted);
@@ -1591,22 +1823,28 @@
     cursor: pointer;
   }
 
-  .resojot-settings-mobile-nav-button:last-child {
-    border-bottom: 0;
-  }
-
-  .resojot-settings-mobile-nav-button:hover {
-    background: color-mix(in srgb, var(--background-modifier-hover) 68%, transparent) !important;
+  .resojot-settings-mobile-nav-button:hover:not(.is-active) {
+    background: var(--background-modifier-hover) !important;
   }
 
   .resojot-settings-mobile-nav-button.is-active {
     color: var(--interactive-accent);
     font-weight: 600;
-    background: color-mix(in srgb, var(--interactive-accent) 10%, transparent) !important;
+    background: transparent !important;
   }
 
   .resojot-settings-mobile-nav-check {
     color: var(--interactive-accent);
+  }
+
+  .resojot-settings-mobile-nav.is-hidden .resojot-settings-mobile-nav-trigger {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(18px);
+  }
+
+  .resojot-settings-content {
+    padding-bottom: calc(74px + env(safe-area-inset-bottom, 0px));
   }
 
   .resojot-settings-prompt-profile-setting .setting-item-info {
@@ -1657,31 +1895,56 @@
     min-height: 260px;
   }
 
-  .modal.resojot-settings-prompt-profile-editor-modal {
-    width: calc(100vw - 24px);
-    max-width: none;
-    max-height: calc(100vh - 28px - env(safe-area-inset-top, 0px));
+  .resojot-settings-prompt-profile-editor-page {
+    gap: 12px;
+    padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px));
   }
 
-  .modal.resojot-settings-prompt-profile-editor-modal .modal-content {
-    max-height: calc(100vh - 108px - env(safe-area-inset-top, 0px));
-    overflow-y: auto;
-    padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
+  .resojot-settings-prompt-profile-editor-toolbar {
+    position: fixed;
+    right: calc(14px + env(safe-area-inset-right, 0px));
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    z-index: 10052;
+    justify-content: flex-end;
+    gap: 8px;
+    padding-top: 0;
   }
 
-  .resojot-settings-prompt-profile-editor {
-    padding-bottom: 0;
+  .resojot-settings-prompt-profile-editor-toolbar-button {
+    width: auto;
+    min-width: 0;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 12px;
+    box-shadow:
+      0 10px 24px rgba(15, 23, 42, 0.12),
+      0 2px 8px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  .resojot-settings-prompt-profile-editor-toolbar-label {
+    display: inline;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  .resojot-settings-prompt-profile-editor-fields {
+    gap: 12px;
+  }
+
+  .resojot-settings-prompt-profile-editor-section {
+    gap: 7px;
+  }
+
+  .resojot-settings-prompt-profile-editor-name-input {
+    min-height: 50px;
+    padding: 0 16px;
+    font-size: 15px;
   }
 
   .resojot-settings-prompt-profile-editor-textarea {
-    min-height: 320px;
-  }
-
-  .resojot-settings-prompt-profile-editor-actions {
-    padding-top: 12px;
-    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+    min-height: 340px;
+    padding: 15px 16px 18px;
   }
 
   .resojot-settings-prompt-profile-name {
