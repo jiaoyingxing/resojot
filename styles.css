@@ -481,7 +481,7 @@
 
 .resojot-plugin-record-controls.is-compact {
   display: grid;
-  grid-template-columns: 92px auto 92px;
+  grid-template-columns: minmax(0, 1fr) auto max-content;
   align-items: center;
   justify-content: center;
   gap: 12px;
@@ -489,14 +489,16 @@
 }
 
 .resojot-plugin-record-controls-spacer {
-  width: 92px;
+  width: 100%;
+  min-width: 0;
   height: 1px;
 }
 
 .resojot-plugin-toolbar--compact-inline {
   margin-left: 0;
   justify-content: flex-start;
-  width: 92px;
+  width: max-content;
+  max-width: 100%;
 }
 
 .resojot-plugin-recording-status {
@@ -522,6 +524,68 @@
   line-height: 1.4;
   color: var(--text-muted);
   word-break: break-all;
+}
+
+.resojot-polish-profile-suggestion-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.resojot-polish-profile-suggestion-title {
+  min-width: 0;
+  font-weight: 600;
+  color: var(--text-normal);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resojot-polish-profile-suggest-modal .suggestion-item.is-current
+  .resojot-polish-profile-suggestion-title {
+  color: var(--interactive-accent);
+  font-weight: 700;
+}
+
+.resojot-polish-profile-suggestion-summary {
+  margin-top: 2px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.resojot-polish-profile-suggest-modal-container .modal-bg,
+.resojot-polish-profile-suggest-modal,
+.resojot-polish-profile-suggest-modal .resojot-polish-profile-suggest-input,
+.resojot-polish-profile-suggest-modal .resojot-polish-profile-suggest-results,
+.resojot-polish-profile-suggest-modal .suggestion-container,
+.resojot-polish-profile-suggest-modal .suggestion-item {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background-image: none !important;
+}
+
+.resojot-polish-profile-suggest-modal-container .modal-bg {
+  background: rgba(15, 23, 42, 0.16);
+}
+
+.resojot-polish-profile-suggest-modal {
+  background: var(--background-primary) !important;
+}
+
+.resojot-polish-profile-suggest-modal .resojot-polish-profile-suggest-input {
+  background: var(--background-secondary) !important;
+}
+
+.resojot-polish-profile-suggest-modal .resojot-polish-profile-suggest-results,
+.resojot-polish-profile-suggest-modal .suggestion-container {
+  background: var(--background-primary) !important;
+}
+
+.resojot-polish-profile-suggest-modal .suggestion-item.is-selected {
+  background: var(--background-modifier-hover) !important;
 }
 
 .resojot-plugin-record-btn {
@@ -617,8 +681,14 @@
   display: none !important;
 }
 
-.resojot-plugin-tool-btn--pending {
-  color: var(--color-red, #ef4444);
+.resojot-plugin-tool-btn--pending .resojot-plugin-tool-btn-icon,
+.resojot-plugin-tool-btn--pending .resojot-plugin-tool-btn-icon svg {
+  color: var(--text-error, var(--color-red, #ef4444));
+}
+
+.resojot-plugin-tool-btn--pending .resojot-plugin-tool-btn-icon svg,
+.resojot-plugin-tool-btn--pending .resojot-plugin-tool-btn-icon svg * {
+  stroke: currentColor;
 }
 
 .resojot-plugin-live-overlay {
@@ -2016,12 +2086,7 @@ body > .resojot-settings-mobile-nav--portal {
   }
 
   .resojot-plugin-record-controls.is-compact {
-    grid-template-columns: 84px auto 84px;
-  }
-
-  .resojot-plugin-record-controls-spacer,
-  .resojot-plugin-toolbar--compact-inline {
-    width: 84px;
+    grid-template-columns: minmax(0, 1fr) auto max-content;
   }
 
   .resojot-plugin-section-title {
