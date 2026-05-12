@@ -184,7 +184,7 @@ It generally contains:
 
 It does not contain private source code, development documents, tests, internal build scripts, license generation materials, private keys, API keys, or local user data.
 
-The plugin has not yet entered the official Obsidian plugin submission process. If source review access is required later under Obsidian's closed-source plugin review process, the author will provide reviewer access to a private source repository separately.
+If source review access is required during Obsidian's plugin review process, the author can provide reviewer access to a private source repository separately.
 
 ## 📌 Current Status
 
