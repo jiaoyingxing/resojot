@@ -62,7 +62,7 @@ The value of voice notes is not only speed. It is fidelity. Pauses, additions, t
 
 ### 1. Record Quickly
 
-Start recording from the workspace, command palette, or mobile-friendly entry points. Resojot is built around saving the thought first, not making you understand a large configuration surface before you can begin.
+Start recording from the workspace, floating strip, command palette, or mobile-friendly entry points. If you use shortcuts or launchers, you can also copy an Obsidian URL that starts or stops recording directly. Resojot is built around saving the thought first, not making you understand a large configuration surface before you can begin.
 
 ### 2. Write To Markdown
 
@@ -70,7 +70,7 @@ After recording, audio is saved into your Obsidian vault and written into Markdo
 
 ### 3. Transcribe And Recover
 
-With a license, Resojot can enable automatic transcription, imported-audio transcription, current-note audio transcription, and a pending task queue. Unfinished or failed tasks can stay in the pending list for retry and recovery.
+With a license, Resojot can enable automatic transcription, imported-audio transcription, current-note audio transcription, transcribe-and-polish commands, and a pending task queue. Unfinished or failed tasks can stay in the pending list for retry, recovery, and diagnostics.
 
 ### 4. Optional AI Polish
 
@@ -81,37 +81,50 @@ After transcription, you can connect your configured LLM provider to polish text
 ### Recording And Writing
 
 - Record directly inside Obsidian.
+- Keep recording visible from the workspace, floating strip, or lightweight mobile entry points.
+- Copy an Obsidian URL to start or stop recording from a shortcut, widget, or launcher.
 - Save audio files and embed them into Markdown notes.
 - Choose new note, daily append, or monthly append writing modes.
 - Use templates for more consistent voice note structure.
-- Use lightweight mobile-first entries and workspace views.
+
+### Workspace And Review
+
+- Use a desktop workspace that adapts between a compact widget, a sidebar single-column view, and a dual-pane desktop view.
+- Preview the selected note beside the workspace in dual-pane mode.
+- Jump back to the active recording or recent note from lightweight cross-page controls.
 
 ### Transcription And Recovery
 
 - Enable automatic transcription after recording with a license.
-- Transcribe imported audio files.
-- Transcribe audio in the current note.
+- Import existing audio files into the transcription flow.
+- Transcribe audio in the current note, or transcribe and polish it in one step.
 - Keep failed or unfinished work in a pending list for retry.
-- Use common error hints and diagnostics to reduce troubleshooting cost.
+- Use service validation, common error hints, and diagnostics to reduce troubleshooting cost.
 
 ### AI Organization
 
 - Continue into an AI polishing flow after transcription with a license.
 - Use common LLM providers or OpenAI-compatible endpoints.
 - Customize prompt presets so the same spoken material can become different styles of writing.
+- Use built-in provider presets such as SiliconFlow and Doubao / Volcengine Ark to shorten setup.
 
 ### Provider Routes
 
-Available provider routes depend on your own accounts, API keys, balance, network access, and provider policies:
+Available provider routes depend on your own accounts, API keys, balance, network access, and provider policies.
+
+Current transcription routes include:
 
 - Local OpenAI-compatible server
 - Manual cloud OpenAI-compatible endpoint
 - SiliconFlow-compatible OpenAI route
+- Doubao ASR
 - Tencent Cloud ASR
 - Aliyun DashScope ASR
 - OpenAI official
 - Azure Speech
 - Google Speech-to-Text
+
+Polishing can continue through your configured LLM route, including common OpenAI-compatible endpoints and presets such as SiliconFlow and Doubao / Volcengine Ark.
 
 ## 🔐 License And Versions
 
@@ -184,11 +197,12 @@ It generally contains:
 
 It does not contain private source code, development documents, tests, internal build scripts, license generation materials, private keys, API keys, or local user data.
 
-If source review access is required during Obsidian's plugin review process, the author can provide reviewer access to a private source repository separately.
+The current public distribution path is GitHub Releases. This repository does not include source code.
 
 ## 📌 Current Status
 
 - Please refer to the GitHub Releases page for actually published installable versions.
+- Public distribution is currently through GitHub Releases.
 
 ## ✉️ Contact
 
