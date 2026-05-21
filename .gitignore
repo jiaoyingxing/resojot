@@ -2,6 +2,11 @@ node_modules/
 data.json
 *.log
 *.tsbuildinfo
+AGENTS.md
+README-zh.md
+RELEASE_NOTES*.md
+ReleaseNotes*.md
+release-notes/
 
 # Private source repository content must never be staged here.
 src/
