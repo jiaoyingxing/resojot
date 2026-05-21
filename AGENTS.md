@@ -3,7 +3,7 @@
 ## 先读
 
 1. 需要公开介绍时读 `README.md`
-2. 需要中文介绍时读 `README-zh.md`
+2. 需要英文介绍时读 `README-en.md`
 3. 需要运行事实时读 `manifest.json` 和 `versions.json`
 
 ## 仓库边界

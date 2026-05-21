@@ -1,18 +1,14 @@
 <p align="center">
-  <strong>Language:</strong> <strong>English</strong> · <a href="./README-zh.md"><strong>简体中文</strong></a>
+  <strong>阅读语言：</strong> <a href="./README-en.md"><strong>English</strong></a> · <strong>简体中文</strong>
 </p>
 
-# Resojot
+# Resojot 应声记
 
-Give Obsidian room for your full expression.
+帮你留住那些来得很快、来不及打字的内容——通勤路上突然冒出的一个想法，散步时慢慢捋顺的一段思路，这些时候，直接开口记录是最方便的。
 
-Speak it out. Save it as a note.
+Resojot能帮记下完整的表达，整理成笔记，放进Obsidian。整个链路都是自动进行的，你只需要开口讲话就行。
 
-A lot of things are worth keeping. The problem is that, when the moment comes, capturing them often feels like too much work. Typing is fine when you are already sitting in front of a keyboard. What usually slips away are the thoughts that arrive too quickly to type: a sentence that appears on the road, a judgment that forms in the middle of a meeting, a line of thought that slowly comes together while walking. In those moments, speaking is the most natural move.
-
-Resojot is built to bring that moment directly into Obsidian.
-
-You speak first, then save first. The audio goes into your vault, Markdown is written into your note, and transcription, polish, and further editing all continue on the same note. On desktop there are shortcuts. On mobile there are Obsidian URLs that can start recording quickly. The whole entry is meant to stay light and avoid interrupting the moment.
+电脑端支持快捷键，手机端也支持URL快速拉起录音，入口和后续整理都很方便，完全不打断你当下的表达。
 
 <p align="center">
   <img src="./assets/手机-工作台.png" width="30%" />
@@ -20,137 +16,137 @@ You speak first, then save first. The audio goes into your vault, Markdown is wr
   <img src="./assets/手机-自动转写.png" width="30%" />
 </p>
 
-## Why
+## 起因
 
-Obsidian is great at organizing things that are already formed. Many people already treat it as their main note system. But when you actually want to capture something, you are not always sitting at a keyboard. A lot of ideas, judgments, spoken drafts, and temporary conclusions appear as speech first. The content is already there, but turning it into a note still means finding the right page, switching apps, thinking about formats, figuring out import, and deciding how to write it into Markdown. That is where many notes stop before they begin.
+Obsidian 很适合整理已经成形的内容，很多人也早就把它当成了自己的主笔记库。可在真正想记的那一刻，人并不总在键盘前。很多念头、判断、口头草稿、临时结论，都是先以说话的方式出现。明明已经有内容了，却还得去找页面、切软件、补格式、想怎么导入、怎么写成 Markdown，这一下就会让很多记录停住。
 
-So the material ends up somewhere else first: chat apps, phone notes, voice messages, temporary drafts, or nowhere at all. By the time you come back later, the original tone, detail, and context have often faded.
+于是这些东西会先落到别的地方。微信、备忘录、语音消息、临时草稿，甚至就这么过去了。等回头再补，原来的语气、细节和当时的状态，往往已经淡了。
 
-That is the gap Resojot is trying to close. The point is not how to record audio. The point is how to let something you wanted to keep, but nearly skipped because it felt annoying, grow directly into Obsidian.
+应声记想补上的，就是这一小段空白。它想解决的，是怎么让原本想记、但嫌麻烦的内容，直接长进 Obsidian。
 
-## Entry
+## 入口
 
-Resojot is closer to a way of entering your notes.
+应声记更接近一种进入笔记的方式。
 
-You start from a shortcut, command, workspace, or mobile entry. The audio is saved first. Markdown is written first. Short material can stop there. Longer material can continue into transcription and polish. Audio already inside the current note and audio imported later can enter the same path too.
+你用快捷键、命令、工作台、移动端入口把录音拉起来，音频先落盘，Markdown 先写下去。短内容说完就收，长内容顺着转写和润色继续往下走。当前笔记里的音频、后来导入的音频，也都能接进这条路。
 
-The main character is always the note. Recording is the entry, transcription is the process, polish is the cleanup, and the final thing that remains is the note already inside Obsidian. The point is not that you got one more piece of source material. The point is that the material has already come back into your own note system.
+整件事的主角始终是笔记。录音是入口，转写是过程，润色是后处理，最后留下来的，是已经进入 Obsidian 的那篇笔记。重点不在多了一段素材，重点在这段内容已经回到了自己的笔记库里。
 
-## Expression
+## 表达
 
-Typing tends to squeeze a lot of things out. Tone, detail, context, and the event itself all get compressed while you are trying to clean up a sentence. A lot of content that looks a little redundant is exactly what people delete while typing, yet that same redundancy can help AI understand the meaning more completely later.
+打字很容易把很多东西收掉。语气、细节、上下文、事件本身，都会在整理句子的过程中被压缩掉。很多看上去有点冗余的内容，打字时会下意识删掉，但后面的 AI 理解，恰恰需要这些冗余，理解才会更完整。
 
-Once that material stays in place, it also becomes easier to look back and understand what was actually happening at the time. Often the valuable part is not only the conclusion itself, but also how you arrived there.
+这些内容留下来以后，后面回看会更方便，也更容易知道当时到底发生了什么。很多时候，真正有价值的并不只是结论本身，还包括你是怎么说到这里的。
 
-That is the part Resojot is trying to keep.
+应声记想保住的，就是这部分内容。
 
-## Flow
+## 用法
 
-Sometimes it is just one short thought. Press once, speak, stop, and the note already holds it.
+有时候只是一句短念头。按一下，说完，收住，笔记里已经留下痕迹。
 
-Sometimes it is something longer. Meetings, classes, discussions, and reviews can be captured first and then moved through transcription, polish, and later splitting or cleanup on the same note.
+有时候是一段更长的内容。会议、课堂、讨论、复盘，先完整留下来，后面再顺着同一篇笔记去转写、润色、拆分整理。
 
-Sometimes the material comes from earlier audio. Audio already in the current note and audio imported later can keep moving through the same path.
+有时候内容来自更早的时候。当前笔记里的音频、后来导入的音频，同样能继续走这套流程。
 
-The priority stays the same all the way through: when you want to keep something, avoid getting blocked by operation overhead; once it is captured, avoid doing a second round of manual moving later.
+整条路的重点一直都很一致：想记的时候，尽量别被操作打断；记完以后，别再回头做第二遍搬运。
 
-## Cleanup
+## 整理
 
-Transcription turns spoken material into text. Polish handles later reading cleanup. Filler words and obvious noise can be reduced, reading becomes easier, and the original tone and meaning are kept as much as possible. This is later-stage cleanup. It does not move the material into another system, and it does not try to rewrite the expression into something unrecognizable.
+转写负责把口头内容继续落成文字，润色负责做后面的阅读整理。真正没有意义的口癖和明显噪音会被适当地收掉，读起来会更方便，原来的语气和内容会尽量保留。它们做的是后面的整理工作，不会把整件事带去另一套系统里，也不会把原始表达改写成完全陌生的东西。
 
-From the first spoken sentence to the note itself and the editing that follows, the whole path stays inside Obsidian.
+从开口，到笔记落下，再到后续整理，这整条路都会留在 Obsidian 里。
 
-## Tradeoffs
+## 取舍
 
-Resojot is not trying to become professional recording software.
+应声记没有往专业录音软件那条路上走。
 
-It does not aim for heavy recording management, a standalone app, or a thick AI writing workflow. It is closer to giving Obsidian a voice entry that is easy enough to reach for: when you want to keep something, you speak directly, and what remains afterwards is a note you can continue working on instead of a piece of source material waiting to be dealt with later.
+这里不追求复杂的录音管理，不想做独立 App，也不想把重点放到一套很重的 AI 写作流程上。更接近的感觉，是给 Obsidian 补上一个足够顺手的语音记录入口：想记的时候直接开口，记完以后就是一篇能继续整理的笔记，而不是一段还等着以后处理的素材。
 
-The goal is to make recording easier first, let the expression stay, and clean it up later.
+先把记录这件事做得更方便，让表达先留下来，再慢慢整理。
 
-## Situations
+## 场景
 
-Resojot becomes useful whenever the moment is basically: “I want to keep this, but doing it right now feels annoying.”
+只要出现“我想记，但现在动手太麻烦了”的那个瞬间，应声记就会很有价值。
 
-That can happen while commuting, walking, sitting in a meeting, in class, in discussion, or simply while sitting at a desk and not wanting to switch back to keyboard input for a few lines. As long as the material was always meant to live in Obsidian, this path is much easier than throwing it somewhere else first and moving it back later.
+这可能发生在通勤、走路、散步、会议、课堂、讨论里，也可能只是坐在电脑前，不想为了几句话再切回键盘输入。只要最后还是想把内容留进 Obsidian，这条路就会比“先放到别处，以后再搬回来”方便很多。
 
-If Obsidian is already where projects, reviews, ideas, and judgments are kept, that difference becomes more obvious.
+如果平时本来就用 Obsidian 写项目、写复盘、存灵感、存判断，这种体感会更明显。
 
-## Provider Routes
+## 服务与接入
 
-Current transcription routes include local OpenAI-compatible services, manually configured cloud OpenAI-compatible endpoints, SiliconFlow, Doubao ASR, Tencent Cloud ASR, Aliyun DashScope ASR, OpenAI, Azure Speech, and Google Speech-to-Text.
+当前转写已接到本地 OpenAI-compatible、手动填写的云端 OpenAI-compatible、硅基流动、豆包 ASR、腾讯云 ASR、阿里云 DashScope ASR、OpenAI、Azure Speech、Google Speech-to-Text。
 
-Polish follows your configured LLM route, including common OpenAI-compatible endpoints and presets such as SiliconFlow and Doubao / Volcengine Ark.
+润色会沿着你配置的大语言模型路线继续走，常见 OpenAI-compatible 接口，以及硅基流动、豆包 / 火山方舟等预设都已接好。
 
-The route you use depends on your own account, API keys, balance, network access, and current provider policies.
+实际走哪条路，取决于你自己的账号、API key、余额、网络环境和服务商政策。
 
-## Installation
+## 安装
 
-Public distribution currently happens through GitHub Releases.
+当前公开分发走 GitHub Releases。
 
-Because the official Community Plugins directory does not currently support closed-source plugins, Resojot does not appear in the in-app plugin store search.
+由于官方 Community Plugins 目录当前不支持闭源插件，应声记不会出现在应用内插件商店搜索里。
 
-### Recommended: BRAT
+### 推荐方式：BRAT
 
-1. Install `BRAT` from Obsidian's Community Plugins browser.
-2. Open BRAT and choose `Add Beta plugin`.
-3. Enter `https://github.com/jiaoyingxing/resojot`.
-4. Let BRAT install the latest available Resojot build.
-5. Enable `Resojot` in Obsidian settings.
+1. 先在 Obsidian 的 Community Plugins 浏览器里安装 `BRAT`。
+2. 打开 BRAT，选择 `Add Beta plugin`。
+3. 输入 `https://github.com/jiaoyingxing/resojot`。
+4. 让 BRAT 安装应声记当前可用的最新构筑物。
+5. 在 Obsidian 设置里启用 `Resojot`。
 
-Using BRAT makes future updates easier.
+用 BRAT，后面更新会更省事。
 
-### Manual Installation
+### 手动安装
 
-1. Download `main.js`, `manifest.json`, and `styles.css` from the matching GitHub Release.
-2. Create `.obsidian/plugins/resojot/` inside your vault.
-3. Place those three files into that folder.
-4. Restart Obsidian, or reload community plugins.
-5. Enable `Resojot` in Obsidian settings.
+1. 从对应的 GitHub Release 下载 `main.js`、`manifest.json` 和 `styles.css`。
+2. 在你的 vault 下创建 `.obsidian/plugins/resojot/` 文件夹。
+3. 将这三个文件放入该文件夹。
+4. 重启 Obsidian，或重新加载社区插件。
+5. 在 Obsidian 设置中启用 `Resojot`。
 
-## License
+## 授权
 
-Resojot uses feature licensing.
+应声记采用功能授权方式。
 
-Without a license, you can first try the basic voice capture flow. With a license, automatic transcription, imported-audio transcription, pending-task recovery, and AI polish become available.
+未授权状态下，可以先用基础语音记录感受这条路。授权后，自动转写、导入音频转写、待处理恢复、AI 润色这部分会一并打开。
 
-Available without a license:
+未授权时已有：
 
-- Recording
-- Saving audio
-- Writing basic Markdown notes
-- Using basic templates
+- 录音
+- 保存音频
+- 写入基础 Markdown 笔记
+- 使用基础模板
 
-Enabled with a license:
+授权后新增：
 
-- Automatic transcription
-- Pending queue and retry
-- Imported-audio transcription
-- AI polish after transcription
+- 自动转写
+- 待处理队列与重试
+- 导入音频转写
+- 转写后的 AI 润色
 
-License notes:
+授权说明：
 
-- License keys are verified locally through signature validation.
-- A Resojot license does not include third-party cloud service quota.
+- 授权码在本地完成签名校验
+- Resojot 授权不包含第三方云服务额度
 
-To get a license key, search for `焦应行` on Xiaohongshu.
+获取授权码：小红书搜索 `焦应行`。
 
-## Privacy And Storage
+## 隐私与存储
 
-- Audio files and Markdown notes are stored in your Obsidian vault.
-- Plugin settings, license state, and pending task state are stored in local Obsidian plugin data.
-- Provider keys, polish API keys, and the license key are stored in Obsidian SecretStorage for the current device and vault.
-- Resojot currently contains no client-side telemetry.
-- If you enable cloud transcription or cloud AI polish, the processed audio or text will be sent to the configured provider.
+- 音频文件和 Markdown 笔记保存在你的 Obsidian vault 中
+- 插件设置、授权状态和待处理状态保存在本地 Obsidian 插件数据中
+- provider key、润色 API key 和授权码保存在 Obsidian SecretStorage 中，并按当前设备和 vault 生效
+- Resojot 当前不包含客户端遥测
+- 一旦启用云端转写或云端 AI 润色，被处理的音频或文字就会发送给所配置的 provider
 
-Do not publish your `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.
+请不要公开 `.obsidian/plugins/resojot/data.json`。它可能包含设置、队列状态、授权状态，以及旧版本遗留的 provider 凭据。
 
-## Closed Source Notice
+## 闭源说明
 
-Resojot is currently distributed as a closed-source plugin. The source code is not public; use BRAT or GitHub Releases above for installation and updates.
+应声记当前以闭源方式分发，源码不公开；安装和更新请使用上面的 BRAT 或 GitHub Releases 路径。
 
-## Contact
+## 联系
 
-Feedback and license access:
+反馈与授权码获取：
 
-- Search Xiaohongshu for `焦应行`
+- 小红书搜索：`焦应行`
