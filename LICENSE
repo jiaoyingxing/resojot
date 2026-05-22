@@ -1,17 +1,214 @@
-Resojot Closed Source License
+Jiao Yingxing Obsidian Plugin Proprietary License
+焦应行 Obsidian 插件专有许可证
 
-Copyright (c) 2026 Jiao Yingxing. All rights reserved.
+Version 1.0 / 版本 1.0
+Last Updated: 2026-05-22 / 最后更新：2026-05-22
 
-Resojot is distributed as a closed-source Obsidian plugin. The public
-repository provides user-facing documentation, screenshots, metadata, and
-compiled release artifacts only.
+Copyright (c) 2026 Jiao Yingxing (焦应行). All rights reserved.
+版权所有 (c) 2026 焦应行。保留所有权利。
 
-You may download and use the compiled plugin artifacts for personal use in
-Obsidian, subject to the product's licensing and feature limits.
+==============================================================================
+1. Limited License Grant / 有限许可授予
+==============================================================================
 
-You may not copy, modify, redistribute, sell, sublicense, reverse engineer,
-decompile, or create derivative works from Resojot or its compiled artifacts
-unless you have explicit written permission from the copyright holder.
+Subject to your full compliance with this License, you are granted a limited,
+non-exclusive, non-transferable, non-sublicensable, revocable license solely
+to do the following:
+在您完全遵守本许可证的前提下，您仅被授予一项有限的、非独占的、
+不可转让的、不可再许可的、可撤销的许可，以进行下列行为：
 
-No warranty is provided. The software is provided "as is", without warranty of
-any kind, express or implied.
+1.1 For purposes of this License, "you" means either:
+    (a) the individual who downloads, installs, or uses the software; or
+    (b) the legal entity on whose behalf that individual lawfully does so, but
+        only for that entity's internal business use.
+    就本许可证而言，“您”是指：
+    (a) 下载、安装或使用本软件的个人；或
+    (b) 该个人合法代表其行事的法人或其他组织，但仅限于该主体的内部业务使用。
+
+1.2 You may download the official release artifacts of this software solely
+    from official distribution channels authorized by the author, including but
+    not limited to the Obsidian Community Plugins directory, GitHub Releases,
+    or other channels expressly designated by the author.
+    您仅可从作者授权的官方分发渠道下载本软件的官方发布产物，包括但不限于
+    Obsidian 社区插件目录、GitHub Releases，或作者明确指定的其他渠道。
+
+1.3 You may install and run the unmodified compiled plugin artifacts in
+    Obsidian vaults that you own or control, solely for your personal use or
+    internal business use.
+    您可以在您拥有或控制的 Obsidian 仓库（Vault）中安装并运行未经修改的
+    编译插件产物，但仅限于您个人使用或内部业务使用。
+
+1.4 Except as expressly granted in this Section 1, no other rights are granted
+    to you, whether by implication, estoppel, or otherwise.
+    除第 1 条明确授予的权利外，不论基于默示、禁止反言或其他原因，均不向您
+    授予任何其他权利。
+
+This License is granted only to you. You may not transfer or assign it to any
+third party without the copyright holder's prior written consent.
+本许可仅授予您本人或依法代表的内部使用主体。未经版权所有者事先书面同意，
+您不得将本许可转让或让与任何第三方。
+
+==============================================================================
+2. No Source Code License / 不授予源码许可
+==============================================================================
+
+No license or right to access, obtain, use, copy, modify, distribute, or
+create derivative works from the source code of this software is granted under
+this License.
+本许可证不授予您访问、取得、使用、复制、修改、分发本软件源代码或基于其
+创作衍生作品的任何许可或权利。
+
+If you obtain access to any source repository, source archive, development
+material, internal document, or non-public build asset relating to this
+software, such access does not by itself grant you any broader right unless the
+copyright holder separately provides explicit written permission.
+如果您取得了与本软件相关的任何源码仓库、源码归档、开发材料、内部文档或
+非公开构建资源的访问权，该访问本身并不当然构成更广泛授权；除非版权所有者
+另行明确书面许可。
+
+==============================================================================
+3. Restrictions / 限制条款
+==============================================================================
+
+All rights not expressly granted above are reserved by the copyright holder.
+未明确授予的所有权利均由版权所有者保留。
+
+Without the copyright holder's prior written permission, you may not, and may
+not permit any third party to:
+未经版权所有者事先书面许可，您不得且不得允许任何第三方：
+
+3.1 Copy, redistribute, republish, sell, lease, sublicense, lend, or otherwise
+    transfer the software or any part of it to any third party.
+    复制、再分发、再发布、销售、出租、出借、再许可或以其他方式将本软件或其
+    任何部分转让给任何第三方。
+
+3.2 Modify, adapt, translate, reverse engineer, decompile, disassemble, or
+    otherwise attempt to derive the source code, architecture, or design of the
+    software from its compiled artifacts or documentation, except to the extent
+    that applicable law expressly permits despite this restriction.
+    修改、改编、翻译、逆向工程、反编译、反汇编，或以其他方式试图从编译产物
+    或文档中推导出本软件的源代码、架构或设计；但适用法律明确允许且该限制
+    不得排除的情形除外。
+
+3.3 Create derivative works from the software, merge the software into other
+    projects, or use any non-public code, styles, assets, documentation, or
+    build outputs obtained from this software or any related source repository
+    to develop competing products or services.
+    基于本软件创作衍生作品、将本软件并入其他项目，或利用从本软件或其相关
+    源码仓库取得的任何非公开代码、样式、资源、文档或构建产物开发竞争性产品
+    或服务。
+
+3.4 Remove, alter, or obscure any copyright notice, proprietary mark,
+    trademark notice, attribution, or this License text from the software or
+    its packaging.
+    移除、更改或掩盖本软件或其包装中的任何版权声明、专有标识、商标声明、
+    署名信息或本许可证文本。
+
+3.5 Use the author's name, product name, logo, or branding to imply
+    endorsement of any modified, unofficial, redistributed, or competing copy.
+    使用作者姓名、产品名称、标志或品牌，暗示作者对任何修改版、非官方版、
+    再分发版本或竞争性复制品的认可、背书或关联。
+
+3.6 Use the software for any unlawful purpose or in any manner that violates
+    this License.
+    将本软件用于任何非法目的，或以任何违反本许可证的方式使用本软件。
+
+==============================================================================
+4. Ownership and Reservation of Rights / 所有权与权利保留
+==============================================================================
+
+This software, including but not limited to its source code, object code,
+documentation, stylesheets, scripts, images, metadata, release artifacts, and
+generated build files, is and shall remain the exclusive property of Jiao
+Yingxing.
+本软件，包括但不限于其源代码、目标代码、文档、样式表、脚本、图像、元数据、
+发布产物及生成的构建文件，均为并将持续为焦应行的专有财产。
+
+Nothing in this License shall be construed as an assignment, sale, or transfer
+of any copyright, patent, trademark, trade secret, or other intellectual
+property right.
+本许可证中的任何内容均不得被解释为对任何版权、专利权、商标权、商业秘密
+或其他知识产权的转让、出售或让与。
+
+No trademark or branding right is granted under this License.
+本许可证不授予任何商标权或品牌使用权。
+
+==============================================================================
+5. Disclaimer of Warranty / 免责声明
+==============================================================================
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, ACCURACY, AVAILABILITY, AND
+NON-INFRINGEMENT.
+
+本软件按“原样”提供，不提供任何形式的担保，无论是明示或默示的，包括但不限于
+对适销性、特定用途适用性、权属、准确性、可用性及非侵权性的担保。
+
+The author does not warrant that the software will be error-free, secure,
+uninterrupted, compatible with every environment, or that any data, content,
+configuration, or settings will not be lost, delayed, or corrupted.
+作者不保证本软件无错误、安全、不中断、适用于所有环境，也不保证任何数据、
+内容、配置或设置不会丢失、延迟或损坏。
+
+==============================================================================
+6. Limitation of Liability / 责任限制
+==============================================================================
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE AUTHOR
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+EXEMPLARY, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS
+OF PROFITS, LOSS OF GOODWILL, BUSINESS INTERRUPTION, PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES, OR ANY OTHER COMMERCIAL OR PERSONAL LOSS, WHETHER ARISING IN
+CONTRACT, TORT, STRICT LIABILITY, OR OTHERWISE, EVEN IF THE AUTHOR HAS BEEN
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+在适用法律允许的最大范围内，作者在任何情况下均不对任何直接、间接、偶然、
+特殊、后果性、示范性或惩罚性损害承担责任，包括但不限于数据丢失、利润损失、
+商誉损失、业务中断、替代商品或服务采购成本，或任何其他商业或个人损失；
+无论该等责任基于合同、侵权、严格责任或其他原因，即使作者已被告知此类损害
+发生的可能性。
+
+==============================================================================
+7. Term and Termination / 期限与终止
+==============================================================================
+
+This License remains effective until terminated. It terminates automatically
+and immediately if you breach any of its terms.
+本许可证自生效起持续有效，直至终止；若您违反其中任何条款，本许可证将自动且
+立即终止。
+
+Upon termination, you must cease all use of the software and, to the extent
+reasonably practicable, delete or destroy all copies in your possession or
+control.
+终止后，您必须停止对本软件的一切使用，并在合理可行的范围内删除或销毁您持有
+或控制的所有副本。
+
+Sections 2, 3, 4, 5, 6, and 8, together with any provision that by its nature
+should survive, shall remain in full force and effect after termination.
+第 2、3、4、5、6、8 条，以及按其性质应在终止后继续有效的其他条款，在本
+许可证终止后继续完全有效。
+
+==============================================================================
+8. Governing Language and Law / 管辖语言与法律
+==============================================================================
+
+This License is issued in both English and Chinese. In the event of any
+conflict, ambiguity, or inconsistency between the two versions, the Chinese
+version shall prevail.
+本许可证以英文和中文同时发布。如两个版本之间存在任何冲突、歧义或不一致，
+以中文版本为准。
+
+This License shall be governed by and construed in accordance with the laws of
+the People's Republic of China, without regard to its conflict of law
+principles.
+本许可证受中华人民共和国法律管辖并依其解释，不考虑其法律冲突原则。
+
+==============================================================================
+Acceptance / 视为接受
+==============================================================================
+
+By downloading, installing, accessing, or using this software, you acknowledge
+that you have read, understood, and agree to be bound by this License.
+一旦下载、安装、访问或使用本软件，即表示您确认已阅读、理解并同意受本许可
+证约束。
