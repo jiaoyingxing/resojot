@@ -4,11 +4,12 @@
 
 # Resojot
 
-Obsidian voice capture plugin. Record first, save audio automatically, create a Markdown note, then continue with transcription and AI polish.
+Obsidian voice capture plugin.
 
-When you think of something while walking, commuting, or in a meeting, it may deserve a place in Obsidian. But without a keyboard nearby, it often gets sent to chat apps or temporary notes first, then moved back later. By the time you return to it, the original tone and detail may already be fading.
-
-Press a shortcut, start speaking, and the audio is saved into your vault while a Markdown note is created at the same time. After that, transcription and polish can continue on the same note inside Obsidian.
+- Record, automatically save audio, and generate Markdown notes.
+- Automatic ASR transcription and LLM polish, all completed inside Obsidian.
+- Every release is tested on real iPhone, Android, and Windows devices.
+- Mobile startup overhead is around 40 ms.
 
 <p align="center">
   <img src="./assets/readme/hero-overview.png" alt="Resojot across mobile and desktop" width="430" />
@@ -18,13 +19,13 @@ Press a shortcut, start speaking, and the audio is saved into your vault while a
 
 ## ⚙️ How It Works
 
-1. 🎤 Start recording with a shortcut or command
+1. 🎤 Start recording with a shortcut, command, or mobile quick entry
 2. 💾 Save the audio into your Obsidian vault
 3. 📝 Create a Markdown note at the same time
-4. 🔄 Optional: transcribe speech into text
+4. 🔄 Optional: automatically transcribe speech into text
 5. ✨ Optional: polish the transcript with AI
 
-Audio already in the current note, or audio imported later, can also go through transcription and polish.
+Audio already in the current note, or audio imported later, can continue through the same transcription and polish path.
 
 <p align="center">
   <img src="./assets/readme/workflow-overview.png" alt="Resojot workflow from recording to Markdown note" width="430" />
@@ -34,14 +35,16 @@ Audio already in the current note, or audio imported later, can also go through 
 
 ## ✨ Core Capabilities
 
-| Phase | Capability | Description |
-|:---|:---|:---|
-| 🎙️ Capture | Voice recording | Start with a shortcut or command, and save audio directly |
-| 📝 Note | Automatic note creation | Create a Markdown file while recording |
-| 🔄 Process | Speech transcription | Turn audio into text through supported ASR providers |
-| ✨ Process | AI polish | Clean up and organize the transcript with an LLM |
-| ⏳ Fallback | Pending queue | Failed transcription tasks go into a queue and can be retried |
-| 📥 Import | Audio import | Import existing audio files and transcribe them later |
+| Category | Description |
+|:---|:---|
+| Entry points | PC supports shortcuts, commands, and buttons; mobile supports URL shortcuts for one-tap recording |
+| Audio storage | Save audio into the Obsidian vault, with configurable per-note / daily / monthly organization, folders, and sorting |
+| Markdown notes | Generate Markdown notes alongside recordings, with recording links, structured sections, and custom templates |
+| Automatic transcription | Unified access to multiple ASR providers, with provider switching and future extensibility; APIs are user-supplied |
+| AI polish | Polish transcript results with LLMs; prompt schemes can be customized and switched at any time |
+| Queue and management | Includes pending-task queue, retry flow, and recording management |
+| Import flow | Import existing audio for later transcription, or use each step independently |
+| Current usage | Already used by hundreds of paying users and still actively updated |
 
 ---
 
@@ -60,8 +63,8 @@ Audio already in the current note, or audio imported later, can also go through 
 
 | Type | Supported Routes |
 |:---|:---|
-| Transcription (ASR) | Local OpenAI-compatible endpoint<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
-| Polish (LLM) | OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao / Volcengine Ark |
+| Transcription (ASR) | Local OpenAI-compatible endpoint (including local deployments such as voxbox)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| Polish (LLM) | OpenAI-compatible<br>Anthropic<br>Gemini<br>Ollama |
 
 > [!NOTE]
 > The actual route you use depends on your own API keys and provider configuration. A Resojot license does not include third-party service quota.
