@@ -4,153 +4,130 @@
 
 # Resojot
 
-Give Obsidian room for your full expression.
+Obsidian voice capture plugin. Record first, save audio automatically, create a Markdown note, then continue with transcription and AI polish.
 
-Speak it out. Save it as a note.
+When you think of something while walking, commuting, or in a meeting, it may deserve a place in Obsidian. But without a keyboard nearby, it often gets sent to chat apps or temporary notes first, then moved back later. By the time you return to it, the original tone and detail may already be fading.
 
-A lot of things are worth keeping. The problem is that, when the moment comes, capturing them often feels like too much work. Typing is fine when you are already sitting in front of a keyboard. What usually slips away are the thoughts that arrive too quickly to type: a sentence that appears on the road, a judgment that forms in the middle of a meeting, a line of thought that slowly comes together while walking. In those moments, speaking is the most natural move.
-
-Resojot is built to bring that moment directly into Obsidian.
-
-You speak first, then save first. The audio goes into your vault, Markdown is written into your note, and transcription, polish, and further editing all continue on the same note. On desktop there are shortcuts. On mobile there are Obsidian URLs that can start recording quickly. The whole entry is meant to stay light and avoid interrupting the moment.
+Press a shortcut, start speaking, and the audio is saved into your vault while a Markdown note is created at the same time. After that, transcription and polish can continue on the same note inside Obsidian.
 
 <p align="center">
-  <img src="./assets/手机-工作台.png" width="30%" />
-  <img src="./assets/手机-录音界面.png" width="30%" />
-  <img src="./assets/手机-自动转写.png" width="30%" />
+  <img src="./assets/readme/hero-overview.png" alt="Resojot across mobile and desktop" width="430" />
 </p>
 
-## Why
+---
 
-Obsidian is great at organizing things that are already formed. Many people already treat it as their main note system. But when you actually want to capture something, you are not always sitting at a keyboard. A lot of ideas, judgments, spoken drafts, and temporary conclusions appear as speech first. The content is already there, but turning it into a note still means finding the right page, switching apps, thinking about formats, figuring out import, and deciding how to write it into Markdown. That is where many notes stop before they begin.
+## ⚙️ How It Works
 
-So the material ends up somewhere else first: chat apps, phone notes, voice messages, temporary drafts, or nowhere at all. By the time you come back later, the original tone, detail, and context have often faded.
+1. 🎤 Start recording with a shortcut or command
+2. 💾 Save the audio into your Obsidian vault
+3. 📝 Create a Markdown note at the same time
+4. 🔄 Optional: transcribe speech into text
+5. ✨ Optional: polish the transcript with AI
 
-That is the gap Resojot is trying to close. The point is not how to record audio. The point is how to let something you wanted to keep, but nearly skipped because it felt annoying, grow directly into Obsidian.
+Audio already in the current note, or audio imported later, can also go through transcription and polish.
 
-## Entry
+<p align="center">
+  <img src="./assets/readme/workflow-overview.png" alt="Resojot workflow from recording to Markdown note" width="430" />
+</p>
 
-Resojot is closer to a way of entering your notes.
+---
 
-You start from a shortcut, command, workspace, or mobile entry. The audio is saved first. Markdown is written first. Short material can stop there. Longer material can continue into transcription and polish. Audio already inside the current note and audio imported later can enter the same path too.
+## ✨ Core Capabilities
 
-The main character is always the note. Recording is the entry, transcription is the process, polish is the cleanup, and the final thing that remains is the note already inside Obsidian. The point is not that you got one more piece of source material. The point is that the material has already come back into your own note system.
+| Phase | Capability | Description |
+|:---|:---|:---|
+| 🎙️ Capture | Voice recording | Start with a shortcut or command, and save audio directly |
+| 📝 Note | Automatic note creation | Create a Markdown file while recording |
+| 🔄 Process | Speech transcription | Turn audio into text through supported ASR providers |
+| ✨ Process | AI polish | Clean up and organize the transcript with an LLM |
+| ⏳ Fallback | Pending queue | Failed transcription tasks go into a queue and can be retried |
+| 📥 Import | Audio import | Import existing audio files and transcribe them later |
 
-## Expression
+---
 
-Typing tends to squeeze a lot of things out. Tone, detail, context, and the event itself all get compressed while you are trying to clean up a sentence. A lot of content that looks a little redundant is exactly what people delete while typing, yet that same redundancy can help AI understand the meaning more completely later.
+## 👀 UI Preview
 
-Once that material stays in place, it also becomes easier to look back and understand what was actually happening at the time. Often the valuable part is not only the conclusion itself, but also how you arrived there.
+| Scenario | Preview |
+|:---|:---|
+| **Mobile recording workspace**<br>Start recording directly and review recent audio clips. | <img src="./assets/readme/mobile-workbench.gif" alt="Mobile recording workspace" width="260" /> |
+| **Desktop command entry**<br>Open the workspace, pending list, and recording commands from the command palette. | <img src="./assets/readme/desktop-command.png" alt="Desktop command entry" width="320" /> |
+| **Live polish inside the note**<br>Partial content appears first, then gets replaced by the final polished result. | <img src="./assets/readme/polishing-note.gif" alt="Live polish inside the note" width="260" /> |
+| **Transcription provider setup**<br>Manage transcription providers and models, then switch between them after saving. | <img src="./assets/readme/provider-entry.gif" alt="Transcription provider setup" width="260" /> |
 
-That is the part Resojot is trying to keep.
+---
 
-## Flow
+## 🔌 Supported Provider Routes
 
-Sometimes it is just one short thought. Press once, speak, stop, and the note already holds it.
+| Type | Supported Routes |
+|:---|:---|
+| Transcription (ASR) | Local OpenAI-compatible endpoint<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| Polish (LLM) | OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao / Volcengine Ark |
 
-Sometimes it is something longer. Meetings, classes, discussions, and reviews can be captured first and then moved through transcription, polish, and later splitting or cleanup on the same note.
+> [!NOTE]
+> The actual route you use depends on your own API keys and provider configuration. A Resojot license does not include third-party service quota.
 
-Sometimes the material comes from earlier audio. Audio already in the current note and audio imported later can keep moving through the same path.
+---
 
-The priority stays the same all the way through: when you want to keep something, avoid getting blocked by operation overhead; once it is captured, avoid doing a second round of manual moving later.
+## 🚀 Installation
 
-## Cleanup
+> [!WARNING]
+> Resojot is a closed-source plugin and does not appear in the official Community Plugins store.
 
-Transcription turns spoken material into text. Polish handles later reading cleanup. Filler words and obvious noise can be reduced, reading becomes easier, and the original tone and meaning are kept as much as possible. This is later-stage cleanup. It does not move the material into another system, and it does not try to rewrite the expression into something unrecognizable.
+### Option 1: BRAT (Recommended)
 
-From the first spoken sentence to the note itself and the editing that follows, the whole path stays inside Obsidian.
+1. Install **BRAT** from Obsidian Community Plugins
+2. Open BRAT and choose **Add Beta plugin**
+3. Enter `https://github.com/jiaoyingxing/resojot`
+4. Enable **Resojot** in Obsidian settings after installation
 
-## Tradeoffs
+> BRAT can update the plugin directly from GitHub Releases, so you usually do not need to replace files manually.
 
-Resojot is not trying to become professional recording software.
+### Option 2: Manual Installation
 
-It does not aim for heavy recording management, a standalone app, or a thick AI writing workflow. It is closer to giving Obsidian a voice entry that is easy enough to reach for: when you want to keep something, you speak directly, and what remains afterwards is a note you can continue working on instead of a piece of source material waiting to be dealt with later.
+1. Download `main.js`, `manifest.json`, and `styles.css` from [GitHub Releases](https://github.com/jiaoyingxing/resojot/releases)
+2. Put them into `.obsidian/plugins/resojot/` inside your vault
+3. Restart Obsidian, or reload community plugins
+4. Enable **Resojot** in Obsidian settings
 
-The goal is to make recording easier first, let the expression stay, and clean it up later.
+---
 
-## Situations
+## 🔐 Licensing
 
-Resojot becomes useful whenever the moment is basically: “I want to keep this, but doing it right now feels annoying.”
+| Status | Available Features |
+|:---|:---|
+| 🔓 Without a license | Recording, audio saving, basic Markdown notes, basic templates |
+| 🔒 With a license | Automatic transcription, pending queue and retry, imported-audio transcription, AI polish |
 
-That can happen while commuting, walking, sitting in a meeting, in class, in discussion, or simply while sitting at a desk and not wanting to switch back to keyboard input for a few lines. As long as the material was always meant to live in Obsidian, this path is much easier than throwing it somewhere else first and moving it back later.
+- License keys are verified locally through signature validation
+- A Resojot license does not include third-party cloud service quota
+- To get a license key, search for **焦应行** on Xiaohongshu
 
-If Obsidian is already where projects, reviews, ideas, and judgments are kept, that difference becomes more obvious.
+---
 
-## Provider Routes
+## 🔒 Data And Privacy
 
-Current transcription routes include local OpenAI-compatible services, manually configured cloud OpenAI-compatible endpoints, SiliconFlow, Doubao ASR, Tencent Cloud ASR, Aliyun DashScope ASR, OpenAI, Azure Speech, and Google Speech-to-Text.
+| Data | Stored In |
+|:---|:---|
+| 🎙️ Audio files and Markdown notes | Your Obsidian vault (local) |
+| ⚙️ Plugin settings, license state, and pending task state | Local Obsidian plugin data |
+| 🔑 Provider API keys, polish API keys, and license key | Obsidian SecretStorage (isolated per device and vault) |
 
-Polish follows your configured LLM route, including common OpenAI-compatible endpoints and presets such as SiliconFlow and Doubao / Volcengine Ark.
+- Resojot does not include client-side telemetry
+- If you enable cloud transcription or cloud polish, the processed audio or text will be sent to your configured provider
 
-The route you use depends on your own account, API keys, balance, network access, and current provider policies.
+> [!CAUTION]
+> Do not publish `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.
 
-## Installation
+---
 
-Public distribution currently happens through GitHub Releases.
+## 📦 Distribution And License
 
-Because the official Community Plugins directory does not currently support closed-source plugins, Resojot does not appear in the in-app plugin store search.
+- Resojot is distributed as a closed-source plugin
+- Installation and updates happen through BRAT or GitHub Releases
+- See [LICENSE](./LICENSE)
 
-### Recommended: BRAT
+---
 
-1. Install `BRAT` from Obsidian's Community Plugins browser.
-2. Open BRAT and choose `Add Beta plugin`.
-3. Enter `https://github.com/jiaoyingxing/resojot`.
-4. Let BRAT install the latest available Resojot build.
-5. Enable `Resojot` in Obsidian settings.
+## 📮 Contact
 
-Using BRAT makes future updates easier.
-
-### Manual Installation
-
-1. Download `main.js`, `manifest.json`, and `styles.css` from the matching GitHub Release.
-2. Create `.obsidian/plugins/resojot/` inside your vault.
-3. Place those three files into that folder.
-4. Restart Obsidian, or reload community plugins.
-5. Enable `Resojot` in Obsidian settings.
-
-## License
-
-Resojot uses feature licensing.
-
-Without a license, you can first try the basic voice capture flow. With a license, automatic transcription, imported-audio transcription, pending-task recovery, and AI polish become available.
-
-Available without a license:
-
-- Recording
-- Saving audio
-- Writing basic Markdown notes
-- Using basic templates
-
-Enabled with a license:
-
-- Automatic transcription
-- Pending queue and retry
-- Imported-audio transcription
-- AI polish after transcription
-
-License notes:
-
-- License keys are verified locally through signature validation.
-- A Resojot license does not include third-party cloud service quota.
-
-To get a license key, search for `焦应行` on Xiaohongshu.
-
-## Privacy And Storage
-
-- Audio files and Markdown notes are stored in your Obsidian vault.
-- Plugin settings, license state, and pending task state are stored in local Obsidian plugin data.
-- Provider keys, polish API keys, and the license key are stored in Obsidian SecretStorage for the current device and vault.
-- Resojot currently contains no client-side telemetry.
-- If you enable cloud transcription or cloud AI polish, the processed audio or text will be sent to the configured provider.
-
-Do not publish your `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.
-
-## Closed Source Notice
-
-Resojot is currently distributed as a closed-source plugin. The source code is not public; use BRAT or GitHub Releases above for installation and updates.
-
-## Contact
-
-Feedback and license access:
-
-- Search Xiaohongshu for `焦应行`
+For feedback and license access, search for **焦应行** on Xiaohongshu.
