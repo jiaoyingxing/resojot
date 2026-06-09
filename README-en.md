@@ -1,15 +1,15 @@
+# Resojot
+
 <p align="center">
   <strong>Language:</strong> <strong>English</strong> · <a href="./README.md"><strong>简体中文</strong></a>
 </p>
 
-# Resojot
+Voice capture plugin for Obsidian.
 
-Obsidian voice capture plugin.
-
-- Record, automatically save audio, and generate Markdown notes.
-- Automatic ASR transcription and LLM polish, all completed inside Obsidian.
+- Record, automatically save audio, and create Markdown notes.
+- Automatic ASR transcription and LLM polish, all within Obsidian.
 - Every release is tested on real iPhone, Android, and Windows devices.
-- Mobile startup overhead is about 40 ms.
+- Mobile startup overhead is only about 40 ms.
 
 <p align="center">
   <img src="./assets/readme/hero-overview.png" alt="Resojot across mobile and desktop" width="430" />
@@ -19,13 +19,13 @@ Obsidian voice capture plugin.
 
 | Category | Description |
 |:---|:---|
-| Entry points | On PC, recording can start from shortcuts, commands, or buttons; on mobile, URL shortcuts enable one-tap recording |
-| Audio storage | Audio is saved into the Obsidian vault, with configurable per-note / daily / monthly organization, folders, and sorting |
-| Markdown notes | Recording generates Markdown notes at the same time, including recording links, structured sections, and custom note templates |
-| ASR transcription | Multiple ASR providers are unified under one path and can be switched or extended; APIs are user-supplied |
-| LLM polish | Transcript results can be polished with LLMs, and prompt schemes can be customized and switched at any time |
-| Queue and management | Includes pending-task queue, retry flow, and recording management |
-| Independent use | Each capability can be used independently, and importing existing audio is also supported |
+| Entry points | On desktop, start recording from shortcuts, commands, or buttons; on mobile, use URL shortcuts for one-tap recording |
+| Audio storage | Save audio into your Obsidian vault with configurable per-note, daily, or monthly organization, plus folder and sorting options |
+| Markdown notes | Create Markdown notes alongside recordings, including audio links, structured sections, and custom note templates |
+| ASR transcription | Work with multiple ASR providers through one unified flow, with provider switching and room to expand; APIs are user-supplied |
+| LLM polish | Polish transcript results with LLMs, with prompt schemes you can customize and switch at any time |
+| Queue and management | Includes a pending-task queue, retries, and recording management tools |
+| Independent use | Each capability can be used on its own, and existing audio can also be imported for processing |
 | Current usage | Already used by hundreds of paying users and still actively updated |
 
 <p align="center">
@@ -36,10 +36,10 @@ Obsidian voice capture plugin.
 
 | Scenario | Preview |
 |:---|:---|
-| **Mobile recording workspace**<br>Start recording directly and review recent audio clips. | <img src="./assets/readme/mobile-workbench.gif" alt="Mobile recording workspace" width="260" /> |
+| **Mobile recording workspace**<br>Start recording immediately and review recent audio clips. | <img src="./assets/readme/mobile-workbench.gif" alt="Mobile recording workspace" width="260" /> |
 | **Desktop command entry**<br>Open the workspace, pending list, and recording commands from the command palette. | <img src="./assets/readme/desktop-command.png" alt="Desktop command entry" width="320" /> |
-| **Live polish inside the note**<br>Partial content appears first, then gets replaced by the final polished result. | <img src="./assets/readme/polishing-note.gif" alt="Live polish inside the note" width="260" /> |
-| **Transcription provider setup**<br>Manage provider and model settings, then switch after saving. | <img src="./assets/readme/provider-entry.gif" alt="Transcription provider setup" width="260" /> |
+| **Live polish inside the note**<br>Partial polished text appears first, then automatically resolves into the final result. | <img src="./assets/readme/polishing-note.gif" alt="Live polish inside the note" width="260" /> |
+| **Transcription provider setup**<br>Manage provider and model settings, then switch between them after saving. | <img src="./assets/readme/provider-entry.gif" alt="Transcription provider setup" width="260" /> |
 
 ## 🔌 Currently Supported Services
 
@@ -49,19 +49,19 @@ Obsidian voice capture plugin.
 | Polish (LLM) | OpenAI-compatible<br>Anthropic<br>Gemini<br>Ollama |
 
 > [!NOTE]
-> A Resojot license does not include third-party cloud service quota.
+> A Resojot license does not include any third-party cloud service quota.
 
 ## 🚀 Installation
 
 > [!WARNING]
-> Resojot is a closed-source plugin and cannot be found in the official plugin store.
+> Resojot is a closed-source plugin and does not appear in the official Community Plugins directory.
 
 ### Option 1: BRAT (Recommended)
 
 1. Install **BRAT** from Obsidian Community Plugins
 2. Open BRAT and choose **Add Beta plugin**
 3. Enter `https://github.com/jiaoyingxing/resojot`
-4. Enable **Resojot** in Obsidian settings after installation
+4. After installation, enable **Resojot** in Obsidian settings
 
 > BRAT can update the plugin directly from GitHub Releases, so you usually do not need to replace files manually.
 
@@ -72,9 +72,9 @@ Obsidian voice capture plugin.
 3. Restart Obsidian, or reload community plugins
 4. Enable Resojot in Obsidian settings
 
-## 🔐 Licensing and Privacy
+## 🔐 License and Privacy
 
-### Licensing Status
+### License Status
 
 | Status | Available Features |
 |:---|:---|
@@ -83,7 +83,7 @@ Obsidian voice capture plugin.
 
 - License keys are verified locally through signature validation
 - A Resojot license does not include third-party cloud service quota
-- To get a license key, search for **焦应行** on Xiaohongshu
+- To get a license key, search Xiaohongshu for **焦应行**
 
 ### Data and Storage
 
@@ -91,7 +91,7 @@ Obsidian voice capture plugin.
 |:---|:---|
 | 🎙️ Audio files and Markdown notes | Your Obsidian vault (local) |
 | ⚙️ Plugin settings, license state, and pending task state | Local Obsidian plugin data |
-| 🔑 Provider API keys, polish API keys, and license key | Obsidian SecretStorage, isolated per device and vault |
+| 🔑 Provider API keys, polish API keys, and license key | Obsidian SecretStorage, isolated by device and vault |
 
 - Resojot does not include client-side telemetry
 - If you enable cloud transcription or cloud polish, the processed audio or text will be sent to your configured provider
