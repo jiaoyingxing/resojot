@@ -18,7 +18,7 @@ Obsidian 的语音记录插件。
 - 详细的部署指南、免费API指南、插件使用技巧、售后群，都在小红书。
 
 <p align="center">
-  <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
+  <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot 移动端录音工作台" width="360" />
 </p>
 
 ## ✨ 基本能力
@@ -48,17 +48,21 @@ Obsidian 的语音记录插件。
 | 可选润色 | 会议、学习、翻译等场景方案预设，支持自定义方案一键调用 |
 
 <p align="center">
-  <img src="./assets/readme/workflow-overview.png" alt="Resojot 从录音到 Markdown 笔记的处理流程" width="430" />
+  <img src="./assets/readme/readme-desktop-workbench-menu.png" alt="Resojot 桌面端双栏工作台与快速操作菜单" width="560" />
 </p>
 
 ## 👀 界面预览
 
 | 场景 | 预览 |
 |:---|:---|
-| **移动端录音工作台**<br>直接开始录音，查看近期录音片段。 | <img src="./assets/readme/mobile-workbench.gif" alt="移动端录音工作台" width="260" /> |
-| **电脑端命令入口**<br>通过命令面板快速打开工作台、待处理列表和录音命令。 | <img src="./assets/readme/desktop-command.png" alt="电脑端命令入口" width="320" /> |
-| **笔记内实时润色**<br>润色过程中先返回部分内容，完成后自动替换为完整结果。 | <img src="./assets/readme/polishing-note.gif" alt="笔记内实时润色" width="260" /> |
-| **转写服务商配置**<br>按服务商与模型维护转写配置，保存后即可切换使用。 | <img src="./assets/readme/provider-entry.gif" alt="转写服务商配置" width="260" /> |
+| **移动端快速操作**<br>润色方案、写入方式、导入音频和录音管理统一收进顶部菜单。 | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="移动端快速操作菜单" width="240" /> |
+| **桌面端双栏工作台**<br>左侧管理近期录音，右侧直接预览笔记，常用操作保持在当前页面。 | <img src="./assets/readme/readme-desktop-workbench-menu.png" alt="桌面端双栏工作台" width="360" /> |
+| **标注框动作菜单**<br>在笔记块里直接触发润色、待办、提要、复制、删除和重试。 | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="标注框动作菜单" width="360" /> |
+| **录音管理双栏**<br>查看队列、失败状态和单条录音操作，右侧预览承接更多动作。 | <img src="./assets/readme/readme-desktop-management.png" alt="录音管理双栏" width="360" /> |
+| **移动端录音管理**<br>在手机上查看队列和录音状态，也能从菜单里调用当前条目的操作。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
+| **日记辅助模式**<br>当日追加时可对接已有日记模板，把录音写入固定日记结构。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
+| **润色与附加处理**<br>默认润色、待办提取、内容提要等方案可以在设置中独立管理。 | <img src="./assets/readme/readme-desktop-settings-polish.png" alt="润色与附加处理设置" width="360" /> |
+| **关于与联系入口**<br>授权状态、GitHub、作者入口和反馈信息集中在关于页面。 | <img src="./assets/readme/readme-mobile-about.png" alt="关于与联系入口" width="240" /> |
 
 ## 🔌 目前接入的服务
 
@@ -123,4 +127,3 @@ Obsidian 的语音记录插件。
 - 闭源分发，源码不公开
 - 安装与更新通过 BRAT 或 GitHub Releases 进行
 - 详见 [LICENSE](./LICENSE)
-
