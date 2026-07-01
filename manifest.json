@@ -3,7 +3,7 @@
   "name": "Resojot",
   "version": "0.9.6",
   "minAppVersion": "1.11.4",
-  "description": "Record audio, generate Markdown notes, and handle transcription and polishing with local or cloud providers. (Closed source).",
+  "description": "Capture voice notes, write them into Markdown, and transcribe them with local or cloud providers. (Closed source).",
   "author": "Jiao Yingxing",
   "isDesktopOnly": false
 }
