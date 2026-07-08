@@ -1,6 +1,15 @@
 # Resojot 应声记
 
 <p align="center">
+  <a href="https://github.com/jiaoyingxing/resojot/releases">
+    <img alt="Release downloads" src="https://img.shields.io/github/downloads/jiaoyingxing/resojot/total.svg?style=flat-square&label=Release%20downloads" />
+  </a>
+  <a href="https://github.com/jiaoyingxing/resojot/releases">
+    <img alt="Latest release" src="https://img.shields.io/github/v/release/jiaoyingxing/resojot?style=flat-square&label=Latest%20release" />
+  </a>
+</p>
+
+<p align="center">
   <strong>阅读语言：</strong> <strong>简体中文</strong> · <a href="./README-en.md"><strong>English</strong></a>
 </p>
 
