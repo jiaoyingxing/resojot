@@ -7,6 +7,12 @@
   <a href="https://github.com/jiaoyingxing/resojot/releases">
     <img alt="Latest release" src="https://img.shields.io/github/v/release/jiaoyingxing/resojot?style=flat-square&label=Latest%20release" />
   </a>
+  <a href="./README.md">
+    <img alt="CN 中文版" src="https://img.shields.io/badge/CN-%E4%B8%AD%E6%96%87%E7%89%88-d32f2f?style=flat-square" />
+  </a>
+  <a href="./README-en.md">
+    <img alt="EN English" src="https://img.shields.io/badge/EN-English-2f6fed?style=flat-square" />
+  </a>
 </p>
 
 <p align="center">
