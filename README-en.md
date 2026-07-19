@@ -23,8 +23,7 @@ Voice recording plugin for Obsidian.
 
 - Record audio, save it automatically, and generate Markdown notes.
 - Automatic ASR transcription and LLM polishing, all handled inside Obsidian.
-- Every release is tested on real iPhone, Android, and Windows devices.
-- Mobile startup latency is about 40–100 ms.
+- iPhone, Android, and Windows compatibility is maintained continuously.
 
 ## 👋 Contact
 
@@ -62,16 +61,10 @@ Voice recording plugin for Obsidian.
 | Import processing | Open the file picker, choose an audio file, and import it in one step. Transcription, polishing, and other preset processing can run automatically |
 | Optional polishing | Preset workflows for meetings, study, translation, and other scenarios, with custom schemes you can call in one click |
 
-<p align="center">
-  <img src="./assets/readme/readme-desktop-workbench-menu.png" alt="Resojot desktop dual-pane workbench and quick actions menu" width="560" />
-</p>
-
 ## 👀 UI Preview
 
 | Scenario | Preview |
 |:---|:---|
-| **Mobile quick actions**<br>Polish schemes, write modes, audio import, and recording management are grouped into the top menu. | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="Mobile quick actions menu" width="240" /> |
-| **Desktop dual-pane workbench**<br>Manage recent recordings on the left, preview notes on the right, and keep common actions on the same page. | <img src="./assets/readme/readme-desktop-workbench-menu.png" alt="Desktop dual-pane workbench" width="360" /> |
 | **Callout action menu**<br>Trigger polish, Todo extraction, content summary, copy, delete, and retry directly from a note block. | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Callout action menu" width="360" /> |
 | **Dual-pane recording management**<br>Review queues, failed states, and per-recording actions, with the preview pane carrying extra actions. | <img src="./assets/readme/readme-desktop-management.png" alt="Dual-pane recording management" width="360" /> |
 | **Mobile recording management**<br>Review the queue and recording states on mobile, then open item actions from the menu. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile recording management" width="240" /> |
@@ -83,7 +76,7 @@ Voice recording plugin for Obsidian.
 
 | Type | Supported |
 |:---|:---|
-| Transcription (ASR) | Local OpenAI-compatible endpoint (including locally deployed voxbox models)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; desktop can manage an installed FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
 | Polish (LLM) | OpenAI-compatible<br>Anthropic<br>Gemini<br>Ollama |
 
 > [!NOTE]

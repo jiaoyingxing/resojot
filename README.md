@@ -23,8 +23,7 @@ Obsidian 的语音记录插件。
 
 - 录音、自动保存音频、生成 Markdown 笔记。
 - 自动 ASR 转写、LLM 润色，整条链路都在 Obsidian 里完成。
-- 每个版本都经过 iPhone、安卓、Windows 实机测试。
-- 移动端启动速度占用约为 40~100ms，极低。
+- 持续维护 iPhone、Android 与 Windows 的多端兼容。
 
 ## 👋 联系
 
@@ -62,16 +61,10 @@ Obsidian 的语音记录插件。
 | 导入处理 | 一键打开文件管理器，选定音频，即可导入。自动进行转写润色以及其他预设方案处理 |
 | 可选润色 | 会议、学习、翻译等场景方案预设，支持自定义方案一键调用 |
 
-<p align="center">
-  <img src="./assets/readme/readme-desktop-workbench-menu.png" alt="Resojot 桌面端双栏工作台与快速操作菜单" width="560" />
-</p>
-
 ## 👀 界面预览
 
 | 场景 | 预览 |
 |:---|:---|
-| **移动端快速操作**<br>润色方案、写入方式、导入音频和录音管理统一收进顶部菜单。 | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="移动端快速操作菜单" width="240" /> |
-| **桌面端双栏工作台**<br>左侧管理近期录音，右侧直接预览笔记，常用操作保持在当前页面。 | <img src="./assets/readme/readme-desktop-workbench-menu.png" alt="桌面端双栏工作台" width="360" /> |
 | **标注框动作菜单**<br>在笔记块里直接触发润色、待办、提要、复制、删除和重试。 | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="标注框动作菜单" width="360" /> |
 | **录音管理双栏**<br>查看队列、失败状态和单条录音操作，右侧预览承接更多动作。 | <img src="./assets/readme/readme-desktop-management.png" alt="录音管理双栏" width="360" /> |
 | **移动端录音管理**<br>在手机上查看队列和录音状态，也能从菜单里调用当前条目的操作。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
@@ -83,7 +76,7 @@ Obsidian 的语音记录插件。
 
 | 类型 | 已支持 |
 |:---|:---|
-| 转写（ASR） | 本地 OpenAI-compatible 接口（支持 voxbox 本地部署模型）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；桌面端可管理已安装的 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
 | 润色（LLM） | OpenAI-compatible<br>Anthropic<br>Gemini<br>Ollama |
 
 > [!NOTE]
