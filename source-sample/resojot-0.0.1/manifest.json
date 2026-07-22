@@ -1,9 +1,0 @@
-{
-  "id": "resojot",
-  "name": "Resojot",
-  "version": "0.0.1",
-  "minAppVersion": "1.5.0",
-  "description": "A lightweight voice capture workspace for Obsidian.",
-  "author": "Jiao Yingxing",
-  "isDesktopOnly": false
-}

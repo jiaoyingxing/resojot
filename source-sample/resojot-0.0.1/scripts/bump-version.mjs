@@ -30,15 +30,13 @@ if (!versionArg || !isValidVersion(versionArg)) {
 }
 
 const pkg = await readJson("package.json");
-const manifest = await readJson("manifest.json");
 const versions = await readJson("versions.json");
 
 const nextVersion = versionArg;
-const nextMinAppVersion = minAppVersionArg || manifest.minAppVersion;
+const nextMinAppVersion =
+  minAppVersionArg || versions[pkg.version] || "1.5.0";
 
 pkg.version = nextVersion;
-manifest.version = nextVersion;
-manifest.minAppVersion = nextMinAppVersion;
 
 const nextVersions = {
   ...versions,
@@ -46,7 +44,6 @@ const nextVersions = {
 };
 
 await writeJson("package.json", pkg);
-await writeJson("manifest.json", manifest);
 await writeJson("versions.json", nextVersions);
 
 console.log("Resojot version metadata updated.");

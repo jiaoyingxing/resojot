@@ -11,27 +11,12 @@ async function readJson(relativePath) {
 }
 
 const pkg = await readJson("package.json");
-const manifest = await readJson("manifest.json");
 const versions = await readJson("versions.json");
 
 const issues = [];
 
-if (pkg.version !== manifest.version) {
-  issues.push(
-    `Version mismatch: package.json=${pkg.version}, manifest.json=${manifest.version}`
-  );
-}
-
-if (typeof versions[manifest.version] !== "string") {
-  issues.push(`versions.json is missing entry for ${manifest.version}`);
-} else if (versions[manifest.version] !== manifest.minAppVersion) {
-  issues.push(
-    `minAppVersion mismatch for ${manifest.version}: versions.json=${versions[manifest.version]}, manifest.json=${manifest.minAppVersion}`
-  );
-}
-
-if (!manifest.id || !manifest.name) {
-  issues.push("manifest.json is missing required plugin identity fields");
+if (typeof versions[pkg.version] !== "string" || !versions[pkg.version].trim()) {
+  issues.push(`versions.json is missing minAppVersion for ${pkg.version}`);
 }
 
 if (issues.length) {
@@ -43,7 +28,6 @@ if (issues.length) {
 }
 
 console.log("Resojot metadata check passed.");
-console.log(`- id: ${manifest.id}`);
-console.log(`- name: ${manifest.name}`);
-console.log(`- version: ${manifest.version}`);
-console.log(`- minAppVersion: ${manifest.minAppVersion}`);
+console.log(`- package: ${pkg.name}`);
+console.log(`- version: ${pkg.version}`);
+console.log(`- minAppVersion: ${versions[pkg.version]}`);
