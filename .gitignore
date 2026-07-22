@@ -9,11 +9,11 @@ ReleaseNotes*.md
 release-notes/
 
 # Private source repository content must never be staged here.
-src/
-scripts/
-tests/
-docs/
-license-local/
+/src/
+/scripts/
+/tests/
+/docs/
+/license-local/
 
 # Local credentials and development-only materials.
 *.key

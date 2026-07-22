@@ -1,0 +1,20 @@
+{
+  "name": "resojot",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check:meta": "node ./scripts/check-metadata.mjs",
+    "version:sync": "node ./scripts/bump-version.mjs",
+    "verify": "npm run typecheck && npm run check:meta && npm run build",
+    "build": "node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "esbuild": "^0.25.2",
+    "obsidian": "latest",
+    "typescript": "^5.8.2"
+  }
+}
