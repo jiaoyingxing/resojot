@@ -19,7 +19,7 @@ export class ResojotPlaceholderSettingTab extends PluginSettingTab {
     containerEl.empty();
 
     new Setting(containerEl)
-      .setName("Resojot 0.0.1 source sample")
+      .setName("Source sample")
       .setDesc(
         "This frozen public placeholder intentionally excludes production feature implementations."
       )
