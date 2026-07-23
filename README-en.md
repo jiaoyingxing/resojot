@@ -23,7 +23,7 @@ Voice recording plugin for Obsidian.
 
 - Record audio, save it automatically, and generate Markdown notes.
 - Automatic ASR transcription and LLM polishing, all handled inside Obsidian.
-- iPhone, Android, and Windows compatibility is maintained continuously.
+- iPhone, Android, Windows, and macOS compatibility is maintained continuously.
 
 ## 👋 Contact
 
@@ -57,7 +57,7 @@ Voice recording plugin for Obsidian.
 | Dictation | Use it like Typeless for speech input; recordings are saved as a fallback so nothing is lost (Windows only for now) |
 | Todo | Automatically extract to-dos from recordings and collect them into a single Markdown note. The checkbox flow feels similar to iPhone Notes |
 | Summary | Automatically summarize each recording into one sentence, then write it into the file name or outline |
-| Internal audio | Record audio from the computer’s internal sound card, including headphone output, for classes, podcasts, and similar use cases (Windows only for now) |
+| Internal audio | Record computer audio, including headphone output, for classes, podcasts, and similar use cases (Windows and macOS 13+; macOS 15+ can also include the microphone) |
 | Import processing | Open the file picker, choose an audio file, and import it in one step. Transcription, polishing, and other preset processing can run automatically |
 | Optional polishing | Preset workflows for meetings, study, translation, and other scenarios, with custom schemes you can call in one click |
 
