@@ -63,7 +63,7 @@ Voice recording plugin for Obsidian.
 
 ## 🧪 Resojot CLI (Testing feature)
 
-Starting with `0.9.10`, Resojot CLI is available as a testing feature for external agents such as Codex and Claude Code. It can discover plugin capabilities, process existing audio in the vault, query / retry / cancel persistent jobs, and return result notes and artifacts. It can also audit recording-management state, preview bounded content, and—after the user confirms an exact plan—restore notes, retry jobs, or clean up selected items.
+Starting with `0.9.10`, Resojot CLI is available as a testing feature for external agents such as Codex and Claude Code. It can discover plugin capabilities, process existing audio in the vault, query / retry / cancel persistent jobs, and return result notes and artifacts. It can also safely adjust storage settings, audit recording-management state, preview bounded content, and—after the user confirms an exact plan—restore notes, retry jobs, or clean up selected items. Its preflight distinguishes host, vault, plugin, and command readiness, while its feedback route can hand off a fully previewed and user-approved report to GitHub Issues.
 
 - Requires the official Obsidian desktop installer `1.12.7+` with **Settings → General → Command line interface** enabled
 - Obsidian and the target vault must stay open while it is used; CLI is unavailable on mobile and older hosts
