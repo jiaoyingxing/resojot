@@ -19,47 +19,51 @@
   <strong>Language:</strong> <strong>English</strong> · <a href="./README.md"><strong>简体中文</strong></a>
 </p>
 
-Voice recording plugin for Obsidian.
+Resojot keeps recording, transcription, organization, and Markdown note capture in one Obsidian workflow.
 
-- Record audio, save it automatically, and generate Markdown notes.
-- Automatic ASR transcription and LLM polishing, all handled inside Obsidian.
+- Save audio automatically and create Markdown notes after recording.
+- Transcribe with local or cloud ASR, then use customizable LLM workflows for polish, Todo extraction, or summaries.
+- Process imported and long-form audio with recovery and fallback across validated providers.
 - iPhone, Android, Windows, and macOS compatibility is maintained continuously.
-
-## 👋 Contact
-
-- Search for **焦应行** on Xiaohongshu to get a permanent license key.
-- For support, feedback, or license access, search Xiaohongshu for **焦应行**.
-- Detailed setup guides, free API guides, plugin tips, and the support group are all on Xiaohongshu.
 
 <p align="center">
   <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot mobile recording workbench" width="360" />
 </p>
 
-## ✨ Core Capabilities
+## ✨ Main Capabilities
 
 | Category | Description |
 |:---|:---|
-| Entry points | On desktop, start from shortcuts, commands, or buttons; on mobile, use a URL shortcut for one-tap recording |
-| UI | A visual recording workspace inside Obsidian that feels like a built-in voice recorder and is easy for new users to pick up |
-| Audio storage | Save audio into your Obsidian vault with per-recording, daily, or monthly organization, plus custom folders and sorting |
-| Markdown notes | Create Markdown notes while recording, including audio links, structured sections, and custom note templates |
-| ASR transcription | Connect to multiple ASR providers through a unified flow; provider APIs are user-configured and not bundled with quota |
-| LLM polish | Polish transcription results with LLMs; prompt schemes are customizable and can be switched at any time |
-| Queue and management | Pending queue, retry, and recording management features are built in |
-| Independent use | Each capability can be used separately, and audio can also be imported for processing |
-| Usage status | Already used by hundreds of real paying users and still being actively updated |
-| i18n | Full and comprehensive English interface support |
+| Entry points and Workbench | Start from shortcuts, commands, or buttons on desktop; use URL shortcuts for one-tap recording on mobile |
+| Audio and notes | Store audio in the Obsidian vault and choose per-recording, daily, monthly, or journal-assist writing, with custom folders, sorting, and templates |
+| ASR transcription | Manage multiple local or cloud ASR configurations, validate them before use, and fall back to another qualified provider when a task fails |
+| Long audio and recovery | Process long recordings in chunks with visible progress, then recover unfinished work after app shutdowns, mobile interruptions, or network instability |
+| LLM organization | Use custom polish profiles, extract Todos, create content summaries, or apply scenario-specific processing |
+| Recording management | Review transcription, polish, failures, missing notes, and orphan attachments in one place, with cancellation, retry, note recovery, and staged cleanup |
+| Independent processing | Import existing audio, process audio from the current note, or transcribe a completed recording again |
+| Interface languages | Simplified Chinese and English interfaces |
 
-## 🎁 Extended Capabilities
+## 🎁 Scenarios and Extensions
 
 | Category | Description |
 |:---|:---|
-| Dictation | Use it like Typeless for speech input; recordings are saved as a fallback so nothing is lost (Windows only for now) |
-| Todo | Automatically extract to-dos from recordings and collect them into a single Markdown note. The checkbox flow feels similar to iPhone Notes |
-| Summary | Automatically summarize each recording into one sentence, then write it into the file name or outline |
-| Internal audio | Record computer audio, including headphone output, for classes, podcasts, and similar use cases (Windows and macOS 13+; macOS 15+ can also include the microphone) |
-| Import processing | Open the file picker, choose an audio file, and import it in one step. Transcription, polishing, and other preset processing can run automatically |
-| Optional polishing | Preset workflows for meetings, study, translation, and other scenarios, with custom schemes you can call in one click |
+| Windows dictation | Hold to speak and release to insert text like a voice input tool; recordings can be retained, and failures remain available in Recording Management |
+| Todo notes | Collect extracted Todos automatically, with completion, sorting, move-to-top, native highlight, and delete actions |
+| Content summaries | Summarize each recording into one sentence and write it into the file name or note outline |
+| Computer audio | Record computer playback, including headphone output, on Windows and macOS 13+; macOS 15+ can also include the microphone |
+| Journal assist | Write regular recordings into an existing daily note created by Daily Notes, Periodic Notes, Journals, or a similar tool without taking over journal creation |
+| Local transcription service | On desktop, discover and manage a separately installed FunASR program; users still install FunASR and prepare its models themselves |
+| Recording display | Choose no extra indicator, a top strip, or a full-screen overlay; regular and computer-audio recording share the same display rule |
+
+## 🖥️ Platforms and Versions
+
+| Capability | Requirement |
+|:---|:---|
+| Standard Resojot features | Obsidian `1.11.4+`; Windows, macOS, iPhone, and Android |
+| Windows dictation | Windows desktop only |
+| Computer-audio recording | Windows and macOS 13+ desktop; macOS 15+ can include the microphone |
+| Local FunASR management | Desktop, with FunASR and its models installed separately |
+| Resojot CLI | Official Obsidian desktop installer `1.12.7+` with Command line interface enabled |
 
 ## 🧪 Resojot CLI (Testing feature)
 
@@ -70,26 +74,39 @@ Starting with `0.9.10`, Resojot CLI is available as a testing feature for extern
 - Write operations retain the boundary of exact planning, user-facing explanation, confirmation, and pre-apply revalidation
 - CLI does not expose API keys, license keys, or internal queues; its public contract and operation scope may still change during testing
 
+Minimal capability discovery:
+
+```shell
+obsidian vault="<vault-name-or-id>" resojot
+obsidian vault="<vault-name-or-id>" resojot:capabilities
+obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
+```
+
+If the terminal is already inside the target vault, `vault=...` can be omitted. Treat the current `resojot:schema` output as the source of truth for command parameters.
+
 ## 👀 UI Preview
 
 | Scenario | Preview |
 |:---|:---|
-| **Callout action menu**<br>Trigger polish, Todo extraction, content summary, copy, delete, and retry directly from a note block. | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Callout action menu" width="360" /> |
-| **Dual-pane recording management**<br>Review queues, failed states, and per-recording actions, with the preview pane carrying extra actions. | <img src="./assets/readme/readme-desktop-management.png" alt="Dual-pane recording management" width="360" /> |
-| **Mobile recording management**<br>Review the queue and recording states on mobile, then open item actions from the menu. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile recording management" width="240" /> |
-| **Journal assist mode**<br>When appending to daily notes, Resojot can target an existing journal template and write into that structure. | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="Journal assist mode settings" width="240" /> |
-| **Polish and add-on processing**<br>Default polish, Todo extraction, content summary, and related schemes can be managed independently. | <img src="./assets/readme/readme-desktop-settings-polish.png" alt="Polish and add-on processing settings" width="360" /> |
-| **About and contact entry**<br>License state, GitHub, author contact, and feedback information are grouped in the About page. | <img src="./assets/readme/readme-mobile-about.png" alt="About and contact entry" width="240" /> |
+| **Workbench quick menu**<br>Open Recording Management and settings, switch among four writing modes, or import audio directly from the mobile Workbench. | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="Mobile Workbench quick menu" width="240" /> |
+| **Callout action menu**<br>Continue from the current transcript or polish block with polish profiles, Todo extraction, summaries, copy, or delete. | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Callout action menu" width="480" /> |
+| **Desktop Recording Management**<br>Review failure reasons, retry status, and per-recording details in one place. | <img src="./assets/readme/readme-desktop-management.png" alt="Desktop Recording Management" width="480" /> |
+| **Mobile Recording Management**<br>Review cancelled, no-speech, missing-note, and orphan-attachment states on mobile. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile Recording Management" width="240" /> |
+| **Storage and writing**<br>Choose the writing mode, audio and note folders, templates, and append order. | <img src="./assets/readme/readme-desktop-storage.png" alt="Storage and note writing settings" width="480" /> |
+| **Journal assist mode**<br>Locate an existing journal by folder, date format, and target heading. | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="Journal assist mode settings" width="240" /> |
+| **Polish and add-on processing**<br>Manage polish providers, default polish, Todo extraction, and content summaries. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="Polish providers and automatic processing settings" width="240" /> |
+| **Todo notes**<br>Control automatic collection, note location, display size, and line-end task actions. | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo note settings" width="240" /> |
+| **About and privacy**<br>Review the current version, author links, privacy, API service, usage risks, and data storage information. | <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 About page" width="480" /> |
 
 ## 🔌 Supported Services
 
 | Type | Supported |
 |:---|:---|
-| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; desktop can manage an installed FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
-| Polish (LLM) | OpenAI-compatible<br>Anthropic<br>Gemini<br>Ollama |
+| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; desktop can manage an installed FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>Xiaomi MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| Polish (LLM) | SiliconFlow<br>Doubao<br>Qwen<br>DeepSeek<br>Xiaomi MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>Custom OpenAI-compatible endpoint |
 
 > [!NOTE]
-> A Resojot license does not include any third-party cloud service quota.
+> A Resojot license does not include any third-party cloud service quota. Service availability, model access, costs, and request limits are determined by the provider you configure.
 
 ## 🚀 Installation
 
@@ -122,10 +139,11 @@ Starting with `0.9.10`, Resojot CLI is available as a testing feature for extern
 | Status | Available features |
 |:---|:---|
 | 🔒 Unlicensed | Recording, audio saving, basic Markdown notes, and basic templates |
-| 🔓 Licensed | Automatic transcription, pending queue and retry, imported-audio transcription, AI polish, and other advanced features |
+| 🔓 Licensed | Automatic transcription, including its task queue and retry flow; imported-audio transcription; AI polish; and polish-dependent Todo extraction and content summaries |
 
 - License keys are verified locally through signature validation
 - License keys do not include any third-party cloud service quota
+- License duration and supported versions are shown in the plugin's License details
 - To get a license key, search Xiaohongshu for **焦应行**
 
 ### Data and storage
@@ -141,6 +159,12 @@ Starting with `0.9.10`, Resojot CLI is available as a testing feature for extern
 
 > [!CAUTION]
 > Do not publish `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.
+
+## 👋 Contact and Feedback
+
+- Bugs, reproducible issues, and feature requests: [GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
+- Usage questions, license access, and product discussion: search Xiaohongshu for **焦应行**
+- Detailed setup guides, free API guides, plugin tips, and support-group information are also available on Xiaohongshu
 
 ## 📜 License
 

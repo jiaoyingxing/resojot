@@ -19,47 +19,51 @@
   <strong>阅读语言：</strong> <strong>简体中文</strong> · <a href="./README-en.md"><strong>English</strong></a>
 </p>
 
-Obsidian 的语音记录插件。
+Resojot 把录音、转写、整理和 Markdown 笔记沉淀放在同一条 Obsidian 工作流里。
 
-- 录音、自动保存音频、生成 Markdown 笔记。
-- 自动 ASR 转写、LLM 润色，整条链路都在 Obsidian 里完成。
-- 持续维护 iPhone、Android、Windows 与 Mac 的多端兼容。
-
-## 👋 联系
-
-- 来小红书找我，获取永久授权码。
-- 咨询/反馈/授权码获取：小红书搜索 **焦应行** 🔍
-- 详细的部署指南、免费API指南、插件使用技巧、售后群，都在小红书。
+- 录音后自动保存音频并生成 Markdown 笔记。
+- 使用本地或云端 ASR 转写，再按自定义方案调用 LLM 润色、提取待办或生成提要。
+- 支持导入已有音频、长音频处理、失败恢复和多服务商备用切换。
+- 持续维护 iPhone、Android、Windows 与 macOS 的多端兼容。
 
 <p align="center">
   <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot 移动端录音工作台" width="360" />
 </p>
 
-## ✨ 基本能力
+## ✨ 主要能力
 
 | 类别 | 说明 |
 |:---|:---|
-| 启动入口 | PC 可通过快捷键、命令、按钮启动；移动端可通过 URL 快捷指令一键录音 |
-| UI界面 | 如同给Ob里塞了一个录音软件，可视化界面管理，新手友好 |
-| 音频保存 | 音频保存至 Obsidian vault，支持按次 / 日 / 月保存，可设目录与排序 |
-| Markdown 笔记 | 录音同时生成 Markdown 笔记，包含录音链接、结构化目录与自设笔记模板 |
-| ASR 转写 | 多家 ASR 统一接入，支持切换与扩展；API 由用户自配，插件不含服务额度 |
-| LLM 润色 | 对转写结果进行 LLM 润色，提示词方案可自定义并随时切换 |
-| 队列与管理 | 具备待处理队列、失败重试、录音管理等能力 |
-| 独立调用 | 每个功能都可拆分独立调用，也支持导入音频处理 |
-| 使用状态 | 已有数百位真实付费用户，持续更新中... |
-| i18n | 完整且全面的英文支持;Complete and comprehensive English interface support |
+| 入口与工作台 | 桌面端可通过快捷键、命令和按钮启动；移动端可通过 URL 快捷指令一键录音 |
+| 音频与笔记 | 音频保存在 Obsidian vault，支持每次新建、当日追加、当月追加和日记辅助；可自定义目录、排序与笔记模板 |
+| ASR 转写 | 统一管理多条本地或云端 ASR 配置，保存前校验可用性；任务失败时可尝试其他合格服务商 |
+| 长音频与恢复 | 长录音可分段处理并显示进度；应用关闭、移动端中断或网络波动后，未完成任务可继续恢复 |
+| LLM 整理 | 支持自定义润色方案，并可继续提取待办、生成内容提要或按场景处理转写结果 |
+| 录音管理 | 集中查看转写、润色、失败、缺失笔记和孤立附件；支持取消、重试、恢复为笔记及分步安全清理 |
+| 独立处理 | 支持导入已有音频、处理当前笔记音频，也可以对已经完成的转写重新转写 |
+| 界面语言 | 提供简体中文与 English 界面 |
 
-## 🎁 拓展能力
+## 🎁 场景与扩展
 
 | 类别 | 说明 |
 |:---|:---|
-| 听写 | 类似Typeless，作语音输入法使用，优势是录音可保存兜底，不怕丢失（暂支持Windows） |
-| Todo | 自动提取录音中的待办任务，汇集到同一篇md笔记。勾选使用体验类似iphone备忘录 |
-| 提要 | 自动总结每段录音内容，提要成一句话，写入文件名称或大纲 |
-| 内部录音 | 录制电脑内部声音，支持戴耳机录制，适用于录制网课、播客等（支持 Windows 与 macOS 13+；macOS 15+ 可同时录制麦克风） |
-| 导入处理 | 一键打开文件管理器，选定音频，即可导入。自动进行转写润色以及其他预设方案处理 |
-| 可选润色 | 会议、学习、翻译等场景方案预设，支持自定义方案一键调用 |
+| Windows 听写 | 像语音输入法一样按住说话、松开输入；录音可按设置保留，失败条目仍可回到录音管理处理 |
+| Todo 笔记 | 自动汇集待办提取结果，支持勾选、排序、移到顶部、原生高亮和删除 |
+| 内容提要 | 把每段录音总结成一句话，可写入文件名或笔记大纲 |
+| 电脑声音录制 | 录制电脑播放的声音，戴耳机也可使用；支持 Windows 与 macOS 13+，macOS 15+ 可同时录制麦克风 |
+| 日记辅助 | 将普通录音写入 Daily Notes、Periodic Notes、Journals 等工具已经创建的当天日记，不接管日记创建 |
+| 本地转写服务 | 桌面端可发现并管理用户已经安装的 FunASR 程序；FunASR 与模型仍由用户自行安装和准备 |
+| 录音显示 | 可在“无特别提示”“顶部横条”“全屏浮窗”之间选择，普通录音与电脑声音录制使用同一显示规则 |
+
+## 🖥️ 平台与版本
+
+| 能力 | 要求 |
+|:---|:---|
+| Resojot 常规功能 | Obsidian `1.11.4+`；支持 Windows、macOS、iPhone 与 Android |
+| Windows 听写 | 仅 Windows 桌面端 |
+| 电脑声音录制 | Windows 与 macOS 13+ 桌面端；macOS 15+ 可同时录制麦克风 |
+| 本地 FunASR 管理 | 桌面端，需要用户已经安装 FunASR 并准备模型 |
+| Resojot CLI | Obsidian 桌面端官方安装包 `1.12.7+`，并启用 Command line interface |
 
 ## 🧪 Resojot CLI（测试功能）
 
@@ -70,26 +74,39 @@ Obsidian 的语音记录插件。
 - 写操作继续遵循“先生成精确计划、向用户说明、确认后执行、执行前重校验”的边界
 - CLI 不公开 API Key、授权码或插件内部队列；测试期间公共协议和操作范围仍可能调整
 
+最小能力发现：
+
+```shell
+obsidian vault="<vault-name-or-id>" resojot
+obsidian vault="<vault-name-or-id>" resojot:capabilities
+obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
+```
+
+终端当前目录已经是目标 vault 时，可以省略 `vault=...`。完整参数以当前版本返回的 `resojot:schema` 为准。
+
 ## 👀 界面预览
 
 | 场景 | 预览 |
 |:---|:---|
-| **标注框动作菜单**<br>在笔记块里直接触发润色、待办、提要、复制、删除和重试。 | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="标注框动作菜单" width="360" /> |
-| **录音管理双栏**<br>查看队列、失败状态和单条录音操作，右侧预览承接更多动作。 | <img src="./assets/readme/readme-desktop-management.png" alt="录音管理双栏" width="360" /> |
-| **移动端录音管理**<br>在手机上查看队列和录音状态，也能从菜单里调用当前条目的操作。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
-| **日记辅助模式**<br>当日追加时可对接已有日记模板，把录音写入固定日记结构。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
-| **润色与附加处理**<br>默认润色、待办提取、内容提要等方案可以在设置中独立管理。 | <img src="./assets/readme/readme-desktop-settings-polish.png" alt="润色与附加处理设置" width="360" /> |
-| **关于与联系入口**<br>授权状态、GitHub、作者入口和反馈信息集中在关于页面。 | <img src="./assets/readme/readme-mobile-about.png" alt="关于与联系入口" width="240" /> |
+| **工作台快速菜单**<br>从移动端工作台直接进入录音管理、设置、四种写入方式和音频导入。 | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="移动端工作台快速菜单" width="240" /> |
+| **标注框动作菜单**<br>在当前转写或润色块中继续调用润色方案、待办、提要、复制和删除。 | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="标注框动作菜单" width="480" /> |
+| **桌面端录音管理**<br>集中查看失败原因、重试状态和单条录音详情。 | <img src="./assets/readme/readme-desktop-management.png" alt="桌面端录音管理" width="480" /> |
+| **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
+| **存储与写入**<br>选择笔记写入方式、音频与笔记目录、模板和追加顺序。 | <img src="./assets/readme/readme-desktop-storage.png" alt="存储与笔记写入设置" width="480" /> |
+| **日记辅助模式**<br>按目录、日期命名规则和板块标题定位已有日记。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
+| **润色与附加处理**<br>管理润色服务商、默认润色、待办提取和内容提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="润色服务商与自动处理设置" width="240" /> |
+| **Todo 笔记**<br>控制自动汇集、笔记位置、显示大小和任务行末操作。 | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo 笔记设置" width="240" /> |
+| **关于与隐私**<br>版本、作者入口、隐私、API 服务、使用风险和数据存储说明集中展示。 | <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 关于页面" width="480" /> |
 
 ## 🔌 目前接入的服务
 
 | 类型 | 已支持 |
 |:---|:---|
-| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；桌面端可管理已安装的 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
-| 润色（LLM） | OpenAI-compatible<br>Anthropic<br>Gemini<br>Ollama |
+| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；桌面端可管理已安装的 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>小米 MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| 润色（LLM） | 硅基流动<br>豆包<br>通义千问<br>DeepSeek<br>小米 MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>自定义 OpenAI-compatible 接口 |
 
 > [!NOTE]
-> 插件授权不包含第三方云服务额度。
+> 插件授权不包含第三方云服务额度。服务是否可用、模型权限、费用和请求限制由用户配置的服务商决定。
 
 ## 🚀 安装
 
@@ -122,10 +139,11 @@ Obsidian 的语音记录插件。
 | 状态 | 可用功能 |
 |:---|:---|
 | 🔒 未授权 | 录音、保存音频、基础 Markdown 笔记、基础模板 |
-| 🔓 授权后 | 自动转写、待处理队列与重试、导入音频转写、AI 润色等高级功能 |
+| 🔓 授权后 | 自动转写（含任务队列与失败重试）、导入音频转写、AI 润色，以及依赖润色的待办提取和内容提要 |
 
 - 授权码在本地进行签名校验
 - 授权码不包含第三方云服务额度
+- 授权期限与适用版本以插件“授权信息”中显示的内容为准
 - 获取授权码：小红书搜索 **焦应行**
 
 ### 数据与存储
@@ -141,6 +159,12 @@ Obsidian 的语音记录插件。
 
 > [!CAUTION]
 > 请勿公开 `.obsidian/plugins/resojot/data.json`。该文件可能包含设置、队列状态、授权状态及旧版本遗留的 provider 凭据。
+
+## 👋 联系与反馈
+
+- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
+- 使用咨询、授权码获取和产品交流：小红书搜索 **焦应行** 🔍
+- 详细部署指南、免费 API 指南、插件使用技巧和售后群信息也在小红书
 
 ## 📜 许可
 
