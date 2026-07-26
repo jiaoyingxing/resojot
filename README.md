@@ -61,6 +61,15 @@ Obsidian 的语音记录插件。
 | 导入处理 | 一键打开文件管理器，选定音频，即可导入。自动进行转写润色以及其他预设方案处理 |
 | 可选润色 | 会议、学习、翻译等场景方案预设，支持自定义方案一键调用 |
 
+## 🧪 Resojot CLI（测试功能）
+
+从 `0.9.10` 起，Resojot CLI 作为测试功能开放给 Codex、Claude Code 等外部 Agent。它可以发现插件能力、处理库内已有音频、查询 / 重试 / 取消持久任务并取得结果笔记与 artifact，也可以审计录音管理状态、预览有界内容，以及在用户确认精确计划后恢复笔记、重试任务或清理选定条目。
+
+- 需要 Obsidian 桌面端 `1.12.7+` 的官方安装包，并在 **设置 → 通用** 中启用 **Command line interface**
+- 调用时 Obsidian 与目标 vault 需要保持打开；移动端和旧版宿主不提供 CLI
+- 写操作继续遵循“先生成精确计划、向用户说明、确认后执行、执行前重校验”的边界
+- CLI 不公开 API Key、授权码或插件内部队列；测试期间公共协议和操作范围仍可能调整
+
 ## 👀 界面预览
 
 | 场景 | 预览 |
@@ -84,10 +93,13 @@ Obsidian 的语音记录插件。
 
 ## 🚀 安装
 
-> [!WARNING]
-> Resojot 为闭源插件，官方插件商店搜不到。
+### 方式一：Obsidian 社区插件（推荐）
 
-### 方式一：**BRAT（推荐）**，我已汉化了BRAT并被作者合并大家直接用到中文版。
+1. 打开 Obsidian 的 **设置 → 第三方插件**
+2. 选择 **浏览**，搜索 **Resojot**
+3. 安装并启用插件
+
+### 方式二：BRAT
 
 1. 在 Obsidian 社区插件中安装 **BRAT**
 2. 打开 BRAT，选择 **Add Beta plugin**
@@ -96,7 +108,7 @@ Obsidian 的语音记录插件。
 
 > BRAT 可自动从 GitHub Releases 更新，无需手动替换文件。
 
-### 方式二：手动安装
+### 方式三：手动安装
 
 1. 从 [GitHub Releases](https://github.com/jiaoyingxing/resojot/releases) 下载 `main.js`、`manifest.json`、`styles.css`
 2. 在 vault 的 `.obsidian/plugins/resojot/` 目录放入上述文件
@@ -133,5 +145,5 @@ Obsidian 的语音记录插件。
 ## 📜 许可
 
 - 闭源分发，源码不公开
-- 安装与更新通过 BRAT 或 GitHub Releases 进行
+- 安装与更新可通过 Obsidian 社区插件、BRAT 或 GitHub Releases 进行
 - 详见 [LICENSE](./LICENSE)

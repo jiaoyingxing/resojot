@@ -61,6 +61,15 @@ Voice recording plugin for Obsidian.
 | Import processing | Open the file picker, choose an audio file, and import it in one step. Transcription, polishing, and other preset processing can run automatically |
 | Optional polishing | Preset workflows for meetings, study, translation, and other scenarios, with custom schemes you can call in one click |
 
+## 🧪 Resojot CLI (Testing feature)
+
+Starting with `0.9.10`, Resojot CLI is available as a testing feature for external agents such as Codex and Claude Code. It can discover plugin capabilities, process existing audio in the vault, query / retry / cancel persistent jobs, and return result notes and artifacts. It can also audit recording-management state, preview bounded content, and—after the user confirms an exact plan—restore notes, retry jobs, or clean up selected items.
+
+- Requires the official Obsidian desktop installer `1.12.7+` with **Settings → General → Command line interface** enabled
+- Obsidian and the target vault must stay open while it is used; CLI is unavailable on mobile and older hosts
+- Write operations retain the boundary of exact planning, user-facing explanation, confirmation, and pre-apply revalidation
+- CLI does not expose API keys, license keys, or internal queues; its public contract and operation scope may still change during testing
+
 ## 👀 UI Preview
 
 | Scenario | Preview |
@@ -84,10 +93,13 @@ Voice recording plugin for Obsidian.
 
 ## 🚀 Installation
 
-> [!WARNING]
-> Resojot is a closed-source plugin and does not appear in the official Community Plugins directory.
+### Option 1: Obsidian Community Plugins (recommended)
 
-### Option 1: BRAT (recommended)
+1. Open **Settings → Community plugins** in Obsidian
+2. Choose **Browse** and search for **Resojot**
+3. Install and enable the plugin
+
+### Option 2: BRAT
 
 1. Install **BRAT** from Obsidian Community Plugins
 2. Open BRAT and choose **Add Beta plugin**
@@ -96,7 +108,7 @@ Voice recording plugin for Obsidian.
 
 > BRAT can update the plugin directly from GitHub Releases, so you usually do not need to replace files manually.
 
-### Option 2: Manual installation
+### Option 3: Manual installation
 
 1. Download `main.js`, `manifest.json`, and `styles.css` from [GitHub Releases](https://github.com/jiaoyingxing/resojot/releases)
 2. Put them into `.obsidian/plugins/resojot/` inside your vault
@@ -133,5 +145,5 @@ Voice recording plugin for Obsidian.
 ## 📜 License
 
 - Distributed as a closed-source plugin
-- Installation and updates happen through BRAT or GitHub Releases
+- Installation and updates are available through Obsidian Community Plugins, BRAT, or GitHub Releases
 - See [LICENSE](./LICENSE)
