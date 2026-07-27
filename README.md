@@ -33,7 +33,7 @@ Resojot 把录音、转写、整理和 Markdown 笔记沉淀放在同一条 Obsi
 - Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
 
 <p align="center">
-  <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot 移动端录音工作台" width="360" />
+  <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
 </p>
 
 ## ✨ 主要能力
@@ -92,7 +92,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 ## 👀 部分界面展示
 
-> 下方桌面端截图中的功能同样支持移动端；Resojot 会根据屏幕调整布局，而不是将这些能力限制在桌面端。这里仅按截图形态分组：桌面截图用于完整展示横向界面，移动截图用于展示手机布局。
+> 下方桌面端截图中的功能同样支持移动端；Resojot 会根据屏幕调整布局，而不是将这些能力限制在桌面端。这里仅按截图形态分组，并按入口与日常操作、写入与处理、任务管理的使用路径排列。
 
 ### 桌面端截图
 
@@ -103,18 +103,18 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
   <img src="./assets/readme/readme-desktop-callout-actions.png" alt="标注框动作菜单" width="900" />
 </p>
 
-**桌面端录音管理**<br>
-集中查看失败原因、重试状态和单条录音详情。
-
-<p align="center">
-  <img src="./assets/readme/readme-desktop-management.png" alt="桌面端录音管理" width="900" />
-</p>
-
 **存储与写入**<br>
 选择笔记写入方式、音频与笔记文件夹、模板和追加顺序。
 
 <p align="center">
   <img src="./assets/readme/readme-desktop-storage.png" alt="存储与笔记写入设置" width="900" />
+</p>
+
+**桌面端录音管理**<br>
+集中查看失败原因、重试状态和单条录音详情。
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-management.png" alt="桌面端录音管理" width="900" />
 </p>
 
 **关于与隐私**<br>
@@ -128,11 +128,12 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 | 场景 | 预览 |
 |:---|:---|
+| **移动端工作台**<br>查看最近录音笔记，并从底部录音按钮开始记录。 | <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot 移动端录音工作台" width="240" /> |
 | **工作台快速菜单**<br>从移动端工作台直接进入录音管理、设置、四种写入方式和音频导入。 | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="移动端工作台快速菜单" width="240" /> |
-| **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
 | **日记辅助模式**<br>按目录、日期命名规则和板块标题定位已有日记。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
 | **润色与附加处理**<br>管理润色服务商、默认润色、待办提取和内容提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="润色服务商与自动处理设置" width="240" /> |
 | **Todo 笔记**<br>控制自动汇集、笔记位置、显示大小和任务行末操作。 | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo 笔记设置" width="240" /> |
+| **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
 
 ## 🔌 目前接入的服务
 

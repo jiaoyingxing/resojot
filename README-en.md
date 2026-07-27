@@ -33,7 +33,7 @@ Resojot keeps recording, transcription, organization, and Markdown note capture 
 - Bugs, reproducible issues, and feature requests: [GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
 
 <p align="center">
-  <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot mobile recording workbench" width="360" />
+  <img src="./assets/readme/hero-overview.png" alt="Resojot across mobile and desktop" width="430" />
 </p>
 
 ## ✨ Main Capabilities
@@ -92,7 +92,7 @@ If the terminal is already inside the target vault, `vault=...` can be omitted. 
 
 ## 👀 Selected Interface Previews
 
-> The features shown in the desktop screenshots below are also available on mobile. Resojot adapts their layout to the screen instead of limiting these capabilities to desktop. The sections are grouped only by screenshot format: desktop captures show the wide layout in full, while mobile captures show the phone layout.
+> The features shown in the desktop screenshots below are also available on mobile. Resojot adapts their layout to the screen instead of limiting these capabilities to desktop. The sections are grouped by screenshot format and ordered along the path from entry and everyday use to writing, processing, and task management.
 
 ### Desktop Screenshots
 
@@ -103,18 +103,18 @@ Continue from the current transcript or polish block with polish profiles, Todo 
   <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Callout action menu" width="900" />
 </p>
 
-**Desktop Recording Management**<br>
-Review failure reasons, retry status, and per-recording details in one place.
-
-<p align="center">
-  <img src="./assets/readme/readme-desktop-management.png" alt="Desktop Recording Management" width="900" />
-</p>
-
 **Storage and writing**<br>
 Choose the writing mode, audio and note folders, templates, and append order.
 
 <p align="center">
   <img src="./assets/readme/readme-desktop-storage.png" alt="Storage and note writing settings" width="900" />
+</p>
+
+**Desktop Recording Management**<br>
+Review failure reasons, retry status, and per-recording details in one place.
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-management.png" alt="Desktop Recording Management" width="900" />
 </p>
 
 **About and privacy**<br>
@@ -128,11 +128,12 @@ Review the current version, author links, privacy, API service, usage risks, and
 
 | Scenario | Preview |
 |:---|:---|
+| **Mobile Workbench**<br>Review recent recording notes and start recording from the button at the bottom. | <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot mobile recording workbench" width="240" /> |
 | **Workbench quick menu**<br>Open Recording Management and settings, switch among four writing modes, or import audio directly from the mobile Workbench. | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="Mobile Workbench quick menu" width="240" /> |
-| **Mobile Recording Management**<br>Review cancelled, no-speech, missing-note, and orphan-attachment states on mobile. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile Recording Management" width="240" /> |
 | **Journal assist mode**<br>Locate an existing journal by folder, date format, and target heading. | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="Journal assist mode settings" width="240" /> |
 | **Polish and add-on processing**<br>Manage polish providers, default polish, Todo extraction, and content summaries. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="Polish providers and automatic processing settings" width="240" /> |
 | **Todo notes**<br>Control automatic collection, note location, display size, and line-end task actions. | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo note settings" width="240" /> |
+| **Mobile Recording Management**<br>Review cancelled, no-speech, missing-note, and orphan-attachment states on mobile. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile Recording Management" width="240" /> |
 
 ## 🔌 Supported Services
 
