@@ -92,7 +92,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 ## 👀 部分界面展示
 
-> 下方桌面端截图中的功能同样支持移动端；Resojot 会根据屏幕调整布局，而不是将这些能力限制在桌面端。这里仅按截图形态分组，并按入口与日常操作、写入与处理、任务管理的使用路径排列。
+> 下方桌面端截图中的功能同样支持移动端；Resojot 会根据屏幕调整布局。
 
 ### 桌面端截图
 
