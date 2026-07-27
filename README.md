@@ -26,6 +26,12 @@ Resojot 把录音、转写、整理和 Markdown 笔记沉淀放在同一条 Obsi
 - 支持导入已有音频、长音频处理、失败恢复和多服务商备用切换。
 - 持续维护 iPhone、Android、Windows 与 macOS 的多端兼容。
 
+## 👋 联系
+
+- 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
+- 详细部署指南、免费 API 指南、插件使用技巧和交流群信息：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
+- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
+
 <p align="center">
   <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot 移动端录音工作台" width="360" />
 </p>
@@ -84,19 +90,49 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 终端当前目录已经是目标 vault 时，可以省略 `vault=...`。完整参数以当前版本返回的 `resojot:schema` 为准。
 
-## 👀 界面预览
+## 👀 部分界面展示
+
+> 下方桌面端截图中的功能同样支持移动端；Resojot 会根据屏幕调整布局，而不是将这些能力限制在桌面端。这里仅按截图形态分组：桌面截图用于完整展示横向界面，移动截图用于展示手机布局。
+
+### 桌面端截图
+
+**标注框动作菜单**<br>
+在当前转写或润色块中继续调用润色方案、待办、提要、复制和删除。
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-callout-actions.png" alt="标注框动作菜单" width="900" />
+</p>
+
+**桌面端录音管理**<br>
+集中查看失败原因、重试状态和单条录音详情。
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-management.png" alt="桌面端录音管理" width="900" />
+</p>
+
+**存储与写入**<br>
+选择笔记写入方式、音频与笔记文件夹、模板和追加顺序。
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-storage.png" alt="存储与笔记写入设置" width="900" />
+</p>
+
+**关于与隐私**<br>
+版本、作者入口、隐私、API 服务、使用风险和数据存储说明集中展示。
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 关于页面" width="900" />
+</p>
+
+### 移动端截图
 
 | 场景 | 预览 |
 |:---|:---|
 | **工作台快速菜单**<br>从移动端工作台直接进入录音管理、设置、四种写入方式和音频导入。 | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="移动端工作台快速菜单" width="240" /> |
-| **标注框动作菜单**<br>在当前转写或润色块中继续调用润色方案、待办、提要、复制和删除。 | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="标注框动作菜单" width="480" /> |
-| **桌面端录音管理**<br>集中查看失败原因、重试状态和单条录音详情。 | <img src="./assets/readme/readme-desktop-management.png" alt="桌面端录音管理" width="480" /> |
 | **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
-| **存储与写入**<br>选择笔记写入方式、音频与笔记目录、模板和追加顺序。 | <img src="./assets/readme/readme-desktop-storage.png" alt="存储与笔记写入设置" width="480" /> |
 | **日记辅助模式**<br>按目录、日期命名规则和板块标题定位已有日记。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
 | **润色与附加处理**<br>管理润色服务商、默认润色、待办提取和内容提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="润色服务商与自动处理设置" width="240" /> |
 | **Todo 笔记**<br>控制自动汇集、笔记位置、显示大小和任务行末操作。 | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo 笔记设置" width="240" /> |
-| **关于与隐私**<br>版本、作者入口、隐私、API 服务、使用风险和数据存储说明集中展示。 | <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 关于页面" width="480" /> |
 
 ## 🔌 目前接入的服务
 
@@ -159,12 +195,6 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 > [!CAUTION]
 > 请勿公开 `.obsidian/plugins/resojot/data.json`。该文件可能包含设置、队列状态、授权状态及旧版本遗留的 provider 凭据。
-
-## 👋 联系与反馈
-
-- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
-- 使用咨询、授权码获取和产品交流：小红书搜索 **焦应行** 🔍
-- 详细部署指南、免费 API 指南、插件使用技巧和售后群信息也在小红书
 
 ## 📜 许可
 

@@ -26,6 +26,12 @@ Resojot keeps recording, transcription, organization, and Markdown note capture 
 - Process imported and long-form audio with recovery and fallback across validated providers.
 - iPhone, Android, Windows, and macOS compatibility is maintained continuously.
 
+## 👋 Contact
+
+- For a license key, usage questions, or product discussion, search Xiaohongshu for **焦应行**
+- Detailed setup guides, free API guides, plugin tips, and community group information: [Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
+- Bugs, reproducible issues, and feature requests: [GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
+
 <p align="center">
   <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot mobile recording workbench" width="360" />
 </p>
@@ -84,19 +90,49 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 If the terminal is already inside the target vault, `vault=...` can be omitted. Treat the current `resojot:schema` output as the source of truth for command parameters.
 
-## 👀 UI Preview
+## 👀 Selected Interface Previews
+
+> The features shown in the desktop screenshots below are also available on mobile. Resojot adapts their layout to the screen instead of limiting these capabilities to desktop. The sections are grouped only by screenshot format: desktop captures show the wide layout in full, while mobile captures show the phone layout.
+
+### Desktop Screenshots
+
+**Callout action menu**<br>
+Continue from the current transcript or polish block with polish profiles, Todo extraction, summaries, copy, or delete.
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Callout action menu" width="900" />
+</p>
+
+**Desktop Recording Management**<br>
+Review failure reasons, retry status, and per-recording details in one place.
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-management.png" alt="Desktop Recording Management" width="900" />
+</p>
+
+**Storage and writing**<br>
+Choose the writing mode, audio and note folders, templates, and append order.
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-storage.png" alt="Storage and note writing settings" width="900" />
+</p>
+
+**About and privacy**<br>
+Review the current version, author links, privacy, API service, usage risks, and data storage information.
+
+<p align="center">
+  <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 About page" width="900" />
+</p>
+
+### Mobile Screenshots
 
 | Scenario | Preview |
 |:---|:---|
 | **Workbench quick menu**<br>Open Recording Management and settings, switch among four writing modes, or import audio directly from the mobile Workbench. | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="Mobile Workbench quick menu" width="240" /> |
-| **Callout action menu**<br>Continue from the current transcript or polish block with polish profiles, Todo extraction, summaries, copy, or delete. | <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Callout action menu" width="480" /> |
-| **Desktop Recording Management**<br>Review failure reasons, retry status, and per-recording details in one place. | <img src="./assets/readme/readme-desktop-management.png" alt="Desktop Recording Management" width="480" /> |
 | **Mobile Recording Management**<br>Review cancelled, no-speech, missing-note, and orphan-attachment states on mobile. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile Recording Management" width="240" /> |
-| **Storage and writing**<br>Choose the writing mode, audio and note folders, templates, and append order. | <img src="./assets/readme/readme-desktop-storage.png" alt="Storage and note writing settings" width="480" /> |
 | **Journal assist mode**<br>Locate an existing journal by folder, date format, and target heading. | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="Journal assist mode settings" width="240" /> |
 | **Polish and add-on processing**<br>Manage polish providers, default polish, Todo extraction, and content summaries. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="Polish providers and automatic processing settings" width="240" /> |
 | **Todo notes**<br>Control automatic collection, note location, display size, and line-end task actions. | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo note settings" width="240" /> |
-| **About and privacy**<br>Review the current version, author links, privacy, API service, usage risks, and data storage information. | <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 About page" width="480" /> |
 
 ## 🔌 Supported Services
 
@@ -159,12 +195,6 @@ If the terminal is already inside the target vault, `vault=...` can be omitted. 
 
 > [!CAUTION]
 > Do not publish `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.
-
-## 👋 Contact and Feedback
-
-- Bugs, reproducible issues, and feature requests: [GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
-- Usage questions, license access, and product discussion: search Xiaohongshu for **焦应行**
-- Detailed setup guides, free API guides, plugin tips, and support-group information are also available on Xiaohongshu
 
 ## 📜 License
 
