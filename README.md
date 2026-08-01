@@ -19,49 +19,57 @@
   <strong>阅读语言：</strong> <strong>简体中文</strong> · <a href="./README-en.md"><strong>English</strong></a>
 </p>
 
-Resojot 把录音、转写、整理和 Markdown 笔记沉淀放在同一条 Obsidian 工作流里。
+Resojot 让语音记录更简单，录音会按你的设置自动保存，并转写、整理成 Obsidian 笔记。打开工作台即可快捷录音，录音状态和后续处理进度都能直接看到。
 
-- 录音后自动保存音频并生成 Markdown 笔记。
-- 使用本地或云端 ASR 转写，再按自定义方案调用 LLM 润色、提取待办或生成提要。
-- 支持导入已有音频、长音频处理、失败恢复和多服务商备用切换。
-- 持续维护 iPhone、Android、Windows 与 macOS 的多端兼容。
+录音结束后，Resojot 可以按设置自动保存音频、转写文本、AI 润色正文，并提取标题、待办和提要，生成结构化 Markdown 笔记。
 
-## 👋 联系
+保存位置、文件命名、笔记模板和写入方式都可以设置；每段录音可以按次新建，也可以按日、按月汇总，或者写入已有日记。
 
-- 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
-- 详细部署指南、免费 API 指南、插件使用技巧和交流群信息：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
-- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
+## 1. ⚙️ 自动处理流程
+
+```mermaid
+flowchart LR
+    A["开始录音"] --> B["选择记录方式<br/>按次 · 按日 · 按月 · 日记"]
+    B --> C["按设置自动保存<br/>位置 · 命名 · 模板<br/>生成 Markdown 笔记"]
+    C -->|已配置| D["自动转写文本"]
+    D -->|已开启| E["自动 AI 润色正文<br/>标题 · 待办 · 提要"]
+    E --> F["可视化管理<br/>进度 · 状态 · 异常"]
+```
+
+音频和笔记始终自动保存。转写、AI 润色、标题、待办和提要在相应服务与开关配置完成后自动运行。没有配置转写服务时，任务会显示为“等待配置”，配置后可以继续处理。
 
 <p align="center">
   <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
 </p>
 
-## ✨ 主要能力
+## 2. ✨ 主要功能
 
-| 类别 | 说明 |
+| 特点 | 说明 |
 |:---|:---|
-| 入口与工作台 | 桌面端可通过快捷键、命令和按钮启动；移动端可通过 URL 快捷指令一键录音 |
-| 音频与笔记 | 音频保存在 Obsidian vault，支持每次新建、当日追加、当月追加和日记辅助；可自定义目录、排序与笔记模板 |
-| ASR 转写 | 统一管理多条本地或云端 ASR 配置，保存前校验可用性；任务失败时可尝试其他合格服务商 |
-| 长音频与恢复 | 长录音可分段处理并显示进度；应用关闭、移动端中断或网络波动后，未完成任务可继续恢复 |
-| LLM 整理 | 支持自定义润色方案，并可继续提取待办、生成内容提要或按场景处理转写结果 |
-| 录音管理 | 集中查看转写、润色、失败、缺失笔记和孤立附件；支持取消、重试、恢复为笔记及分步安全清理 |
-| 独立处理 | 支持导入已有音频、处理当前笔记音频，也可以对已经完成的转写重新转写 |
-| 界面语言 | 提供简体中文与 English 界面 |
+| ⚡ 快捷录音 | 工作台底部可以直接开始录音。桌面端还可以使用快捷键、命令和按钮；移动端支持 URL 快捷指令。 |
+| 🧱 结构化笔记 | 音频、转写文本、润色正文、待办和提要写入 Markdown 笔记，并按内容类型分开显示和继续操作。 |
+| 📁 自动结构化存储 | 录音结束后按设置自动保存。音频与笔记位置、文件命名、笔记模板和追加顺序可以分别设置，支持按次、按日、按月和日记辅助。 |
+| 🔤 自动转写文本 | 配置本地或云端 ASR 后，录音自动进入转写。可以保存多条服务配置，当前服务失败时尝试其他符合条件的服务。 |
+| ✍️ 自动 AI 润色正文 | 开启自动润色后，转写完成会继续整理口语和格式。也可以使用自定义润色操作处理当前正文。 |
+| ✅ 自动提取标题与待办 | 可以根据录音内容生成标题或一句话提要，写入文件名或笔记大纲；提取出的待办可以自动汇集到 Todo 笔记。 |
+| ⏳ 长音频与恢复 | 长录音分段处理并显示进度。应用关闭、移动端中断或网络波动后，未完成任务会保留，重新打开后可以继续处理。 |
+| 📊 可视化管理 | 工作台显示最近的录音笔记；录音管理集中显示转写、润色、失败、笔记缺失和孤立附件，可以取消、重试、恢复笔记和分步清理。 |
+| 📥 已有音频 | 可以导入外部音频、处理当前笔记中的音频，也可以重新转写已经完成的结果。 |
+| 🌐 界面与设备 | 提供简体中文和 English 界面，常规功能支持 Windows、macOS、iPhone 和 Android。 |
 
-## 🎁 场景与扩展
+转写和润色结果写在笔记中的标注框里。打开当前标注框的动作菜单，可以重新转写、选择润色方案、提取待办、生成提要、复制或删除。
 
-| 类别 | 说明 |
+## 3. 🎁 记录方式与电脑端功能
+
+| 功能 | 说明 |
 |:---|:---|
-| Windows 听写 | 像语音输入法一样按住说话、松开输入；录音可按设置保留，失败条目仍可回到录音管理处理 |
-| Todo 笔记 | 自动汇集待办提取结果，支持勾选、排序、移到顶部、原生高亮和删除 |
-| 内容提要 | 把每段录音总结成一句话，可写入文件名或笔记大纲 |
-| 电脑声音录制 | 录制电脑播放的声音，戴耳机也可使用；支持 Windows 与 macOS 13+，macOS 15+ 可同时录制麦克风 |
-| 日记辅助 | 将普通录音写入 Daily Notes、Periodic Notes、Journals 等工具已经创建的当天日记，不接管日记创建 |
-| 本地转写服务 | 桌面端可发现并管理用户已经安装的 FunASR 程序；FunASR 与模型仍由用户自行安装和准备 |
-| 录音显示 | 可在“无特别提示”“顶部横条”“全屏浮窗”之间选择，普通录音与电脑声音录制使用同一显示规则 |
+| 🗣️ Windows 听写 | 按住快捷键说话，松开后把文字输入到当前应用。录音可以按设置保留，失败条目仍能回到录音管理中处理。 |
+| 💻 电脑声音录制 | 录制电脑正在播放的声音，使用耳机时也可以录制。支持 Windows 和 macOS 13+；macOS 15+ 可以同时录制麦克风。 |
+| 📅 日记辅助 | 把普通录音写入 Daily Notes、Periodic Notes、Journals 等工具已经创建的当天日记。Resojot 负责查找和写入，不接管日记创建。 |
+| 🧠 本地转写 | 桌面端可以发现、选择、启动和停止用户已经安装的 FunASR 程序。FunASR、Python 环境和模型仍由用户自行安装和准备。 |
+| 📱 录音显示 | 可以选择不额外提示、顶部横条或全屏浮窗。普通录音与电脑声音录制使用同一显示设置。 |
 
-## 🖥️ 平台与版本
+## 4. 🖥️ 平台与版本
 
 | 能力 | 要求 |
 |:---|:---|
@@ -71,14 +79,18 @@ Resojot 把录音、转写、整理和 Markdown 笔记沉淀放在同一条 Obsi
 | 本地 FunASR 管理 | 桌面端，需要用户已经安装 FunASR 并准备模型 |
 | Resojot CLI | Obsidian 桌面端官方安装包 `1.12.7+`，并启用 Command line interface |
 
-## 🧪 Resojot CLI（测试功能）
+## 5. 🧪 Resojot CLI（测试功能）
 
-从 `0.9.10` 起，Resojot CLI 作为测试功能开放给 Codex、Claude Code 等外部 Agent。它可以发现插件能力、处理库内已有音频、查询 / 重试 / 取消持久任务并取得结果笔记与 artifact，也可以安全调整存储设置、审计录音管理状态、预览有界内容，以及在用户确认精确计划后恢复笔记、重试任务或清理选定条目。配套预检可识别宿主、vault、插件和命令状态，反馈入口可在用户确认完整内容后衔接官方 GitHub Issues。
+从 `0.9.10` 起，Codex、Claude Code 等外部 Agent 可以通过官方 Obsidian CLI 调用 Resojot。这项功能目前处于测试阶段。
+
+Agent 可以检查当前环境和插件能力，处理 vault 中已有的音频，查询、重试或取消任务，并取得结果笔记和 artifact。它还可以读取存储与润色设置、查看 FunASR 状态、审计录音管理列表，以及预览选定录音的有限片段。
+
+修改设置、恢复笔记、重试任务或清理条目前，Resojot 会先生成一份精确计划。Agent 需要把计划和影响说明给用户，得到本次确认后才能提交；执行前，Resojot 还会重新检查对象和设置是否发生变化。
 
 - 需要 Obsidian 桌面端 `1.12.7+` 的官方安装包，并在 **设置 → 通用** 中启用 **Command line interface**
 - 调用时 Obsidian 与目标 vault 需要保持打开；移动端和旧版宿主不提供 CLI
-- 写操作继续遵循“先生成精确计划、向用户说明、确认后执行、执行前重校验”的边界
-- CLI 不公开 API Key、授权码或插件内部队列；测试期间公共协议和操作范围仍可能调整
+- 预览没有现成转写的录音时，选定片段可能会发送到当前转写服务，并产生相应费用
+- CLI 不公开 API Key、授权码或插件内部队列；测试期间命令参数和可执行范围仍可能调整
 
 最小能力发现：
 
@@ -90,11 +102,11 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 终端当前目录已经是目标 vault 时，可以省略 `vault=...`。完整参数以当前版本返回的 `resojot:schema` 为准。
 
-## 👀 部分界面展示
+## 6. 👀 部分界面展示
 
-> 下方桌面端截图中的功能同样支持移动端；Resojot 会根据屏幕调整布局。
+> 下面的桌面端截图所示功能同样支持移动端；Resojot 会根据屏幕调整布局。
 
-### 桌面端截图
+### 6.1 桌面端截图
 
 **标注框动作菜单**<br>
 在当前转写或润色块中继续调用润色方案、待办、提要、复制和删除。
@@ -124,18 +136,18 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
   <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 关于页面" width="900" />
 </p>
 
-### 移动端截图
+### 6.2 移动端截图
 
 | 场景 | 预览 |
 |:---|:---|
 | **移动端工作台**<br>查看最近录音笔记，并从底部录音按钮开始记录。 | <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot 移动端录音工作台" width="240" /> |
 | **工作台快速菜单**<br>从移动端工作台直接进入录音管理、设置、四种写入方式和音频导入。 | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="移动端工作台快速菜单" width="240" /> |
 | **日记辅助模式**<br>按目录、日期命名规则和板块标题定位已有日记。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
-| **润色与附加处理**<br>管理润色服务商、默认润色、待办提取和内容提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="润色服务商与自动处理设置" width="240" /> |
+| **润色与附加处理**<br>管理润色服务商、自动润色、待办提取和内容提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="润色服务商与自动处理设置" width="240" /> |
 | **Todo 笔记**<br>控制自动汇集、笔记位置、显示大小和任务行末操作。 | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo 笔记设置" width="240" /> |
 | **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
 
-## 🔌 目前接入的服务
+## 7. 🔌 目前接入的服务
 
 | 类型 | 已支持 |
 |:---|:---|
@@ -145,15 +157,15 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 > [!NOTE]
 > 插件授权不包含第三方云服务额度。服务是否可用、模型权限、费用和请求限制由用户配置的服务商决定。
 
-## 🚀 安装
+## 8. 🚀 安装
 
-### 方式一：Obsidian 社区插件（推荐）
+### 8.1 Obsidian 社区插件（推荐）
 
 1. 打开 Obsidian 的 **设置 → 第三方插件**
 2. 选择 **浏览**，搜索 **Resojot**
 3. 安装并启用插件
 
-### 方式二：BRAT
+### 8.2 BRAT
 
 1. 在 Obsidian 社区插件中安装 **BRAT**
 2. 打开 BRAT，选择 **Add Beta plugin**
@@ -162,16 +174,16 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 > BRAT 可自动从 GitHub Releases 更新，无需手动替换文件。
 
-### 方式三：手动安装
+### 8.3 手动安装
 
 1. 从 [GitHub Releases](https://github.com/jiaoyingxing/resojot/releases) 下载 `main.js`、`manifest.json`、`styles.css`
 2. 在 vault 的 `.obsidian/plugins/resojot/` 目录放入上述文件
 3. 重启 Obsidian 或重新加载社区插件
 4. 在设置中启用 Resojot
 
-## 🔐 授权与隐私
+## 9. 🔐 授权与隐私
 
-### 授权状态
+### 9.1 授权状态
 
 | 状态 | 可用功能 |
 |:---|:---|
@@ -183,7 +195,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 - 授权期限与适用版本以插件“授权信息”中显示的内容为准
 - 获取授权码：小红书搜索 **焦应行**
 
-### 数据与存储
+### 9.2 数据与存储
 
 | 数据 | 存储位置 |
 |:---|:---|
@@ -197,7 +209,13 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 > [!CAUTION]
 > 请勿公开 `.obsidian/plugins/resojot/data.json`。该文件可能包含设置、队列状态、授权状态及旧版本遗留的 provider 凭据。
 
-## 📜 许可
+## 10. 👋 联系
+
+- 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
+- 部署指南、免费 API 指南、插件使用技巧和交流群信息：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
+- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
+
+## 11. 📜 许可
 
 - 闭源分发，源码不公开
 - 安装与更新可通过 Obsidian 社区插件、BRAT 或 GitHub Releases 进行
