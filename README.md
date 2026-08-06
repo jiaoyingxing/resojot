@@ -19,24 +19,27 @@
   <strong>阅读语言：</strong> <strong>简体中文</strong> · <a href="./README-en.md"><strong>English</strong></a>
 </p>
 
-Resojot 让语音记录更简单，录音会按你的设置自动保存，并转写、整理成 Obsidian 笔记。打开工作台即可快捷录音，录音状态和后续处理进度都能直接看到。
+Resojot 把录音、转写和整理自动接到 Obsidian 笔记里，让语音内容更快变成可查、可用的记录。
 
-录音结束后，Resojot 可以按设置自动保存音频、转写文本、AI 润色正文，并提取标题、待办和提要，生成结构化 Markdown 笔记。
+## 👋 联系
 
-保存位置、文件命名、笔记模板和写入方式都可以设置；每段录音可以按次新建，也可以按日、按月汇总，或者写入已有日记。
+- 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
+- 部署指南、免费 API 指南、插件使用技巧和交流群信息：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
+- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
 
 ## 1. ⚙️ 自动处理流程
 
 ```mermaid
-flowchart LR
-    A["开始录音"] --> B["选择记录方式<br/>按次 · 按日 · 按月 · 日记"]
-    B --> C["按设置自动保存<br/>位置 · 命名 · 模板<br/>生成 Markdown 笔记"]
-    C -->|已配置| D["自动转写文本"]
-    D -->|已开启| E["自动 AI 润色正文<br/>标题 · 待办 · 提要"]
-    E --> F["可视化管理<br/>进度 · 状态 · 异常"]
+flowchart TB
+    A["录音"]
+    B["保存音频与笔记"]
+    C["转写"]
+    D["润色、标题、待办"]
+    E["管理进度与重试"]
+    A --> B --> C --> D --> E
 ```
 
-音频和笔记始终自动保存。转写、AI 润色、标题、待办和提要在相应服务与开关配置完成后自动运行。没有配置转写服务时，任务会显示为“等待配置”，配置后可以继续处理。
+录音会先保存音频和笔记；配置好转写和润色后，后续处理会自动接上。还没有配置转写服务时，任务会先留在“等待配置”状态，之后可以继续处理。
 
 <p align="center">
   <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
@@ -209,13 +212,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 > [!CAUTION]
 > 请勿公开 `.obsidian/plugins/resojot/data.json`。该文件可能包含设置、队列状态、授权状态及旧版本遗留的 provider 凭据。
 
-## 10. 👋 联系
-
-- 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
-- 部署指南、免费 API 指南、插件使用技巧和交流群信息：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
-- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
-
-## 11. 📜 许可
+## 10. 📜 许可
 
 - 闭源分发，源码不公开
 - 安装与更新可通过 Obsidian 社区插件、BRAT 或 GitHub Releases 进行
