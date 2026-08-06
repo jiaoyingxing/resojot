@@ -19,12 +19,12 @@
   <strong>阅读语言：</strong> <strong>简体中文</strong> · <a href="./README-en.md"><strong>English</strong></a>
 </p>
 
-Resojot 把录音、转写和整理自动接到 Obsidian 笔记里，让语音内容更快变成可查、可用的记录。
+Resojot 在 Obsidian 里完成录音、转写和整理，让语音内容更快变成可查、可用的笔记。
 
 ## 👋 联系
 
 - 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
-- 部署指南、免费 API 指南、插件使用技巧和交流群信息：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
+- 部署指南、免费 API 指南、插件使用技巧知识库：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
 - Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
 
 ## 1. ⚙️ 自动处理流程
@@ -39,7 +39,7 @@ flowchart TB
     A --> B --> C --> D --> E
 ```
 
-录音会先保存音频和笔记；配置好转写和润色后，后续处理会自动接上。还没有配置转写服务时，任务会先留在“等待配置”状态，之后可以继续处理。
+录音会先保存音频和笔记；配置好转写和润色后，后续处理会自动继续。还没有配置转写服务时，任务会先留在“等待配置”状态，之后可以继续处理。
 
 <p align="center">
   <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
@@ -150,7 +150,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 | **Todo 笔记**<br>控制自动汇集、笔记位置、显示大小和任务行末操作。 | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo 笔记设置" width="240" /> |
 | **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
 
-## 7. 🔌 目前接入的服务
+## 7. 🔌 目前支持的服务
 
 | 类型 | 已支持 |
 |:---|:---|
