@@ -53,6 +53,7 @@ From saving recordings to transcription, polish, titles, Todos, and summaries, R
 | Structured notes | Audio, transcripts, polished text, Todos, and summaries are written into Markdown notes, separated by content type for review and follow-up actions. |
 | Automatic structured storage | After recording, audio and notes are saved based on your settings. Audio and note locations, file naming, note templates, and append order can be configured separately, with per-recording, daily, monthly, and journal-assist writing. |
 | Automatic transcription | After local or cloud ASR is configured, recordings enter transcription automatically. You can save multiple service configurations, and Resojot can try another eligible service when the current one fails. |
+| Local dictionary | Add words that are often transcribed incorrectly and tell Resojot how they should be written. Future transcripts and automatic polish results will use your chosen wording. You can add entries from completed transcript or polish content, or export the dictionary as Markdown and import it on another device. |
 | Live transcription while recording | From the Workbench, use “Record and transcribe live” to show transcript sentences while recording; after stopping, Resojot still saves the complete audio and continues through full transcription and polish based on your settings. |
 | Automatic AI polish | After automatic polish is enabled, finished transcripts continue into spoken-language cleanup and formatting. You can also apply custom polish actions to the current text. |
 | Automatic titles and Todos | Generate titles or one-sentence summaries from recording content, write them into filenames or note outlines, and collect extracted Todos into a Todo note automatically. |
@@ -62,7 +63,7 @@ From saving recordings to transcription, polish, titles, Todos, and summaries, R
 | Tablet and multi-window layout | Phones keep a single-column flow; tablets and desktop windows adapt Settings and Workbench layouts to the available width. |
 | Interface and devices | Simplified Chinese and English interfaces; standard features support Windows, macOS, iPhone, and Android. |
 
-Transcript and polish results are written into callouts in the note. Open the action menu on the current callout to retranscribe, choose a polish profile, extract Todos, generate a summary, copy, or delete.
+After transcription or polish finishes, use the action menu for that content to retry or retranscribe, or open “AI polish” for polish profiles, Todo extraction, and summaries. The same menu also provides “Correct wording,” copy, and delete actions; when the dictionary changed this content, it also provides “Dictionary corrections…”.
 
 ## 3. 🎁 Scenarios and Extensions
 
@@ -114,11 +115,11 @@ If the terminal is already inside the target vault, `vault=...` can be omitted. 
 
 ### 6.1 Desktop Screenshots
 
-**Callout action menu**<br>
-Continue from the current transcript or polish block with polish profiles, Todo extraction, summaries, copy, or delete.
+**Transcript and polish actions**<br>
+Open “AI polish,” or use “Correct wording,” copy, and delete.
 
 <p align="center">
-  <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Callout action menu" width="900" />
+  <img src="./assets/readme/readme-desktop-callout-actions.png" alt="Transcript and polish action menu" width="900" />
 </p>
 
 **Storage and writing**<br>
@@ -206,11 +207,12 @@ Review the current version, author links, privacy, API service, usage risks, and
 | Data | Stored in |
 |:---|:---|
 | 🎙️ Audio files and Markdown notes | Your Obsidian vault (local) |
-| ⚙️ Plugin settings, license state, and pending task state | Local Obsidian plugin data |
+| ⚙️ Plugin settings, dictionary, license state, and pending task state | Local Obsidian plugin data |
 | 🔑 Provider API keys, polish API keys, and license key | Obsidian SecretStorage, separated by device and vault |
 
 - Resojot does not include client-side telemetry
 - If you enable cloud transcription or cloud polish, the processed audio or text will be sent to your configured provider
+- Dictionary rules are stored in plugin data for the current vault; an exported `Resojot 词典.md` is an explicitly generated plain-text transfer file that may be read by sync, backup, or search tools. Import requires confirmation and never silently replaces the active dictionary
 
 > [!CAUTION]
 > Do not publish `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.

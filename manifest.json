@@ -1,9 +1,9 @@
 {
   "id": "resojot",
   "name": "Resojot",
-  "version": "0.9.12",
+  "version": "0.9.13",
   "minAppVersion": "1.11.4",
-  "description": "Capture voice notes, write them into Markdown, and transcribe them with local or cloud providers. (Closed source).",
+  "description": "Easily record, transcribe, and organize voice into searchable, usable notes.",
   "author": "Jiao Yingxing",
   "isDesktopOnly": false
 }
