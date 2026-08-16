@@ -158,7 +158,7 @@ Review the current version, author links, privacy, API service, usage risks, and
 
 | Type | Supported |
 |:---|:---|
-| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; desktop can manage an installed FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>Xiaomi MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; desktop can manage an installed FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>Xiaomi MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
 | Polish (LLM) | SiliconFlow<br>Doubao<br>Qwen<br>DeepSeek<br>Xiaomi MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>Custom OpenAI-compatible endpoint |
 
 > [!NOTE]

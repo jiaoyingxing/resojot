@@ -158,7 +158,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 | 类型 | 已支持 |
 |:---|:---|
-| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；桌面端可管理已安装的 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>小米 MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text |
+| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；桌面端可管理已安装的 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>小米 MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
 | 润色（LLM） | 硅基流动<br>豆包<br>通义千问<br>DeepSeek<br>小米 MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>自定义 OpenAI-compatible 接口 |
 
 > [!NOTE]
