@@ -72,7 +72,7 @@ flowchart TB
 | 🗣️ Windows 听写 | 按住快捷键说话，松开后把文字输入到当前应用。录音可以按设置保留，失败条目仍能回到录音管理中处理。 |
 | 💻 电脑声音录制 | 录制电脑正在播放的声音，使用耳机时也可以录制。支持 Windows 和 macOS 13+；macOS 15+ 可以同时录制麦克风。 |
 | 📅 日记辅助 | 把普通录音写入 Daily Notes、Periodic Notes、Journals 等工具已经创建的当天日记。Resojot 负责查找和写入，不接管日记创建。 |
-| 🧠 本地转写 | Windows 桌面端可以一键安装本地转写程序并自动准备运行环境，也可以发现、选择、启动和停止已安装的 FunASR 程序。首次启用时会按需下载模型。 |
+| 🧠 本地转写 | Windows 桌面端可以一键安装本地转写程序并自动准备运行环境，也可以选择并使用已经安装好的 FunASR 程序。首次启用时会按需下载模型。 |
 | 📱 录音显示 | 可以选择不额外提示、顶部横条或全屏浮窗。普通录音与电脑声音录制使用同一显示设置。 |
 
 ## 4. 🖥️ 平台与版本
@@ -145,7 +145,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 | **日记辅助模式**<br>按目录、日期命名规则和板块标题定位已有日记。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
 | **AI 润色与附加处理**<br>从内容动作菜单打开「AI润色」，选择或新建润色方案、提取待办和生成提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="AI 润色与附加处理" width="240" /> |
 | **Todo 笔记**<br>控制自动汇集、笔记位置、显示大小和任务行末操作。 | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo 笔记设置" width="240" /> |
-| **音频播放条操作**<br>调整播放速度、转写这段音频，或按录音管理的 note-first 规则删除。 | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="音频播放条操作菜单" width="240" /> |
+| **音频播放条操作**<br>调整播放速度、转写这段音频，或删除录音（仍被笔记引用时保留音频文件）。 | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="音频播放条操作菜单" width="240" /> |
 | **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
 
 ## 7. 🔌 目前支持的服务

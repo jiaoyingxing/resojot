@@ -72,7 +72,7 @@ After transcription or polish finishes, use the action menu for that content to 
 | Windows dictation | Hold to speak and release to insert text like a voice input tool; recordings can be retained, and failures remain available in Recording Management |
 | Computer audio | Record computer playback, including headphone output, on Windows and macOS 13+; macOS 15+ can also include the microphone |
 | Journal assist | Write regular recordings into an existing daily note created by Daily Notes, Periodic Notes, Journals, or a similar tool without taking over journal creation |
-| Local transcription service | On Windows desktop, install a local transcription program with one click (runtime prepared automatically); on desktop, you can also discover, choose, start, and stop a separately installed FunASR program. Models are downloaded on demand on first use |
+| Local transcription service | On Windows desktop, install a local transcription program with one click, with its Python environment prepared automatically; you can also choose and use an already-installed FunASR program. Models are downloaded on demand on first use |
 | Recording display | Choose no extra indicator, a top strip, or a full-screen overlay; regular and computer-audio recording share the same display rule |
 
 ## 4. 🖥️ Platforms and Versions
@@ -83,7 +83,7 @@ After transcription or polish finishes, use the action menu for that content to 
 | Tablet and multi-window layout | Wide tablets and desktop windows adapt the Workbench and Settings layouts to the available width |
 | Windows dictation | Windows desktop only |
 | Computer-audio recording | Windows and macOS 13+ desktop; macOS 15+ can include the microphone |
-| Local FunASR management | Desktop; Windows can install FunASR and its runtime with one click, or manage an installed FunASR |
+| Local FunASR management | Desktop; Windows can install FunASR with one click, including its Python environment, or manage an installed FunASR |
 | Resojot CLI | Official Obsidian desktop installer `1.12.7+` with Command line interface enabled |
 
 ## 5. 🧪 Resojot CLI (Testing feature)
@@ -145,7 +145,7 @@ Review failure reasons, retry status, and per-recording details in one place.
 | **Journal assist mode**<br>Locate an existing journal by folder, date format, and target heading. | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="Journal assist mode settings" width="240" /> |
 | **AI polish and add-on processing**<br>Open “AI polish” from a note's content action menu to apply or create polish profiles, extract Todos, or generate summaries. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="AI polish and add-on actions" width="240" /> |
 | **Todo notes**<br>Control automatic collection, note location, display size, and line-end task actions. | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo note settings" width="240" /> |
-| **Audio bar menu**<br>Adjust playback speed, transcribe this audio, or delete the recording following the note-first management rules. | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="Audio bar action menu" width="240" /> |
+| **Audio bar menu**<br>Adjust playback speed, transcribe this audio, or delete the recording; the audio file is kept while the note still references it. | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="Audio bar action menu" width="240" /> |
 | **Mobile Recording Management**<br>Review cancelled, no-speech, missing-note, and orphan-attachment states on mobile. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile Recording Management" width="240" /> |
 
 ## 7. 🔌 Supported Services
