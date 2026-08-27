@@ -42,7 +42,7 @@ flowchart TB
 From saving recordings to transcription, polish, titles, Todos, and summaries, Resojot can run the workflow automatically based on your settings; tasks wait when a required service is not configured yet, then continue once configuration is completed.
 
 <p align="center">
-  <img src="./assets/readme/hero-overview.png" alt="Resojot desktop workbench" width="430" />
+  <img src="./assets/readme/hero-overview.png" alt="Resojot across mobile and desktop" width="430" />
 </p>
 
 ## 2. ✨ Main Capabilities

@@ -42,7 +42,7 @@ flowchart TB
 从录音保存到转写、润色、标题、待办和提要，都可以按设置自动完成；暂未配置服务时，任务会保留等待，配置完成后继续处理。
 
 <p align="center">
-  <img src="./assets/readme/hero-overview.png" alt="Resojot 桌面端双列工作台" width="430" />
+  <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
 </p>
 
 ## 2. ✨ 主要功能
