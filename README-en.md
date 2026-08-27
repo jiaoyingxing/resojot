@@ -42,7 +42,7 @@ flowchart TB
 From saving recordings to transcription, polish, titles, Todos, and summaries, Resojot can run the workflow automatically based on your settings; tasks wait when a required service is not configured yet, then continue once configuration is completed.
 
 <p align="center">
-  <img src="./assets/readme/hero-overview.png" alt="Resojot across mobile and desktop" width="430" />
+  <img src="./assets/readme/hero-overview.png" alt="Resojot desktop workbench" width="430" />
 </p>
 
 ## 2. ✨ Main Capabilities
@@ -72,7 +72,7 @@ After transcription or polish finishes, use the action menu for that content to 
 | Windows dictation | Hold to speak and release to insert text like a voice input tool; recordings can be retained, and failures remain available in Recording Management |
 | Computer audio | Record computer playback, including headphone output, on Windows and macOS 13+; macOS 15+ can also include the microphone |
 | Journal assist | Write regular recordings into an existing daily note created by Daily Notes, Periodic Notes, Journals, or a similar tool without taking over journal creation |
-| Local transcription service | On desktop, discover, choose, start, and stop a separately installed FunASR program; users still install FunASR, Python, and models themselves |
+| Local transcription service | On Windows desktop, install a local transcription program with one click (runtime prepared automatically); on desktop, you can also discover, choose, start, and stop a separately installed FunASR program. Models are downloaded on demand on first use |
 | Recording display | Choose no extra indicator, a top strip, or a full-screen overlay; regular and computer-audio recording share the same display rule |
 
 ## 4. 🖥️ Platforms and Versions
@@ -83,7 +83,7 @@ After transcription or polish finishes, use the action menu for that content to 
 | Tablet and multi-window layout | Wide tablets and desktop windows adapt the Workbench and Settings layouts to the available width |
 | Windows dictation | Windows desktop only |
 | Computer-audio recording | Windows and macOS 13+ desktop; macOS 15+ can include the microphone |
-| Local FunASR management | Desktop, with FunASR and its models installed separately |
+| Local FunASR management | Desktop; Windows can install FunASR and its runtime with one click, or manage an installed FunASR |
 | Resojot CLI | Official Obsidian desktop installer `1.12.7+` with Command line interface enabled |
 
 ## 5. 🧪 Resojot CLI (Testing feature)
@@ -136,13 +136,6 @@ Review failure reasons, retry status, and per-recording details in one place.
   <img src="./assets/readme/readme-desktop-management.png" alt="Desktop Recording Management" width="900" />
 </p>
 
-**About and privacy**<br>
-Review the current version, author links, privacy, API service, usage risks, and data storage information.
-
-<p align="center">
-  <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 About page" width="900" />
-</p>
-
 ### 6.2 Mobile Screenshots
 
 | Scenario | Preview |
@@ -150,15 +143,16 @@ Review the current version, author links, privacy, API service, usage risks, and
 | **Mobile Workbench**<br>Review recent recording notes and start recording from the button at the bottom. | <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot mobile recording workbench" width="240" /> |
 | **Workbench quick menu**<br>Open Recording Management and settings, switch among four writing modes, or import audio directly from the mobile Workbench. | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="Mobile Workbench quick menu" width="240" /> |
 | **Journal assist mode**<br>Locate an existing journal by folder, date format, and target heading. | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="Journal assist mode settings" width="240" /> |
-| **Polish and add-on processing**<br>Manage polish providers, default polish, Todo extraction, and content summaries. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="Polish providers and automatic processing settings" width="240" /> |
+| **AI polish and add-on processing**<br>Open “AI polish” from a note's content action menu to apply or create polish profiles, extract Todos, or generate summaries. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="AI polish and add-on actions" width="240" /> |
 | **Todo notes**<br>Control automatic collection, note location, display size, and line-end task actions. | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo note settings" width="240" /> |
+| **Audio bar menu**<br>Adjust playback speed, transcribe this audio, or delete the recording following the note-first management rules. | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="Audio bar action menu" width="240" /> |
 | **Mobile Recording Management**<br>Review cancelled, no-speech, missing-note, and orphan-attachment states on mobile. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile Recording Management" width="240" /> |
 
 ## 7. 🔌 Supported Services
 
 | Type | Supported |
 |:---|:---|
-| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; desktop can manage an installed FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>Xiaomi MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
+| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; Windows desktop can install or manage a FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>Xiaomi MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
 | Polish (LLM) | SiliconFlow<br>Doubao<br>Qwen<br>DeepSeek<br>Xiaomi MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>Custom OpenAI-compatible endpoint |
 
 > [!NOTE]

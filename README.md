@@ -42,7 +42,7 @@ flowchart TB
 从录音保存到转写、润色、标题、待办和提要，都可以按设置自动完成；暂未配置服务时，任务会保留等待，配置完成后继续处理。
 
 <p align="center">
-  <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
+  <img src="./assets/readme/hero-overview.png" alt="Resojot 桌面端双列工作台" width="430" />
 </p>
 
 ## 2. ✨ 主要功能
@@ -72,7 +72,7 @@ flowchart TB
 | 🗣️ Windows 听写 | 按住快捷键说话，松开后把文字输入到当前应用。录音可以按设置保留，失败条目仍能回到录音管理中处理。 |
 | 💻 电脑声音录制 | 录制电脑正在播放的声音，使用耳机时也可以录制。支持 Windows 和 macOS 13+；macOS 15+ 可以同时录制麦克风。 |
 | 📅 日记辅助 | 把普通录音写入 Daily Notes、Periodic Notes、Journals 等工具已经创建的当天日记。Resojot 负责查找和写入，不接管日记创建。 |
-| 🧠 本地转写 | 桌面端可以发现、选择、启动和停止用户已经安装的 FunASR 程序。FunASR、Python 环境和模型仍由用户自行安装和准备。 |
+| 🧠 本地转写 | Windows 桌面端可以一键安装本地转写程序并自动准备运行环境，也可以发现、选择、启动和停止已安装的 FunASR 程序。首次启用时会按需下载模型。 |
 | 📱 录音显示 | 可以选择不额外提示、顶部横条或全屏浮窗。普通录音与电脑声音录制使用同一显示设置。 |
 
 ## 4. 🖥️ 平台与版本
@@ -83,7 +83,7 @@ flowchart TB
 | 平板与多窗口布局 | 宽屏平板和桌面多窗口按可用宽度调整工作台与设置页布局 |
 | Windows 听写 | 仅 Windows 桌面端 |
 | 电脑声音录制 | Windows 与 macOS 13+ 桌面端；macOS 15+ 可同时录制麦克风 |
-| 本地 FunASR 管理 | 桌面端，需要用户已经安装 FunASR 并准备模型 |
+| 本地 FunASR 管理 | 桌面端；Windows 支持一键安装 FunASR 与运行环境，也可管理已安装的 FunASR |
 | Resojot CLI | Obsidian 桌面端官方安装包 `1.12.7+`，并启用 Command line interface |
 
 ## 5. 🧪 Resojot CLI（测试功能）
@@ -136,13 +136,6 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
   <img src="./assets/readme/readme-desktop-management.png" alt="桌面端录音管理" width="900" />
 </p>
 
-**关于与隐私**<br>
-版本、作者入口、隐私、API 服务、使用风险和数据存储说明集中展示。
-
-<p align="center">
-  <img src="./assets/readme/readme-desktop-about.png" alt="Resojot 0.9.10 关于页面" width="900" />
-</p>
-
 ### 6.2 移动端截图
 
 | 场景 | 预览 |
@@ -150,15 +143,16 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 | **移动端工作台**<br>查看最近录音笔记，并从底部录音按钮开始记录。 | <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot 移动端录音工作台" width="240" /> |
 | **工作台快速菜单**<br>从移动端工作台直接进入录音管理、设置、四种写入方式和音频导入。 | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="移动端工作台快速菜单" width="240" /> |
 | **日记辅助模式**<br>按目录、日期命名规则和板块标题定位已有日记。 | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="日记辅助模式设置" width="240" /> |
-| **润色与附加处理**<br>管理润色服务商、自动润色、待办提取和内容提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="润色服务商与自动处理设置" width="240" /> |
+| **AI 润色与附加处理**<br>从内容动作菜单打开「AI润色」，选择或新建润色方案、提取待办和生成提要。 | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="AI 润色与附加处理" width="240" /> |
 | **Todo 笔记**<br>控制自动汇集、笔记位置、显示大小和任务行末操作。 | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo 笔记设置" width="240" /> |
+| **音频播放条操作**<br>调整播放速度、转写这段音频，或按录音管理的 note-first 规则删除。 | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="音频播放条操作菜单" width="240" /> |
 | **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
 
 ## 7. 🔌 目前支持的服务
 
 | 类型 | 已支持 |
 |:---|:---|
-| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；桌面端可管理已安装的 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>小米 MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
+| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；Windows 桌面端可一键安装或管理 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>小米 MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
 | 润色（LLM） | 硅基流动<br>豆包<br>通义千问<br>DeepSeek<br>小米 MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>自定义 OpenAI-compatible 接口 |
 
 > [!NOTE]
