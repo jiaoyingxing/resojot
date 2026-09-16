@@ -188,8 +188,8 @@ Review failure reasons, retry status, and per-recording details in one place.
 
 | Status | Available features |
 |:---|:---|
-| 🔒 Unlicensed | Recording, audio saving, basic Markdown notes, and basic templates |
-| 🔓 Licensed | Automatic transcription, including its task queue and retry flow; imported-audio transcription; AI polish; and polish-dependent Todo extraction and content summaries |
+| 🔓 Free | Recording, audio saving, basic Markdown notes and templates; transcription of recordings up to 5 minutes with automatic polish and title generation; manual polish and todo extraction on existing transcripts; using existing polish profiles |
+| 🔒 License required | Transcribing recordings beyond 5 minutes, imported-audio transcription, computer-audio recording, desktop dictation, real-time transcription, Todo collection, speaker labeling, and managing polish profiles |
 
 - License keys are verified locally through signature validation
 - License keys do not include any third-party cloud service quota
@@ -214,5 +214,6 @@ Review failure reasons, retry status, and per-recording details in one place.
 ## 10. 📜 License
 
 - Distributed as a closed-source plugin
+- Speaker recognition runs on [onnxruntime-web](https://github.com/microsoft/onnxruntime) (MIT License); recognition models come from each publisher's public release, and their licenses and terms follow the publisher's documentation
 - Installation and updates are available through Obsidian Community Plugins, BRAT, or GitHub Releases
 - See [LICENSE](./LICENSE)

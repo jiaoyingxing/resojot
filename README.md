@@ -21,6 +21,8 @@
 
 Resojot 让你在 Obsidian 里轻松完成录音、转写和整理，让语音内容更快变成可查、可用的笔记。
 
+*Resojot helps you record, transcribe, and organize audio in Obsidian, so spoken content becomes searchable, usable notes faster.*
+
 ## 👋 联系
 
 - 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
@@ -63,7 +65,7 @@ flowchart TB
 | 📐 平板与多窗口适配 | 手机保持单列操作，平板和桌面多窗口会按可用宽度使用更适合大屏的设置页与工作台布局。 |
 | 🌐 界面与设备 | 提供简体中文和 English 界面，常规功能支持 Windows、macOS、iPhone 和 Android。 |
 
-转写或润色完成后，可以从对应内容的动作菜单重试或重新转写，也可以打开“AI润色”选择润色方案、提取待办或生成提要。“用词纠错”、复制和删除也在这个菜单中；本次内容使用了词典时，还可以查看“本次词典纠正…”。
+转写或润色完成后，可以从对应内容的动作菜单重试或重新转写，也可以打开“AI润色”选择润色方案、提取待办或生成标题。“用词纠错”、复制和删除也在这个菜单中；本次内容使用了词典时，还可以查看“本次词典纠正…”。
 
 ## 3. 🎁 记录方式与电脑端功能
 
@@ -188,8 +190,8 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 | 状态 | 可用功能 |
 |:---|:---|
-| 🔒 未授权 | 录音、保存音频、基础 Markdown 笔记、基础模板 |
-| 🔓 授权后 | 自动转写（含任务队列与失败重试）、导入音频转写、AI 润色，以及依赖润色的待办提取和内容提要 |
+| 🔓 免费 | 录音、保存音频、基础 Markdown 笔记与模板；5 分钟以内录音的转写、自动润色与标题生成；对已有转写手动发起润色与提取待办；使用已有润色方案 |
+| 🔒 需要授权 | 超过 5 分钟的录音转写、导入音频转写、录制电脑音频、桌面听写、实时转写（边录边出字）、Todo 收集、话者识别（发言人补标）、润色方案的管理 |
 
 - 授权码在本地进行签名校验
 - 授权码不包含第三方云服务额度
@@ -214,5 +216,6 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 ## 10. 📜 许可
 
 - 闭源分发，源码不公开
+- 话者识别的推理运行时使用 [onnxruntime-web](https://github.com/microsoft/onnxruntime)（MIT License）；识别模型来自各发布方的公开版本，其许可与使用条款以发布方说明为准
 - 安装与更新可通过 Obsidian 社区插件、BRAT 或 GitHub Releases 进行
 - 详见 [LICENSE](./LICENSE)
