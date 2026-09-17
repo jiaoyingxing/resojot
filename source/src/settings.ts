@@ -24,11 +24,6 @@ export class ResojotSettingTab extends PluginSettingTab {
     containerEl.empty();
 
     new Setting(containerEl)
-      .setName("General")
-      .setDesc("General settings.")
-      .setHeading();
-
-    new Setting(containerEl)
       .setName("Show notice on load")
       .setDesc("Show a notice when the plugin loads.")
       .addToggle(toggle =>
