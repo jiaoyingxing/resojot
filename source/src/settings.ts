@@ -24,8 +24,8 @@ export class ResojotSettingTab extends PluginSettingTab {
     containerEl.empty();
 
     new Setting(containerEl)
-      .setName("Resojot")
-      .setDesc("Resojot settings.")
+      .setName("General")
+      .setDesc("General settings.")
       .setHeading();
 
     new Setting(containerEl)

@@ -16,8 +16,8 @@ export default class ResojotPlugin extends Plugin {
     });
 
     this.addCommand({
-      id: "open-resojot-notice",
-      name: "Open Resojot notice",
+      id: "open-notice",
+      name: "Open notice",
       callback: () => {
         new Notice("Resojot");
       }
