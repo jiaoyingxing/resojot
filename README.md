@@ -15,21 +15,13 @@
   </a>
 </p>
 
-<p align="center">
-  <strong>阅读语言：</strong> <strong>简体中文</strong> · <a href="./README-en.md"><strong>English</strong></a>
-</p>
-
 Resojot 让你在 Obsidian 里轻松完成录音、转写和整理，让语音内容更快变成可查、可用的笔记。
 
-*Resojot helps you record, transcribe, and organize audio in Obsidian, so spoken content becomes searchable, usable notes faster.*
+## 1. ⚙️ 概览
 
-## 👋 联系
-
-- 获取授权码、使用咨询和产品交流：小红书搜索 **焦应行** 🔍
-- 部署指南、免费 API 指南、插件使用技巧知识库：[Resojot 应声记](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
-- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
-
-## 1. ⚙️ 自动处理流程
+<p align="center">
+  <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
+</p>
 
 ```mermaid
 flowchart TB
@@ -41,84 +33,78 @@ flowchart TB
     A --> B --> C --> D --> E
 ```
 
-从录音保存到转写、润色、标题、待办和提要，都可以按设置自动完成；暂未配置服务时，任务会保留等待，配置完成后继续处理。
+## 2. ✨ 核心功能
 
-<p align="center">
-  <img src="./assets/readme/hero-overview.png" alt="Resojot 移动端与桌面端概览" width="430" />
-</p>
-
-## 2. ✨ 主要功能
-
-| 特点 | 说明 |
-|:---|:---|
-| ⚡ 快捷录音 | 工作台底部可以直接开始录音。桌面端还可以使用快捷键、命令和按钮；移动端支持 URL 快捷指令。 |
-| 🧱 结构化笔记 | 音频、转写文本、润色正文、待办和提要写入 Markdown 笔记，并按内容类型分开显示和继续操作。 |
-| 📁 自动结构化存储 | 录音结束后按设置自动保存。音频与笔记位置、文件命名、笔记模板和追加顺序可以分别设置，支持按次、按日、按月和日记辅助。 |
-| 🔤 自动转写文本 | 配置本地或云端 ASR 后，录音自动进入转写。可以保存多条服务配置，当前服务失败时尝试其他符合条件的服务。 |
-| 📖 本地词典 | 把容易转写错的词加入词典，并告诉 Resojot 应该写成什么。以后转写和自动润色遇到这些词时，会自动改成你设定的写法。你可以从已经完成的转写或润色内容中添加，也可以把词典导出成 Markdown 文件，在其他设备上导入。 |
-| 📝 录音实时转写 | 从工作台使用“录音并实时转写”时，录音中会按句显示转写文本；停止后仍会保存完整音频，并按设置完成后续转写和润色。 |
-| ✍️ 自动 AI 润色正文 | 开启自动润色后，转写完成会继续整理口语和格式。也可以使用自定义润色操作处理当前正文。 |
-| ✅ 自动提取标题与待办 | 可以根据录音内容生成标题或一句话提要，写入文件名或笔记大纲；提取出的待办可以自动汇集到 Todo 笔记。 |
-| ⏳ 长音频与恢复 | 长录音分段处理并显示进度。应用关闭、移动端中断或网络波动后，未完成任务会保留，重新打开后可以继续处理。 |
-| 📊 可视化管理 | 工作台显示最近的录音笔记；录音管理集中显示转写、润色、失败、笔记缺失和孤立附件，可以取消、重试、恢复笔记和分步清理。 |
-| 📥 已有音频 | 可以导入外部音频、处理当前笔记中的音频，也可以重新转写已经完成的结果。 |
-| 📐 平板与多窗口适配 | 手机保持单列操作，平板和桌面多窗口会按可用宽度使用更适合大屏的设置页与工作台布局。 |
-| 🌐 界面与设备 | 提供简体中文和 English 界面，常规功能支持 Windows、macOS、iPhone 和 Android。 |
-
-转写或润色完成后，可以从对应内容的动作菜单重试或重新转写，也可以打开“AI润色”选择润色方案、提取待办或生成标题。“用词纠错”、复制和删除也在这个菜单中；本次内容使用了词典时，还可以查看“本次词典纠正…”。
-
-## 3. 🎁 记录方式与电脑端功能
+标注 🔒 的功能需要授权码，其余安装后即可使用。
 
 | 功能 | 说明 |
 |:---|:---|
-| 🗣️ Windows 听写 | 按住快捷键说话，松开后把文字输入到当前应用。录音可以按设置保留，失败条目仍能回到录音管理中处理。 |
-| 💻 电脑声音录制 | 录制电脑正在播放的声音，使用耳机时也可以录制。支持 Windows 和 macOS 13+；macOS 15+ 可以同时录制麦克风。 |
-| 📅 日记辅助 | 把普通录音写入 Daily Notes、Periodic Notes、Journals 等工具已经创建的当天日记。Resojot 负责查找和写入，不接管日记创建。 |
-| 🧠 本地转写 | Windows 桌面端可以一键安装本地转写程序并自动准备运行环境，也可以选择并使用已经安装好的 FunASR 程序。首次启用时会按需下载模型。 |
-| 📱 录音显示 | 可以选择不额外提示、顶部横条或全屏浮窗。普通录音与电脑声音录制使用同一显示设置。 |
+| 🎙️ 内置录音 | 在 Obsidian 里直接录音：工作台一键开始，桌面端可用快捷键和命令，移动端支持 URL 快捷指令。录音数据有本地缓存保护，保存失败不丢失，重启插件后自动恢复。 |
+| 📁 自动存入笔记库 | 录音结束自动保存音频，并生成一条 Markdown 笔记：转写文本、润色正文、待办、提要分区写进同一条笔记。存到哪里、怎么命名、用什么模板，都可以设置。 |
+| 🔤 自动转写 | 配好转写服务后，录音自动转成文字。常写错的词加入词典就会自动纠正，词典可导出、在设备间迁移；一条服务失败会自动换下一条可用的。 |
+| 📝 实时转写 🔒 | 从工作台选择「录音并实时转写」，边录边逐句出字；停止后照常保存音频、继续后续处理。 |
+| ⏳ 长录音转写 🔒 | 超过 5 分钟的录音自动分段转写并显示进度；应用重开后，没转完的接着转。 |
+| ✍️ AI 润色与整理 | 转写完成后自动把口语稿整理成好读的笔记，可以生成标题和一句话提要；提取的待办自动汇集到 Todo 笔记 🔒。也可以在笔记里随时手动润色、提取待办或纠正用词。 |
+| 📊 录音管理 | 工作台显示最近的录音；管理页集中查看每条录音的状态，失败可重试、笔记缺失可恢复、孤立附件可清理。 |
 
-## 4. 🖥️ 平台与版本
+## 3. 🚀 快速开始
+
+**安装**（三选一）：
+
+1. **Obsidian 社区插件（推荐）**：设置 → 第三方插件 → 浏览 → 搜索 **Resojot**，安装并启用
+2. **BRAT**：安装 BRAT 后选择 **Add Beta plugin**，输入 `https://github.com/jiaoyingxing/resojot`，之后可自动从 GitHub Releases 更新
+3. **手动**：从 [GitHub Releases](https://github.com/jiaoyingxing/resojot/releases) 下载 `main.js`、`manifest.json`、`styles.css` 放入 vault 的 `.obsidian/plugins/resojot/`，重新加载插件并启用
+
+**首次使用**：
+
+1. 在插件设置中选择一个转写服务，可参考知识库的[部署指南与免费 API 指南](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
+2. 从工作台底部按钮开始第一段录音，保存后按设置自动完成转写和润色
+
+不配置授权码也可以使用录音、笔记与 5 分钟以内的转写和润色，完整边界见下方「授权与隐私」。
+
+## 4. 🔌 目前支持的服务
+
+| 类型 | 已支持 |
+|:---|:---|
+| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；Windows 桌面端可一键安装或管理 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>小米 MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
+| 润色（LLM） | 硅基流动<br>豆包<br>通义千问<br>DeepSeek<br>小米 MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>自定义 OpenAI-compatible 接口 |
+
+> [!NOTE]
+> 插件授权不包含第三方云服务额度。服务是否可用、模型权限、费用和请求限制由用户配置的服务商决定。
+
+## 5. 🎁 进阶与桌面端能力
+
+标注 🔒 的功能需要授权码，其余安装后即可使用。
+
+| 功能 | 说明 |
+|:---|:---|
+| 🏠 本地转写 | Windows 桌面端可以一键安装 FunASR 转写程序并自动准备运行环境，也可以使用已经安装好的 FunASR；首次启用时按需下载模型。 |
+| 📅 日记辅助 | 把录音写进 Daily Notes、Periodic Notes、Journals 等工具已经建好的当天日记。Resojot 负责找到日记并写入，不接管日记创建。 |
+| 📱 录音显示 | 录音提示全局悬浮显示，录音时可以照常记笔记：可选顶部横条、全屏浮窗或不提示，普通录音和电脑声音录制共用这套设置。 |
+| 🗣️ 桌面听写 🔒 | Windows：按住快捷键说话，松开后文字自动输入到当前应用。录音可以按设置保留，失败的条目会回到录音管理。 |
+| 💻 电脑声音录制 🔒 | 录制电脑正在播放的声音，戴耳机也可以录；macOS 15+ 还能同时录麦克风。 |
+| 👥 话者识别 🔒 | 转写完成后按说话人区分，正文逐句以「发言人 N：」写回。首次使用要在设置的「工具」页获取识别组件（约 38MB，每个 vault 只需下载一次）；超过 1 小时的录音暂不支持。 |
+| 📥 已有音频 🔒 | 导入外部音频、处理当前笔记里的音频，或重新转写已完成的结果。 |
+
+## 6. 🖥️ 平台与版本
 
 | 能力 | 要求 |
 |:---|:---|
-| Resojot 常规功能 | Obsidian `1.11.4+`；支持 Windows、macOS、iPhone 和 Android |
-| 平板与多窗口布局 | 宽屏平板和桌面多窗口按可用宽度调整工作台与设置页布局 |
+| Resojot 常规功能 | Obsidian `1.11.4+`；支持 Windows、macOS、iPhone 和 Android；界面提供简体中文和 English |
+| 多端布局 | 手机、平板、电脑各有专门设计的界面；平板和桌面多窗口下，工作台与设置页按窗口宽度自动调整。 |
 | Windows 听写 | 仅 Windows 桌面端 |
 | 电脑声音录制 | Windows 与 macOS 13+ 桌面端；macOS 15+ 可同时录制麦克风 |
 | 本地 FunASR 管理 | 桌面端；Windows 支持一键安装 FunASR 与运行环境，也可管理已安装的 FunASR |
 | Resojot CLI | Obsidian 桌面端官方安装包 `1.12.7+`，并启用 Command line interface |
 
-## 5. 🧪 Resojot CLI（测试功能）
-
-从 `0.9.10` 起，Codex、Claude Code 等外部 Agent 可以通过官方 Obsidian CLI 调用 Resojot。这项功能目前处于测试阶段。
-
-Agent 可以检查当前环境和插件能力，处理 vault 中已有的音频，查询、重试或取消任务，并取得结果笔记和 artifact。它还可以读取存储与润色设置、查看 FunASR 状态、审计录音管理列表，以及预览选定录音的有限片段。
-
-修改设置、恢复笔记、重试任务或清理条目前，Resojot 会先生成一份精确计划。Agent 需要把计划和影响说明给用户，得到本次确认后才能提交；执行前，Resojot 还会重新检查对象和设置是否发生变化。
-
-- 需要 Obsidian 桌面端 `1.12.7+` 的官方安装包，并在 **设置 → 通用** 中启用 **Command line interface**
-- 调用时 Obsidian 与目标 vault 需要保持打开；移动端和旧版宿主不提供 CLI
-- 预览没有现成转写的录音时，选定片段可能会发送到当前转写服务，并产生相应费用
-- CLI 不公开 API Key、授权码或插件内部队列；测试期间命令参数和可执行范围仍可能调整
-
-最小能力发现：
-
-```shell
-obsidian vault="<vault-name-or-id>" resojot
-obsidian vault="<vault-name-or-id>" resojot:capabilities
-obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
-```
-
-终端当前目录已经是目标 vault 时，可以省略 `vault=...`。完整参数以当前版本返回的 `resojot:schema` 为准。
-
-## 6. 👀 部分界面展示
+## 7. 👀 部分界面展示
 
 > 下面的桌面端截图所示功能同样支持移动端；Resojot 会根据屏幕调整布局。
 
-### 6.1 桌面端截图
+### 7.1 桌面端截图
 
 **转写与润色动作菜单**<br>
-打开“AI润色”，或使用“用词纠错”、复制和删除。
+打开「AI润色」，或使用「用词纠错」、复制和删除。
 
 <p align="center">
   <img src="./assets/readme/readme-desktop-callout-actions.png" alt="转写与润色动作菜单" width="900" />
@@ -138,7 +124,7 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
   <img src="./assets/readme/readme-desktop-management.png" alt="桌面端录音管理" width="900" />
 </p>
 
-### 6.2 移动端截图
+### 7.2 移动端截图
 
 | 场景 | 预览 |
 |:---|:---|
@@ -150,39 +136,25 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 | **音频播放条操作**<br>调整播放速度、转写这段音频，或删除录音（仍被笔记引用时保留音频文件）。 | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="音频播放条操作菜单" width="240" /> |
 | **移动端录音管理**<br>在手机上查看取消、无语音、笔记缺失和孤立附件等状态。 | <img src="./assets/readme/readme-mobile-management.png" alt="移动端录音管理" width="240" /> |
 
-## 7. 🔌 目前支持的服务
+## 8. 🧪 Resojot CLI（测试功能）
 
-| 类型 | 已支持 |
-|:---|:---|
-| 转写（ASR） | 本地转写服务（兼容 OpenAI 接口；Windows 桌面端可一键安装或管理 FunASR）<br>云端 OpenAI-compatible 接口<br>硅基流动<br>豆包 ASR<br>腾讯云 ASR<br>阿里云 DashScope ASR<br>小米 MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
-| 润色（LLM） | 硅基流动<br>豆包<br>通义千问<br>DeepSeek<br>小米 MiMo<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>自定义 OpenAI-compatible 接口 |
+Codex、Claude Code 等外部 Agent 可以通过官方 Obsidian CLI 调用 Resojot。Agent 可以检查当前环境和插件能力，发起或停止录音、处理 vault 中已有的音频，查询、重试或取消任务，并取得结果笔记和 artifact；也可以读取存储与润色设置、查看 FunASR 状态、读写术语词典、审计录音管理列表，以及预览选定录音的有限片段。
 
-> [!NOTE]
-> 插件授权不包含第三方云服务额度。服务是否可用、模型权限、费用和请求限制由用户配置的服务商决定。
+修改设置、恢复笔记、重试任务或清理条目前，Resojot 会先生成一份精确计划；Agent 需要把计划和影响说明给用户，得到本次确认后才能提交，执行前还会重新检查对象和设置是否发生变化。
 
-## 8. 🚀 安装
+- 需要 Obsidian 桌面端官方安装包 `1.12.7+`，并在 **设置 → 通用** 中启用 **Command line interface**；调用时 Obsidian 与目标 vault 需要保持打开，移动端不提供
+- 预览没有现成转写的录音时，选定片段可能会发送到当前转写服务，并产生相应费用
+- CLI 不公开 API Key、授权码或插件内部队列；测试期间命令参数和可执行范围仍可能调整
 
-### 8.1 Obsidian 社区插件（推荐）
+最小能力发现：
 
-1. 打开 Obsidian 的 **设置 → 第三方插件**
-2. 选择 **浏览**，搜索 **Resojot**
-3. 安装并启用插件
+```shell
+obsidian vault="<vault-name-or-id>" resojot
+obsidian vault="<vault-name-or-id>" resojot:capabilities
+obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
+```
 
-### 8.2 BRAT
-
-1. 在 Obsidian 社区插件中安装 **BRAT**
-2. 打开 BRAT，选择 **Add Beta plugin**
-3. 输入 `https://github.com/jiaoyingxing/resojot`
-4. 安装完成后，在 Obsidian 设置中启用 **Resojot**
-
-> BRAT 可自动从 GitHub Releases 更新，无需手动替换文件。
-
-### 8.3 手动安装
-
-1. 从 [GitHub Releases](https://github.com/jiaoyingxing/resojot/releases) 下载 `main.js`、`manifest.json`、`styles.css`
-2. 在 vault 的 `.obsidian/plugins/resojot/` 目录放入上述文件
-3. 重启 Obsidian 或重新加载社区插件
-4. 在设置中启用 Resojot
+终端当前目录已经是目标 vault 时，可以省略 `vault=...`。完整参数以当前版本返回的 `resojot:schema` 为准。
 
 ## 9. 🔐 授权与隐私
 
@@ -193,10 +165,8 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 | 🔓 免费 | 录音、保存音频、基础 Markdown 笔记与模板；5 分钟以内录音的转写、自动润色与标题生成；对已有转写手动发起润色与提取待办；使用已有润色方案 |
 | 🔒 需要授权 | 超过 5 分钟的录音转写、导入音频转写、录制电脑音频、桌面听写、实时转写（边录边出字）、Todo 收集、话者识别（发言人补标）、润色方案的管理 |
 
-- 授权码在本地进行签名校验
-- 授权码不包含第三方云服务额度
-- 授权期限与适用版本以插件“授权信息”中显示的内容为准
-- 获取授权码：小红书搜索 **焦应行**
+- 获取授权码：小红书搜索 **焦应行** 🔍
+- 授权码在本地进行签名校验；授权期限与适用版本以插件「授权信息」中显示的内容为准
 
 ### 9.2 数据与存储
 
@@ -208,12 +178,18 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 - 插件本身不包含客户端遥测
 - 启用云端转写或云端润色时，音频或文字会发送至用户配置的第三方服务
-- 词典规则保存在当前 vault 的插件数据中；导出的 `Resojot 词典.md` 是用户显式生成的明文迁移文件，可能被同步、备份或搜索工具读取。导入前会由用户确认，不会静默替换正在使用的词典
+- 导出的词典 Markdown 是明文迁移文件，可能被同步、备份或搜索工具读取；导入前会由用户确认，不会静默替换正在使用的词典
 
 > [!CAUTION]
 > 请勿公开 `.obsidian/plugins/resojot/data.json`。该文件可能包含设置、队列状态、授权状态及旧版本遗留的 provider 凭据。
 
-## 10. 📜 许可
+## 10. 💬 反馈与支持
+
+- 部署指南、免费 API 指南与使用技巧：[Resojot 应声记知识库](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
+- Bug、可复现问题和功能建议：[GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
+- 使用交流与产品动态：小红书搜索 **焦应行** 🔍
+
+## 11. 📜 许可
 
 - 闭源分发，源码不公开
 - 话者识别的推理运行时使用 [onnxruntime-web](https://github.com/microsoft/onnxruntime)（MIT License）；识别模型来自各发布方的公开版本，其许可与使用条款以发布方说明为准
