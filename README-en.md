@@ -183,6 +183,34 @@ If the terminal is already inside the target vault, `vault=...` can be omitted. 
 > [!CAUTION]
 > Do not publish `.obsidian/plugins/resojot/data.json`. It may contain settings, queue state, license state, and legacy provider credentials from older versions.
 
+### 9.3 Network use disclosure
+
+| When | Where | Purpose |
+|:---|:---|:---|
+| Update check at startup (one version lookup) | `data.jsdelivr.com` | Reads the latest Resojot version number to notify you when a new version is available. The plugin never downloads or installs updates by itself; updating is always your call via the official Community Plugins directory, BRAT, or GitHub Releases. |
+| Fetching speaker recognition components (Settings → Tools, manual click) | `github.com` (this plugin's Releases page); acceleration mirrors `gh-proxy.com`, `ghfast.top`, `wget.la`; fallback `hf-mirror.com` | Downloads the speaker recognition models and runtime components (about 38 MB, once per vault). Multiple sources are tried simultaneously and the first to finish wins; each file is hash-verified after download to guard against corruption or tampering. |
+| One-click FunASR local transcription setup (Windows only, manual click) | `www.python.org`, `bootstrap.pypa.io`, `pypi.org`, plus the Tsinghua, Alibaba, USTC and Tencent PyPI mirrors | Downloads the official Python runtime and FunASR's official installer. On first use, FunASR itself downloads its model files from its official model sources. |
+| Cloud transcription / cloud polish (automatic once a provider is configured) | The provider endpoint you configure in Settings | Sends audio to transcribe or text to polish; see section 4 for the provider list. The plugin never routes through any relay server. |
+
+Beyond the table above, the plugin connects to no other remote services: no telemetry, analytics or ads. The mirrors and fallback sources only serve the same public files, improving download success on restricted networks.
+
+### 9.4 File write locations
+
+| What | Where | When |
+|:---|:---|:---|
+| Audio files, Markdown notes, dictionary exports | Folders you configure inside the vault | When using the feature |
+| Diagnostic reports | Vault root, filename starting with "Resojot 诊断报告" | Only when you generate one |
+| Transcription temp files, rolling diagnostics, Todo metadata, iOS key mirror | Hidden in-vault folder `.resojot-temp/` | When using the feature; recreated automatically if deleted |
+| Dictation helper (Windows, .exe) and computer-audio recording helper (macOS), bundled with the plugin and hash-verified before being written | In-vault plugin folder `.obsidian/plugins/resojot/` | On first use of dictation or computer-audio recording, and on helper updates |
+| FunASR local transcription runtime | **Outside the vault**: `%LOCALAPPDATA%\Resojot\funasr-runtime` under the Windows user profile | Only when you use one-click FunASR setup on Windows; delete the folder if you stop using it |
+
+Except for the last row, everything the plugin writes stays inside your vault.
+
+### 9.5 Release file note
+
+- The plugin is distributed as closed source. To protect the licensing mechanism from being located and cracked, release files are minified and lightly obfuscated at packaging time; this only guards the license-verification logic — it does not hide features and collects no data.
+- The plugin contains no third-party analytics, reporting or advertising components.
+
 ## 10. 💬 Feedback and Support
 
 - Setup guides, free API guides, and usage tips: [Resojot 应声记 knowledge base](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
