@@ -189,12 +189,12 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 
 | 何时发生 | 访问哪里 | 用途 |
 |:---|:---|:---|
-| 启动时检查更新（仅查询一次版本号） | `data.jsdelivr.com` | 读取 Resojot 的最新版本号，用于在有新版本时提醒你。插件不会自行下载或安装任何更新；是否更新、如何更新，由你通过 Obsidian 官方插件目录、BRAT 或 GitHub Releases 决定。 |
+| 启动时检查更新（仅查询一次版本号） | `raw.githubusercontent.com`（GitHub 原始文件，主源）；`data.jsdelivr.com`（备用）；加速镜像 `gh-proxy.com`、`ghfast.top`、`wget.la`（主源不可达时备用） | 读取 Resojot 的最新版本号，用于在有新版本时提醒你。主源成功时只发一次请求；失败才尝试备用与镜像。插件不会自行下载或安装任何更新；是否更新、如何更新，由你通过 Obsidian 官方插件目录、BRAT 或 GitHub Releases 决定。 |
 | 获取话者识别组件（设置 → 工具页，手动点击） | `github.com`（本插件的 Releases 页）；加速镜像 `gh-proxy.com`、`ghfast.top`、`wget.la`；备用源 `hf-mirror.com` | 下载话者识别的模型与运行组件（约 38MB，每个仓库只需下载一次）。多个来源同时尝试下载，先完成的生效；下载后会逐件校验哈希，防止内容损坏或被篡改。 |
 | 一键安装 FunASR 本地转写（仅 Windows，手动点击） | `www.python.org`、`bootstrap.pypa.io`、`pypi.org`，以及清华、阿里、中科大、腾讯的 PyPI 镜像 | 下载 Python 运行环境与 FunASR 官方安装包，全部来自官方发布源。安装完成后首次使用本地转写时，FunASR 会自行从其官方模型源下载所需的模型文件。 |
 | 云端转写 / 云端润色（配置服务商后自动进行） | 你在设置中填写的服务商接口地址 | 发送待转写的音频或待润色的文字，服务商清单见第 4 节；插件不经过任何中转服务器。 |
 
-除上表所列，插件不连接任何其他远程服务：没有遥测、统计上报或广告。上表中的镜像与备用源只是同一份公开文件的下载通道，用于在网络受限时提高下载成功率。
+除上表所列，插件不连接任何其他远程服务：没有遥测、统计上报或广告。上表中的镜像与备用源只是同一份公开文件的下载与版本查询通道，用于在网络受限时提高成功率。
 
 ### 9.4 文件写入位置
 
