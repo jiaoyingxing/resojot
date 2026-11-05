@@ -39,13 +39,14 @@ Features marked 🔒 require a license key; everything else is available right a
 
 | Capability | Description |
 |:---|:---|
-| Built-in recording | Record right inside Obsidian: start with one click from the Workbench, use shortcuts and commands on desktop, or URL shortcuts on mobile (add the ready-made iOS shortcut from Settings → Tools → Quick launch). Recording data is protected by a local cache — if saving fails nothing is lost, and it is restored automatically after the plugin restarts. |
-| Automatic note library storage | When a recording ends, the audio is saved automatically and a Markdown note is created: transcript, polished text, Todos, and summaries are written into the same note in separate sections. Where recordings go, how they are named, and which template is used are all configurable. |
+| Built-in recording | Record right inside Obsidian: start with one click from the Workbench, use shortcuts and commands on desktop, or URL shortcuts on mobile (add the ready-made iOS shortcut from Settings → Tools → Quick launch). On mobile, recording continues when you switch apps or lock the screen (iPhone requires Obsidian 1.15 or later; older versions still stop when the app is hidden). Recording data is protected by a local cache — if saving fails nothing is lost, and it is restored automatically after the plugin restarts. |
+| Automatic note library storage | When a recording ends, the audio is saved automatically and a Markdown note is created: transcript, polished text, and Todos are written into the same note in separate sections, and the generated title is written to the file name or outline heading. Where recordings go, how they are named, and which template is used are all configurable. |
 | Automatic transcription | Once a transcription service is configured, recordings turn into text automatically. Words that often come out wrong can be added to a local dictionary and are corrected automatically afterwards; the dictionary can be exported and migrated between devices. When one service fails, Resojot automatically tries the next eligible one. |
-| Live transcription 🔒 | Choose “Record and transcribe live” from the Workbench and sentences appear while you speak; after stopping, the complete audio is still saved and follow-up processing continues. |
-| Live translation 🔒 | Pick a target language from the Workbench “+” menu and translation runs while you record: translated and original lines are written into the note together, with Chinese, English, Japanese, German, French, Korean, or Spanish as the target. Requires both transcription and polish licenses; a title is generated automatically when you stop. |
-| Long-recording transcription 🔒 | Recordings beyond 5 minutes are transcribed in segments with visible progress; unfinished parts resume after the app reopens; after another interruption the task stops and can be retried manually. |
-| AI polish and organization | Finished transcripts are automatically cleaned up into readable notes, with optional titles and one-sentence summaries; extracted Todos are collected into a Todo note 🔒 automatically. You can also polish manually, extract Todos, or correct wording from a note at any time. |
+| Live transcription 🔒 | From the Workbench “+” menu, open “Live translation” and choose “Transcription only”; sentences appear while you speak, and after stopping the complete audio is still saved and follow-up processing continues. |
+| Live translation 🔒 | From the Workbench “+” menu, open “Live translation” and pick a target language; translation runs while you record: translated and original lines are written into the note together, with Chinese, English, Japanese, German, French, Korean, or Spanish as the target. Requires both transcription and polish licenses; a title is generated automatically when you stop. |
+| Long-recording transcription 🔒 | Recordings beyond 5 minutes are transcribed automatically with visible progress; Resojot segments the audio when the file is large or the service requires it. Unfinished parts resume after the app reopens; after another interruption the task stops and can be retried manually. |
+| AI polish and organization | Finished transcripts are automatically cleaned up into readable notes, with optional one-line titles; extracted Todos are collected into a Todo note 🔒 automatically. You can also polish manually, extract Todos, or correct wording from a note at any time. |
+| Diagram generation | From the menu on a transcript or polish block, choose “Generate diagram” and pick a mind map, flowchart, timeline, state diagram, sequence diagram, pie chart, Gantt chart, or class diagram, or let Resojot choose the type automatically. The result is written as a Mermaid diagram rendered directly by Obsidian; regenerating the same type replaces it in place, while different types are kept in order. A working polish service is required. |
 | Audio queue | The Workbench shows recent recording notes; the Audio queue shows the state of each recording in one place — retry failures, recover missing notes, and clean up orphan attachments. |
 
 ## 3. Quick Start
@@ -58,16 +59,16 @@ Features marked 🔒 require a license key; everything else is available right a
 
 **First use**:
 
-1. **Set up a service**: the first row under Recordings is a first-run guide. Enter one SiliconFlow API key and Resojot configures and validates both transcription and polish, then lets you choose where to save and start; the row disappears after one completed transcription and polish. You can also choose a transcription service yourself in the plugin settings; the [setup guides and free API guides](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe) in the knowledge base can help
+1. **Set up a service**: the first row under Recordings is a first-run guide. Enter one SiliconFlow API key and Resojot configures and validates both transcription and polish, then lets you choose where to save and start; the row disappears after one completed transcription and polish as long as both sides remain usable; it returns if a service is removed or fails validation. You can also choose a transcription service yourself in the plugin settings; the [setup guides and free API guides](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe) in the knowledge base can help
 2. **Start recording**: start your first recording from the button at the bottom of the Workbench; after saving, transcription and polish run automatically based on your settings
 
-Without a license key you can still use recording, notes, and transcription and polish for recordings up to 5 minutes; see License and Privacy below for the full boundary.
+Without a license key you can still use recording and notes, and transcribe and polish ordinary recordings and note audio up to 5 minutes; computer audio can be recorded, but its transcription requires a license. See License and Privacy below for the full boundary.
 
 ## 4. Supported Services
 
 | Type | Supported |
 |:---|:---|
-| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; Windows desktop can install or manage a FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>Xiaomi MiMo ASR<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
+| Transcription (ASR) | Local Transcription Service (OpenAI-compatible; Windows desktop can install or manage a FunASR setup)<br>Cloud OpenAI-compatible endpoint<br>SiliconFlow<br>Doubao ASR<br>Tencent Cloud ASR<br>Aliyun DashScope ASR<br>Xiaomi MiMo ASR<br>Cloudflare Workers AI<br>OpenAI<br>Azure Speech<br>Google Speech-to-Text<br>Google Gemini |
 | Polish (LLM) | SiliconFlow<br>Doubao<br>Qwen<br>DeepSeek<br>Xiaomi MiMo<br>OpenCode<br>Command Code<br>OpenAI / ChatGPT<br>Gemini<br>Anthropic / Claude<br>Ollama<br>Custom OpenAI-compatible endpoint |
 
 > [!NOTE]
@@ -79,14 +80,14 @@ Features marked 🔒 require a license key; everything else is available right a
 
 | Capability | Description |
 |:---|:---|
-| Local transcription | On Windows desktop, install FunASR with one click and its runtime environment is prepared automatically; you can also use an already-installed FunASR. Models are downloaded on demand on first use. |
+| Local transcription (installation, management, and enabling) 🔒 | On Windows desktop, install FunASR with one click and its runtime environment is prepared automatically; you can also use an already-installed FunASR. Models are downloaded on demand on first use. Installation, management, and enabling all require a transcription license. |
 | Journal assist | Write recordings into the current day's note already created by Daily Notes, Periodic Notes, Journals, or similar tools. Resojot finds the note and writes into it; it does not take over journal creation. |
 | Recording display | The recording indicator floats globally, so you can keep taking notes while recording: choose a top strip, a full-screen overlay, or no indicator. Regular and computer-audio recording share the same display settings. |
 | Windows dictation 🔒 | On Windows, hold a hotkey to speak and release to insert the text into the current app. Recordings can be retained per settings; failed entries return to the Audio queue. |
-| Computer audio 🔒 | Record the sound your computer is playing, including through headphones; on macOS 15+ the microphone can be recorded at the same time. |
+| Computer audio | Record the sound your computer is playing, including through headphones; on macOS 15+ the microphone can be recorded at the same time. Recording is free; transcribing this recording requires a license. |
 | Speaker labeling 🔒 | After transcription, Resojot distinguishes speakers and writes the text back with per-sentence “Speaker N:” prefixes. Some providers, such as Aliyun DashScope ASR, return their own speaker labels and are used directly without downloading components; otherwise get the recognition components from Settings → Tools → Speaker recognition on first use (about 38 MB, once per vault). Very long recordings are not covered: the components handle up to about 90 minutes, and Aliyun DashScope up to 2 hours. |
 | Existing audio 🔒 | Import audio from the current device, process audio in the current note, or re-transcribe completed results. |
-| Bilibili link import 🔒 | On desktop, paste a public single-video Bilibili link from the Workbench “+” menu; confirm the title, author, duration, and source, and Resojot downloads the audio, creates a note, and starts transcription. Requires yt-dlp on the machine (ffmpeg optional); Resojot only detects and calls it and does not install or update it. Multi-part videos import part 1 by default; add ?p=N to the link for another part. Not available on mobile. |
+| Bilibili link import 🔒 | On desktop, open the Workbench “+” menu → “Import audio” → “Import from a Bilibili link” and paste a public single-video Bilibili link; confirm the title, author, duration, and source, and Resojot downloads the audio, creates a note, and starts transcription. Requires yt-dlp on the machine (ffmpeg optional); Resojot only detects and calls it and does not install or update it. Multi-part videos import part 1 by default; add ?p=N to the link for another part. Not available on mobile. |
 
 ## 6. Platforms and Versions
 
@@ -96,7 +97,7 @@ Features marked 🔒 require a license key; everything else is available right a
 | Multi-device layout | Phones, tablets, and computers each get a purpose-designed interface; on tablets and desktop multi-window, the Workbench and Settings adjust to the window width |
 | Windows dictation | Windows desktop only |
 | Computer-audio recording | Windows and macOS 13+ desktop; macOS 15+ can include the microphone |
-| Local FunASR management | Desktop; Windows can install FunASR with one click, including its runtime environment, or manage an installed FunASR |
+| Local FunASR management | Windows desktop; install FunASR with one click, including its runtime environment, or manage an installed FunASR |
 | Bilibili link import | Desktop; yt-dlp installed on the machine, ffmpeg optional |
 | Resojot CLI | Official Obsidian desktop installer `1.12.7+` with Command line interface enabled |
 
@@ -134,7 +135,7 @@ Review failure reasons, retry status, and per-recording details in one place.
 | **Mobile Workbench**<br>Review recent recording notes and start recording from the button at the bottom. | <img src="./assets/readme/readme-mobile-workbench.png" alt="Resojot mobile recording workbench" width="240" /> |
 | **Workbench quick menu**<br>Open the Audio queue and settings, switch among four writing modes, or import from the current device on the mobile Workbench. | <img src="./assets/readme/readme-mobile-workbench-menu.png" alt="Mobile Workbench quick menu" width="240" /> |
 | **Journal assist mode**<br>Locate an existing journal by folder, date format, and target heading. | <img src="./assets/readme/readme-mobile-journal-assist.png" alt="Journal assist mode settings" width="240" /> |
-| **AI polish and add-on processing**<br>Open “AI polish” from a note's content action menu to apply or create polish profiles, extract Todos, or generate summaries. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="AI polish and add-on actions" width="240" /> |
+| **AI polish and add-on processing**<br>Open “AI polish” from a note's content action menu to apply or create polish profiles, extract Todos, or generate titles. | <img src="./assets/readme/readme-mobile-polish-settings.png" alt="AI polish and add-on actions" width="240" /> |
 | **Todo notes**<br>Control automatic collection, note location, display size, and line-end task actions. | <img src="./assets/readme/readme-mobile-todo-settings.png" alt="Todo note settings" width="240" /> |
 | **Audio bar menu**<br>Adjust playback speed, transcribe this audio, or delete the recording; the audio file is kept while the note still references it. | <img src="./assets/readme/readme-mobile-audio-menu.png" alt="Audio bar action menu" width="240" /> |
 | **Mobile Audio queue**<br>Review cancelled, no-speech, missing-note, and orphan-attachment states on mobile. | <img src="./assets/readme/readme-mobile-management.png" alt="Mobile Audio queue" width="240" /> |
@@ -165,10 +166,10 @@ If the terminal is already inside the target vault, `vault=...` can be omitted. 
 
 | Status | Available features |
 |:---|:---|
-| Free | Recording, audio saving, basic Markdown notes and templates; transcription of recordings up to 5 minutes with automatic polish and title generation; manual polish and todo extraction on existing transcripts; using existing polish profiles |
-| 🔒 License required | Transcribing recordings beyond 5 minutes, imported-audio transcription, computer-audio recording, desktop dictation, real-time transcription, live translation, Todo collection, speaker labeling, and managing polish profiles |
+| Free | Recording (including computer audio), audio saving, basic Markdown notes and templates; transcription of ordinary recordings and note audio up to 5 minutes with automatic polish and title generation; manual polish and todo extraction on existing transcripts; using existing polish profiles. Computer audio can be recorded, but its transcription requires a license |
+| 🔒 License required | Transcribing recordings beyond 5 minutes, computer-audio and imported-audio (including Bilibili links) transcription, desktop dictation, real-time transcription, live translation, local FunASR installation, management, and enabling, Todo collection, speaker labeling, and managing polish profiles |
 
-- To get a license key, search Xiaohongshu for **焦应行**
+- To get a license key, search RedNote for **焦应行**
 - License keys are verified locally through signature validation; license duration and supported versions are shown in the plugin's License details
 
 ### 9.2 Data and storage
@@ -191,7 +192,7 @@ If the terminal is already inside the target vault, `vault=...` can be omitted. 
 | When | Where | Purpose |
 |:---|:---|:---|
 | Update check at startup (one version lookup) | `raw.githubusercontent.com` (GitHub raw files, primary); `data.jsdelivr.com` (fallback); acceleration mirrors `gh-proxy.com`, `ghfast.top`, `wget.la` (fallbacks when the primary is unreachable) | Reads the latest Resojot version number to notify you when a new version is available. One request is sent when the primary succeeds; fallbacks and mirrors are only tried after a failure. The plugin never downloads or installs updates by itself; updating is always your call via the official Community Plugins directory, BRAT, or GitHub Releases. |
-| Fetching speaker recognition components (Settings → Tools → Speaker recognition, manual click) | `github.com` (this plugin's Releases page); acceleration mirrors `gh-proxy.com`, `ghfast.top`, `wget.la`; fallback `hf-mirror.com` | Downloads the speaker recognition models and runtime components (about 38 MB, once per vault). Multiple sources are tried simultaneously and the first to finish wins; each file is hash-verified after download to guard against corruption or tampering. |
+| Fetching speaker recognition components (Settings → Tools → Speaker recognition, manual click) | `github.com` (this plugin's Releases page); acceleration mirrors `gh-proxy.com`, `ghfast.top`, `wget.la`; model fallback `hf-mirror.com` | Downloads the speaker recognition models and runtime components (about 38 MB, once per vault). Multiple sources are tried simultaneously and the first to finish wins; each file is hash-verified after download to guard against corruption or tampering. |
 | One-click FunASR local transcription setup (Windows only, manual click) | `www.python.org`, `bootstrap.pypa.io`, `pypi.org`, plus the Tsinghua, Alibaba, USTC and Tencent PyPI mirrors | Downloads the official Python runtime and FunASR's official installer. On first use, FunASR itself downloads its model files from its official model sources. |
 | Cloud transcription / cloud polish (automatic once a provider is configured) | The provider endpoint you configure in Settings | Sends audio to transcribe or text to polish; see section 4 for the provider list. The plugin never routes through any relay server. |
 
@@ -203,7 +204,7 @@ Beyond the table above, the plugin connects to no other remote services: no tele
 |:---|:---|:---|
 | Audio files, Markdown notes, dictionary exports | Folders you configure inside the vault | When using the feature |
 | Diagnostic reports | Vault root, filename starting with "Resojot 诊断报告" | Only when you generate one |
-| Transcription temp files, rolling diagnostics, Todo metadata, iOS key mirror | Hidden in-vault folder `.resojot-temp/` | When using the feature; recreated automatically if deleted |
+| Transcription temp files, rolling diagnostics, Todo metadata, iOS key mirror (iOS only, written after your consent) | Hidden in-vault folder `.resojot-temp/` | When using the feature; recreated automatically if deleted |
 | Dictation helper (Windows, .exe) and computer-audio recording helper (macOS), bundled with the plugin and hash-verified before being written | In-vault plugin folder `.obsidian/plugins/resojot/` | On first use of dictation or computer-audio recording, and on helper updates |
 | FunASR local transcription runtime | **Outside the vault**: `%LOCALAPPDATA%\Resojot\funasr-runtime` under the Windows user profile | Only when you use one-click FunASR setup on Windows; delete the folder if you stop using it |
 
@@ -218,7 +219,7 @@ Except for the last row, everything the plugin writes stays inside your vault.
 
 - Setup guides, free API guides, and usage tips: [Resojot 应声记 knowledge base](https://my.feishu.cn/wiki/WvpJwybn6iOJXUkCiODcs1d0nIe)
 - Bugs, reproducible issues, and feature requests: [GitHub Issues](https://github.com/jiaoyingxing/resojot/issues)
-- Community and product updates: search Xiaohongshu for **焦应行**
+- Community and product updates: search RedNote for **焦应行**
 
 ## 11. License
 
