@@ -1,8 +1,8 @@
 {
   "id": "resojot",
   "name": "Resojot",
-  "version": "0.9.28",
-  "minAppVersion": "1.11.4",
+  "version": "0.9.29",
+  "minAppVersion": "1.13.0",
   "description": "录音、转写与整理，把语音内容更快变成可查可用的笔记。Record, transcribe, and organize voice recordings to turn them into searchable, usable notes faster.",
   "author": "Jiao Yingxing",
   "isDesktopOnly": false
