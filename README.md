@@ -226,6 +226,19 @@ obsidian vault="<vault-name-or-id>" resojot:schema command=resojot:process-audio
 ## 11. 许可
 
 - 闭源分发，源码不公开
-- 话者识别的推理运行时使用 [onnxruntime-web](https://github.com/microsoft/onnxruntime)（MIT License）；识别模型来自各发布方的公开版本，其许可与使用条款以发布方说明为准
+- 本插件内含以下第三方开源组件，各组件保留其原始许可与版权：
+  - [mediabunny](https://github.com/Vanilagy/mediabunny) 1.45.2 — Mozilla Public License 2.0（MPL-2.0）。本插件未改动该库源码，构建时仅做打包与压缩；其源码可从上述上游仓库取得。
+  - [@noble/ed25519](https://github.com/paulmillr/noble-ed25519)、[@noble/hashes](https://github.com/paulmillr/noble-hashes) — MIT License
+  - [fflate](https://github.com/101arrowz/fflate)（裁剪的 gzip 解压实现）— MIT License，Copyright (c) Arjun Barrett
+  - [onnxruntime-web](https://github.com/microsoft/onnxruntime) — MIT License，Copyright (c) Microsoft Corporation
+- MIT License 全文：
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+- 话者识别模型来自各发布方的公开版本，其许可与使用条款以发布方说明为准
 - 安装与更新可通过 Obsidian 社区插件、BRAT 或 GitHub Releases 进行
 - 详见 [LICENSE](./LICENSE)

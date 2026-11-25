@@ -224,6 +224,19 @@ Except for the last row, everything the plugin writes stays inside your vault.
 ## 11. License
 
 - Distributed as a closed-source plugin
-- Speaker recognition runs on [onnxruntime-web](https://github.com/microsoft/onnxruntime) (MIT License); recognition models come from each publisher's public release, and their licenses and terms follow the publisher's documentation
+- This plugin includes the following third-party open-source components; each retains its original license and copyright:
+  - [mediabunny](https://github.com/Vanilagy/mediabunny) 1.45.2 — Mozilla Public License 2.0 (MPL-2.0). The library source is not modified; the build only bundles and minifies it. Its source code is available from the upstream repository above.
+  - [@noble/ed25519](https://github.com/paulmillr/noble-ed25519), [@noble/hashes](https://github.com/paulmillr/noble-hashes) — MIT License
+  - [fflate](https://github.com/101arrowz/fflate) (trimmed gzip decompressor) — MIT License, Copyright (c) Arjun Barrett
+  - [onnxruntime-web](https://github.com/microsoft/onnxruntime) — MIT License, Copyright (c) Microsoft Corporation
+- Full MIT License text:
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+- Speaker recognition models come from each publisher's public release; their licenses and terms follow the publisher's documentation
 - Installation and updates are available through Obsidian Community Plugins, BRAT, or GitHub Releases
 - See [LICENSE](./LICENSE)
